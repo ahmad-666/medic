@@ -1,0 +1,1 @@
+import sliderMove from '../../utilities/scripts/sliderMove' ;

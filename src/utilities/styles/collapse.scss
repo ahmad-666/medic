@@ -1,9 +1,6 @@
-@import './colors.scss' ;
-@import './variables.scss' ;
-@import './mixins.scss' ;
-body{
-    background-color: darken($whiteColor2,3%) ;
-}
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
 .questions{
     @include containerStyle ;
     margin: $dist3 auto ;

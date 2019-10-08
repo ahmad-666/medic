@@ -1,0 +1,36 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import './nav.scss' ;
+header{
+    width: 100% ;
+    height: auto;
+    display: flex ;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    #top{
+        width: 100% ;
+        height: auto;
+        display: flex ;
+        @include flex(row,space-between,center,nowrap,"") ;
+        background-color: darken($darkBlue,10%) ;
+        .right,.left{
+            width: auto ;
+            height: 100%;
+            display: flex ;
+            @include flex(row,flex-start,center,nowrap,"") ;
+            padding: $dist2 $dist3 ;
+            a,.phone{
+                width: auto ;
+                height: 100%;
+                display: flex ;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                margin-right: $dist3 ;
+                font-size: $fontM ;
+                color: $textWhite ;
+                &:first-child{margin-right: 0;}
+                i,p{color: inherit ;font-size: inherit ;}
+                p{transform: translateX(-.5em) ;}
+            }
+        }
+    }
+}

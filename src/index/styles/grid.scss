@@ -1,0 +1,64 @@
+@import '../../variables.scss' ;
+@import '../../mixins.scss' ;
+@import '../../colors.scss' ;
+@import '../../utilities/styles/sliderMove.scss';
+#grid{
+    @include containerStyle ;
+    padding-top: 2em ;
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    .row{
+        width: 100% ;
+        height: auto;
+        &:not(:first-child){margin-top: 2em;}
+        display: flex ;
+        @include flex(row,flex-start,flex-start,nowrap,"") ;
+        .article{
+            display: flex ;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            img{
+                width: 100% ;
+            }
+            h4{
+                width: 100% ;
+                font-size: $fontM ;
+                color: $textDark ;
+                font-weight: 700 ;
+                margin-top: $dist1 ;
+                @include multiEllipse(2,$dist2 + 1em,$textDark) ;              
+            }
+            .date{
+                font-size: $fontS ;
+                color: lighten($textGrey,0);
+            }
+        }
+        > .article{
+            width: calc((100% / 3) - 2 * 2em) ;
+            height: auto;
+            margin-right: 2em ;
+            &:first-child{margin-right: 0;}
+            img{
+                height: 8em;
+            }
+        }
+        .col{
+            width: 50% ;
+            height: 20em;
+            display: flex ;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            &:nth-child(2){
+                margin-right: 2em ;
+                .article{
+                    width: 100% ;
+                    height: calc((100% - 2) - 1 * 2em);
+                    margin-top: 2em ;
+                    &:first-child{margin-top: 0;}
+                    img{
+                        height: 6em;
+                    }
+                }
+            }
+        }
+        
+    }
+}

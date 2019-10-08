@@ -49,18 +49,3 @@ input[type='number']::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield;
 }
-div#some{
-    width: 500px ;
-    height: 500px;
-    background-color: white ;
-    position: relative ;
-    top: 20% ;
-    right: 20% ;
-    transition: all .3s linear ;
-    box-shadow: 0 0 2em .2em rgba(135,135,135,.5) ; 
-    &:hover{
-        transform: translateY(-2em) ;
-        box-shadow: 0 7em 2em -4em rgba(80,80,80,.35) ;
-
-    }
-}

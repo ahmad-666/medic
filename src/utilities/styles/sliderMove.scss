@@ -1,6 +1,7 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-.scrollArrows{
-    @include scrollArrows ;
+.sliderWrapperMove{
+    width: 100% ;
+    height: 100%;
 }

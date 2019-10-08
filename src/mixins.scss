@@ -21,7 +21,7 @@
     line-height: $lineHeight;
     max-height: $lineNum * $lineHeight ;
     text-align: justify; //we should not use text-align:center here  
-    padding-left: 1em;
+    padding-left: 2em;
     padding-right: 0 ;
     .ellipse{
         color: $ellipseColor ; 
@@ -82,10 +82,11 @@
     opacity: 0;
     visibility: hidden ;
 }
-@include shadowS{box-shadow: 0 0 1em .05em rgba(175,175,175,.5);}
-@include shadowL{box-shadow: 0 0 1.5em .1em rgba(135,135,135,.5);}
-@include shadowBlurS{box-shadow: 0 0 2em .05em rgba(175,175,175,.5);}
-@include shadowBlurL{box-shadow: 0 0 2.5em .2em rgba(135,135,135,.5);}
+@mixin shadowS{box-shadow: 0 0 1em .05em rgba(175,175,175,.5);}
+@mixin shadowL{box-shadow: 0 0 1.5em .1em rgba(135,135,135,.5);}
+@mixin shadowBlurS{box-shadow: 0 0 2em .05em rgba(175,175,175,.5);}
+@mixin shadowBlurL{box-shadow: 0 0 2.5em .2em rgba(135,135,135,.5);}
+@mixin shadowBellow{box-shadow: 0 .3em 1em -.2em $shadowColor ;}
 @mixin scrollArrows{
     position: relative;
     .arrows{

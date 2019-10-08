@@ -39,7 +39,7 @@ Slider.prototype.moveSlider = function(dir){
     }
     this.slidesWrapper.style.right = `${movement}px` ;
 }
-//new Slider(document.querySelector('.slider_wrapper')) ;
+//new Slider(document.querySelector('.sliderWrapperFade')) ;
 export default{
 	Slider
 }

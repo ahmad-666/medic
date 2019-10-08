@@ -1,9 +1,6 @@
-@import './colors.scss' ;
-@import './variables.scss' ;
-@import './mixins.scss' ;
-body{
-    background-color: darken($whiteColor2,3%) ;
-}
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
 body.disableScroll{overflow: hidden;}
 .productSlider{
     @include containerStyle ;

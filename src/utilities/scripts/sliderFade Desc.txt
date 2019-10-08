@@ -1,4 +1,4 @@
-<div class="slider_wrapper scrollArrows">
+<div class="sliderWrapperFade scrollArrows">
 	<div class="arrows">
 		<i class="fas fa-angle-left"></i>
 		<i class="fas fa-angle-left"></i>
