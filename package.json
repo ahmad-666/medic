@@ -1,27 +1,27 @@
 {
-  "name": "medic",
+  "name": "bitcoin",
   "version": "1.0.0",
-  "description": "news site about medic",
+  "description": "some bitcoin site",
   "main": "./src/index/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "deploy": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmad-666/bitcoin.git"
+  },
+  "homepage": "https://ahmad-666.github.io/bitcoin",
   "keywords": [
-    "medic",
-    "news",
-    "articles"
+    "bitcoin",
+    "mozafari",
+    "digital"
   ],
   "author": "ahmad",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ahmad-666/medic.git"
-  },
-  "homepage": "https://ahmad-666.github.io/medic",
   "bugs": {
-    "url": "https://github.com/ahmad-666/medic/issues"
+    "url": "https://github.com/ahmad-666/bitcoin/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -30,7 +30,7 @@
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
-    "cross-env": "^6.0.2",
+    "cross-env": "^6.0.0",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "file-loader": "^4.2.0",

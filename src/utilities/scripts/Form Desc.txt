@@ -2,7 +2,7 @@
 	<h4>My Title</h4>
 	<div class="inputs">
 		<div class="inputWrapper text">
-			<input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+			<input type="text" id="name" name="name" class="style2 labelHandler validate" required>
 			<label for="name">
 				<i class="fas fa-user icon"></i>
 				<p>نام و نام خانوادگی</p>
@@ -99,7 +99,7 @@
 		</div>
 		<div class="inputWrapper select">
 			<input type="hidden" id="cityHidden" name="cityHidden">
-			<input type="text" id="city" name="city" class="style1 validate" required readonly>
+			<input type="text" id="city" name="city" class="style2 validate" required readonly>
 			<label for="city">
 				<i class="fas fa-map-marker-alt icon"></i>
 				<p>شهر محل سکونت</p>
@@ -227,6 +227,69 @@
 			<div class="ranger" data-min="0" data-max="10000" data-step="100"></div>
 			<p class="text"></p>
 		</div>
-		<button type="submit" class="final">ارسال</button>
+		<div class="inputWrapper text code">
+			<input type="text" id="code" name="code" class="style2 labelHandler validate" required>
+			<label for="code">
+				<i class="fas fa-lock icon"></i>
+				<p>کد امنیتی</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>کد وارد شده صحیح نیست</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+			<div class="row">
+				<div id="timer">
+					<p class="sec"></p>
+					<p>:</p>
+					<p class="min"></p>
+				</div>
+				<button type="button" id="resendCode">ارسال مجدد کد</button>
+			</div>
+		</div>
+		<div class="inputWrapper star">
+			<input type="hidden" id="starScore" name="starScore">
+			<div class="stars">
+				<i class="fas fa-star active" data-score="0"></i>
+				<i class="fas fa-star" data-score="1"></i>
+				<i class="fas fa-star" data-score="2"></i>
+				<i class="fas fa-star" data-score="3"></i>
+				<i class="fas fa-star" data-score="4"></i>
+			</div>
+			<button type="button">ثبت</button>
+		</div>
+		<div class="inputWrapper text separate3Num">
+			<input type="text" id="money" name="money" class="style1 labelHandler validate" required>
+			<label for="money">               
+				<i class="fas fa-money-check-alt icon"></i>
+				<p>هزینه محصول</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>هزینه محصول را وارد کنید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+		</div>
+		<div class="inputWrapper text searchList">
+			<input type="hidden" id="searchListHidden" name="searchListHidden">
+			<input type="text" id="searchList" name="searchList" class="style1 labelHandler validate" required>
+			<label for="searchList">
+				<i class="fas fa-search icon"></i>
+				<p>عبارت جست و جو</p>
+			</label>
+			<span class="line"></span>
+			<div class="msg">
+				<p>عبارتی را برای جست و جو وارد نکرده اید</p>
+				<i class="fas fa-caret-up"></i>
+			</div>
+			<ul>
+				<li data-search="aaaa">aaaa</li>
+				<li data-search="bbb">bbb</li>
+				<li data-search="ccccccc">ccccccc</li>
+				<li data-search="abababa">abababa</li>
+				<li data-search="ccbbaa">ccbbaa</li>
+			</ul>
+		</div>
+		<button type="submit" class="final" id="validateCode">ارسال</button>
 	</div>
 </form>

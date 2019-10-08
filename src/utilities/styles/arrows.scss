@@ -1,0 +1,24 @@
+@import './colors.scss' ;
+@import './variables.scss' ;
+@import './mixins.scss' ;
+body{
+    background-color: darken($whiteColor2,3%) ;
+}
+.wrapper{
+    @include containerStyle ;
+    width: 80% ;
+    height: auto;
+    margin: $sectionsDist auto ;
+    padding: 0;
+    .content{
+        width: 101% ;
+        height: auto;
+        padding: $dist1 ;
+        font-size: $fontM ;
+        color: $textDark ;
+    }
+}
+.scrollArrows{
+    @include scrollArrows ;
+
+}

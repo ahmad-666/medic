@@ -1,4 +1,6 @@
+//getStyle------------------------------------------------------------------------
 let getStyle = (elm,prop) => window.getComputedStyle(elm,null).getPropertyValue(prop) ;
+//getChildIndex------------------------------------------------------------------------
 let getChildIndex = (parent,targetChild) => {
     let index = null ;
     let children = parent.children ;
@@ -12,6 +14,7 @@ let getChildIndex = (parent,targetChild) => {
     }
     return index ;
 }
+//getActiveIndex------------------------------------------------------------------------
 let getActiveIndex = parent => {
     let activeIndex = null ;
     let children = parent.children ;
@@ -25,9 +28,11 @@ let getActiveIndex = parent => {
     }
     return activeIndex ;
 }
+//docHandler------------------------------------------------------------------------
 function docHandler(container,others){
     //others are elements like BlackFilter,BarsMenu,... that we want to change
     //their css classes if we click outside of container
+	//we should use  e.stopPropagation() on other eventListener too
     document.container = container ;
     document.others = [] ;
     others.forEach(other => {
@@ -48,12 +53,14 @@ function docClick(e){
         document.removeEventListener('click',docClick);
     }
 }
+//checkEllipse------------------------------------------------------------------------
 function checkEllipse(ellipse,textAlign){
     let parent = ellipse.parentElement ;
     let threshold = parseInt(window.getComputedStyle(parent,null).getPropertyValue('max-height'));
     if(parent.scrollHeight > threshold) ellipse.classList.add('show') ;  
     else parent.style.textAlign = textAlign ;  
 }
+//fixMenu------------------------------------------------------------------------
 function fixMenu(menu,imgChange,img,beforeFixImg,afterFixImg){
     //we should set imgChange to true if we want to change imgAddress when we have fix Menu
     window.addEventListener('scroll',checkFixMenu) ;
@@ -68,6 +75,7 @@ function fixMenu(menu,imgChange,img,beforeFixImg,afterFixImg){
         }
     }
 }
+//AnimateCounter------------------------------------------------------------------------
 function AnimateCounter(elm){
     this.elm = elm ;
     this.min = parseInt(this.elm.getAttribute('data-min')); 
@@ -95,6 +103,86 @@ AnimateCounter.prototype.animate = function(){
         else clearInterval(clear) ;      
     },this.interval) ;
 }
+//Rand------------------------------------------------------------------------
+let getRandInt = (min,max) => Math.floor(Math.random()*(max-min+1)+min) ;
+let getRandFloat = (min,max) => Math.random()*(max-min)+min ;
+//get Number/alphanumeric------------------------------------------------------------------------
+function getNumArray(min,max){//return array of number between [min,max]
+    let res = [] ;
+    for(let i=0 ; i<=max-min ;i++){
+        res.push(min+i) ;
+    }
+    return res ;
+}
+function getAlphaNumArray(){
+    let num = '0123456789' ;
+    let alphaLow = 'abcdefghijklmnopqrstuvwxyz' ;
+    let alphaUp = alphaLow.toUpperCase() ;
+    let special = `!@#$%^&*?`
+    let allStr = num+alphaLow+alphaUp+special ;
+    return allStr.split('') ;
+}
+//shuffleArray------------------------------------------------------------------------
+function shuffleArray(arr){//randomize arr
+    let res = [] ;
+    for(let i=0 ; i<arr.length ; i++){
+        let random = arr[getRandInt(0,arr.length-1)] ;
+        let unique = res.every(elm=>elm!=random) ;
+        if(unique) res.push(random) ;
+        else i-- ;    
+    }
+    return res ;
+}
+//Timer------------------------------------------------------------------------
+function Timer(min,sec,timerElm){
+    this.initMin = min ;
+    this.initSec = sec ;
+    this.min = min ;
+    this.sec = sec ;
+    this.timerElm = timerElm ;
+    if(this.timerElm) {
+        this.minElm = this.timerElm.querySelector('.min') ;
+        this.secElm = this.timerElm.querySelector('.sec') ;
+        this.validateTime() ;
+    }
+    this.clearTimer = setInterval(this.start.bind(this),1000) ;
+}
+Timer.prototype.start = function(){
+    this.min = parseInt(this.min) ;
+    this.sec = parseInt(this.sec) ;
+    if(this.sec-1>=0) this.sec-- ;   
+    else{
+        this.sec = 59 ;
+        if(this.min-1>=0) this.min-- ;      
+        else{
+            this.sec = '00' ;
+            this.min = '00' ;
+            //timer ends here and we can call cb function 
+            //to alert ending of timer
+            clearInterval(this.clearTimer) ;
+            return ;
+        }
+    }
+    this.validateTime() ;
+    //for add '0' if min/sec gets bellow 10
+    //for set timerElm
+}
+Timer.prototype.validateTime = function(){
+    if(this.min<10) this.min = `0${this.min}` ;
+    if(this.sec<10) this.sec = `0${this.sec}` ;
+    if(this.timerElm){
+        this.minElm.textContent = this.min ;
+        this.secElm.textContent = this.sec ;
+    }
+}
+Timer.prototype.resetTimer = function(){
+    this.min = this.initMin ;
+    this.sec = this.initSec ;
+    this.validateTime() ;
+    clearInterval(this.clearTimer) ;
+    this.clearTimer = setInterval(this.start.bind(this),1000) ;
+}
+//exports------------------------------------------------------------------------
 export default{
     getStyle,
     getChildIndex,
@@ -103,4 +191,10 @@ export default{
     checkEllipse,
     fixMenu,
     AnimateCounter,
+	getRandInt,
+	getRandFloat,
+	getNumArray,
+	getAlphaNumArray,
+    shuffleArray,
+    Timer,
 }

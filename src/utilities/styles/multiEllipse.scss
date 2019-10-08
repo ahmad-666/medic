@@ -1,0 +1,23 @@
+@import './colors.scss' ;
+@import './variables.scss' ;
+@import './mixins.scss' ;
+body{
+    background-color: darken($whiteColor2,3%) ;
+}
+.wrapper{
+    @include containerStyle ;
+    width: 300px ;
+    height: auto;
+    padding: $dist1 ;
+    margin: $sectionsDist auto ;
+    display: flex ;
+    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    p{
+        border: 1px solid blue ;
+        width: 200px ;
+        font-size: $font-m ;
+        color: $darkColor ;
+        @include multiEllipse(3,2em,$darkColor) ;
+    }
+
+}

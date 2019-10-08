@@ -1,0 +1,51 @@
+@import './colors.scss';
+@import './variables.scss';
+@import './mixins.scss';
+*{
+    direction: rtl ;
+    box-sizing: border-box;
+    padding-right: 0 ;
+    margin: 0 ;
+}
+body {
+    background-color: darken($whiteColor2, 3%);
+}
+.wrapper{
+    @include containerStyle ;
+    width: 80% ;
+    height: auto;
+    margin: $dist2 auto ;
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    .select2{
+        width: 15em ;
+        font-size: $fontM ;
+        margin-top: $dist2 ;
+        // padding-right: $dist1 ;    
+        option{
+            color: darken($textGrey,10%) ;
+            font-size: $fontM ;
+        }
+    }
+}
+.select2-container--default .select2-selection--single{
+    border-radius: $dist3 ;
+    border: 1.2px solid lighten($textGrey,25%) ;
+    height: 2.5em;
+    outline: none  ;
+    .select2-selection__rendered{
+        line-height: 2.5em ;
+    }
+    .select2-selection__arrow{
+        @include center-y ;
+
+    }
+}
+.select2-results__option{
+    font-size: $fontM ;
+    color: $textDark ;
+}
+.select2-results__option.alert{
+    font-size: $fontM ;
+    color: $textDark ;
+}

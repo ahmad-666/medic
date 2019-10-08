@@ -1,0 +1,29 @@
+<div class="slider_wrapper scrollArrows">
+	<div class="arrows">
+		<i class="fas fa-angle-left"></i>
+		<i class="fas fa-angle-left"></i>
+		<i class="fas fa-angle-left"></i>
+	</div>
+	<h4>عنوان</h4>
+	<button class="btn prev">
+		<i class="fas fa-angle-right"></i>
+	</button>
+	<button class="btn next">
+		<i class="fas fa-angle-left"></i>
+	</button>
+	<a href="#!" class="show_more">
+		نمایش همه
+		<i class="fas fa-angle-double-left"></i>
+	</a>
+	<div class="helper">
+		<div class="slides" style="right:0px">
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+		  
+		</div>
+	</div>
+	
+</div>

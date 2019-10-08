@@ -1,0 +1,58 @@
+@import './colors.scss' ;
+@import './variables.scss' ;
+@import './mixins.scss' ;
+body{
+    background-color: darken($whiteColor2,3%) ;
+}
+.wrapper{
+    @include containerStyle ;
+    padding: $dist3 ;
+    margin: $dist3 auto ;
+    display: flex ;
+    @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+    p{
+        width: calc((100% - (6 * 3em)) / 6) ;
+        height: 3em ;
+        margin: $dist2 ;
+        text-align: center;
+        line-height: 3em ;
+        border: 1px solid lighten($textGrey,10%) ;
+        font-size: $fontL;
+        color: $textGrey ;
+    }
+    .withTooltip{   
+        position: relative ;    
+        cursor: pointer;
+        &:hover{
+            .tooltip{
+                visibility: visible ;
+                opacity: 1;
+                z-index: 5;
+            }
+        }
+        .tooltip{
+            display: inline-block ;
+            width: auto ;
+            height: auto;
+            text-align: center ;
+            line-height: 0 ;
+            white-space: nowrap ;
+            padding: $dist1 $dist2 - .4em ;
+            font-size: $fontM / 2 ;
+            color: $textWhite ;
+            background-color: darken($darkBlue,0%) ;
+            border-radius: $dist1 ;
+            position: absolute ;
+            top: 105% ;
+            right: -10% ;     
+            opacity: 0;
+            visibility: hidden ;
+            transition: all .3s linear ;
+        }
+        .tooltip.show{
+            opacity: 1;
+            visibility: visible ;
+            z-index: 5;
+        }
+    }
+}

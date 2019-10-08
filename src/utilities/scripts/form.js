@@ -2,6 +2,7 @@
 //form validation------------------------------
 //form validation------------------------------
 function FormValidate(form,submit,inputs,send){
+	//even if we dont want to send form we should always set 'submit' because we need to click on something to start validation
     this.form = form ;
     this.inputs = inputs ;
     this.submit = submit ;
@@ -53,7 +54,7 @@ FormValidate.prototype.validateInput = function(input){
             }
         }
         else if(input.getAttribute('id')=='mobile'){
-            if(input.value.length == 11 && input.value.startsWith('09')){
+            if(input.value.length == 11){
                 this.isValid(input) ;
                 input.removeEventListener('input',this) ;     
                 return true ;
@@ -92,7 +93,7 @@ FormValidate.prototype.handleEvent = function(e){
             else this.isNotValid(input) ;        
         }
         else if(input.getAttribute('id')=='mobile'){
-            if(input.value.length == 11 && input.value.startsWith('09')) this.isValid(input) ;     
+            if(input.value.length == 11) this.isValid(input) ;     
             else this.isNotValid(input) ;        
         }
         else{
@@ -260,7 +261,7 @@ function NumberInput(input){
     this.input.addEventListener('keypress',this.justNumber.bind(this)) ;
 }
 NumberInput.prototype.justNumber = function(e){
-    if(e.key =='e' || e.key=='E') e.preventDefault(); 
+    if(!e.key.match(/\d/)) e.preventDefault() ;
 }
 //input with increase/decrease---------------------
 //input with increase/decrease---------------------
@@ -398,11 +399,325 @@ Ranger.prototype.createRanger = function(){
         this.maxHidden.value = this.ranger.noUiSlider.get()[1];   
         this.text.textContent = `${this.minHidden.value}تومان - ${this.maxHidden.value}تومان` ;
     })
-};
-//exports-----------------------------------------------------
-//exports-----------------------------------------------------
-//exports-----------------------------------------------------
-export default {
+}
+//Timer ------------------------------------
+//Timer ------------------------------------
+//Timer ------------------------------------
+function Timer(min,sec,timerElm){
+    this.initMin = min ;
+    this.initSec = sec ;
+    this.min = min ;
+    this.sec = sec ;
+    this.timerElm = timerElm ;
+    if(this.timerElm) {
+        this.minElm = this.timerElm.querySelector('.min') ;
+        this.secElm = this.timerElm.querySelector('.sec') ;
+        this.validateTime() ;
+    }
+    this.clearTimer = setInterval(this.start.bind(this),1000) ;
+}
+Timer.prototype.start = function(){
+    this.min = parseInt(this.min) ;
+    this.sec = parseInt(this.sec) ;
+    if(this.sec-1>=0) this.sec-- ;   
+    else{
+        this.sec = 59 ;
+        if(this.min-1>=0) this.min-- ;      
+        else{
+            this.sec = '00' ;
+            this.min = '00' ;
+            //timer ends here and we can call cb function 
+            //to alert ending of timer
+            clearInterval(this.clearTimer) ;
+            return ;
+        }
+    }
+    this.validateTime() ;
+    //for add '0' if min/sec gets bellow 10
+    //for set timerElm
+}
+Timer.prototype.validateTime = function(){
+    if(this.min<10) this.min = `0${this.min}` ;
+    if(this.sec<10) this.sec = `0${this.sec}` ;
+    if(this.timerElm){
+        this.minElm.textContent = this.min ;
+        this.secElm.textContent = this.sec ;
+    }
+}
+Timer.prototype.resetTimer = function(){
+    this.min = this.initMin ;
+    this.sec = this.initSec ;
+    this.validateTime() ;
+    clearInterval(this.clearTimer) ;
+    this.clearTimer = setInterval(this.start.bind(this),1000) ;
+}
+//GenerateCode(timer,resend,validate) --------------------------
+//GenerateCode(timer,resend,validate) --------------------------
+//GenerateCode(timer,resend,validate) --------------------------
+let getRandInt = (min,max) => Math.floor(Math.random()*(max-min+1)+min) ;
+function getAlphaNumArray(){
+    let num = '0123456789' ;
+    let alphaLow = 'abcdefghijklmnopqrstuvwxyz' ;
+    let alphaUp = alphaLow.toUpperCase() ;
+    let special = `!@#$%^&*?`
+    let allStr = num+alphaLow+alphaUp+special ;
+    return allStr.split('') ;
+}
+function RandomCode(wrapper,digit,min,sec,timerElm){
+    this.wrapper = wrapper ;
+    this.digit = digit ;
+    this.min = min ;
+    this.sec = sec ;
+    this.timerElm = timerElm ;
+    this.input = this.wrapper.querySelector('input#code') ;
+    this.timer = new Timer(this.min,this.sec,this.timerElm) ;
+    this.resend = this.wrapper.querySelector('#resendCode') ;
+    this.submit = this.wrapper.parentElement.querySelector('#validateCode') ;
+    this.code = '' ;
+    this.valid = false ;
+    this.alphaNumArr = getAlphaNumArray() ;
+    this.msg = this.wrapper.querySelector('.msg') ;
+    this.generateCode() ;
+    this.submit.addEventListener('click',this.validateCode.bind(this)) ;
+    this.resend.addEventListener('click',this.resendCode.bind(this)) ;
+}
+RandomCode.prototype.generateCode = function(){
+    this.code = '' ;
+    for(let i=0 ; i<this.digit ; i++){
+        this.code+= this.alphaNumArr[getRandInt(0,this.alphaNumArr.length-1)];
+    }
+    console.log(this.code) ;
+}
+RandomCode.prototype.validateCode = function(e){
+    if(this.code == this.input.value && (this.timer.min!='00'||this.timer.sec!='00')) {
+        console.log('validate') ;
+        this.msg.classList.remove('show') ;
+        this.valid = true ;
+        return true ;
+    }
+    else {
+        console.log('not valid') ;
+        this.msg.classList.add('show') ;
+        this.valid = false ;
+    }
+}
+RandomCode.prototype.resendCode = function(e){    
+    this.timer.resetTimer() ;
+    this.generateCode() ;
+}
+//StarScore ----------------------------------------
+//StarScore ----------------------------------------
+//StarScore ----------------------------------------
+function StarScore(wrapper){
+    this.wrapper = wrapper ;
+    this.starsWrapper = this.wrapper.querySelector('.stars') ;
+    this.stars = this.starsWrapper.querySelectorAll('i') ;
+    this.hiddenInput = this.wrapper.querySelector('input[type="hidden"]') ;
+    this.submit = this.wrapper.querySelector('button') ;
+    this.score = '' ;
+    this.starsWrapper.addEventListener('mouseout',this) ;
+    this.stars.forEach(star => star.addEventListener('mouseenter',this));
+    this.stars.forEach(star=>star.addEventListener('click',this.setHiddenInput.bind(this)));
+    //this.submit.addEventListener('click',this.sendScore.bind(this)) ;
+}
+StarScore.prototype.handleEvent = function(e){
+    if(e.type == 'mouseenter'){//for each star
+        this.score = e.currentTarget.getAttribute('data-score') ;
+        this.stars.forEach((star,i)=>{
+            if(i>this.score) star.classList.remove('active') ;
+            else star.classList.add('active') ;
+        })
+    }
+    else if(e.type == 'mouseout'){//for starsWrapper
+        this.score = '' ;
+        this.stars.forEach(star => {
+            star.classList.remove('active') ;
+        })
+        this.hiddenInput.value = this.score ;
+    }  
+}
+StarScore.prototype.setHiddenInput = function(e){
+    this.starsWrapper.removeEventListener('mouseout',this) ;
+    this.stars.forEach(star => star.removeEventListener('mouseenter',this));
+    this.score = e.currentTarget.getAttribute('data-score') ;
+    this.stars.forEach((star,i) => {
+        if(i<=this.score) star.classList.add('active') ;
+        else star.classList.remove('active') ;
+    })
+    this.hiddenInput.value = parseInt(this.score) + 1;
+}
+//Seperate each 3number ----------------------------
+//Seperate each 3number ----------------------------
+//Seperate each 3number ----------------------------
+function Separate3Num(wrapper,separator){
+    this.wrapper = wrapper ;
+    this.separator = separator ;
+    if(this.wrapper.classList.contains('inputWrapper')){//we are goint to add input event on input
+        this.input = this.wrapper.querySelector('input') ;
+        this.input.addEventListener('keypress',this.justNum.bind(this)) ;
+        this.input.addEventListener('input',this.checkSeparator.bind(this)) ;
+    }
+    else{//we are goint to format textContent of <p> or <span> , ...
+        this.wrapper.textContent = this.format(this.wrapper.textContent) ;
+    }
+}
+Separate3Num.prototype.justNum = function(e){
+    if(!e.key.match(/\d/)) e.preventDefault() ;
+}
+Separate3Num.prototype.checkSeparator = function(e){
+    let tempVal = this.input.value.replace(/,/g,'') ;
+    this.input.value = this.format(tempVal) ;
+}
+Separate3Num.prototype.format = function(num){
+    //input is integer or float number and output is string(input number with separator)
+    let str = num.toString() ;
+    let res = null ;
+    let addSeparate = (input)=>{
+        let arr = input.split('') ;//covert number to array
+        if(arr.length<=3) return input ;    
+        else{
+            let howMany = (arr.length%3==0)?(Math.floor(arr.length/3-1)):Math.floor((arr.length/3)); //how many ',' needed 
+            let offset = 0 ;
+            for(let i=0;i<howMany;i++){
+                arr.splice(i*3+3+offset,0,this.separator) ;
+                offset++ ;
+            }
+            return arr.join('') ;
+        }      
+    }
+    if(!str.includes('.')) res = addSeparate(str) ; //for integer numbers
+    else{//for float numbers
+        let dotPos = str.indexOf('.') ; 
+        let integerPart = str.slice(0,dotPos);
+        let floatPart = str.slice(dotPos+1,str.length);
+        integerPart = addSeparate(integerPart) ;
+        res = `${integerPart}.${floatPart}` ;
+    }
+    return res ;
+}
+//searchList ---------------------------------------------
+//searchList ---------------------------------------------
+//searchList ---------------------------------------------
+function SearchList(wrapper){
+    this.wrapper = wrapper ;
+    this.input = this.wrapper.querySelector('input[type="text"]') ;
+    this.hiddenInput = this.wrapper.querySelector('input[type="hidden"]') ;
+    this.ul = this.wrapper.querySelector('ul') ;
+    this.initLis = this.ul.querySelectorAll('li') ;
+    this.currLis = [] ;
+    this.ul.innerHTML = '' ;
+    this.label = this.wrapper.querySelector('label') ;
+    this.input.addEventListener('input',this.search.bind(this)) ;
+    document.addEventListener('click',this.closeSearch.bind(this)) ;
+}
+SearchList.prototype.closeSearch = function(e){
+    e.stopPropagation() ;
+    let clickedElm = e.target ;
+    if(!this.ul.contains(clickedElm)) this.ul.classList.remove('show') ;
+}
+SearchList.prototype.search = function(e){
+    this.ul.innerHTML = '' ;
+    this.currLis = [] ;
+    this.currLis.forEach(li => {
+        li.removeEventListener('click',this) ;
+    })
+    let val = e.currentTarget.value ;
+    this.initLis.forEach(li => {
+        if(li.textContent.startsWith(val)) this.currLis.push(li) ;
+    })
+    if(this.currLis.length>0){
+        this.currLis.forEach(li => {
+            this.ul.appendChild(li) ;
+            li.addEventListener('click',this) ;
+        })
+    }
+    else{
+        let li = document.createElement('li') ;
+        li.setAttribute('data-search','none') ;
+        li.textContent = 'هیچ موردی یافت نشد' ;
+        this.ul.appendChild(li) ;
+    }
+    this.ul.classList.add('show') ;
+}
+SearchList.prototype.handleEvent = function(e){
+    e.stopPropagation() ;
+    let li = e.currentTarget ;
+    if(li.nodeName.toLowerCase() == 'li'){//we click on lis
+        this.input.value = li.textContent ;
+        this.hiddenInput.value = li.getAttribute('data-search') ;
+        this.ul.classList.remove('show') ;
+        this.label.classList.add('top') ;
+    }
+}
+//form validation--------------------------------
+//form validation--------------------------------
+//form validation--------------------------------
+// let form = document.querySelector('form.validate') ;
+// let formSubmit = form.querySelector('button.final') ;
+// let inputs = form.querySelectorAll('.validate') ;
+// new FormValidate(form,formSubmit,inputs,true) ;
+// //Select--------------------------------
+// let selects = document.querySelectorAll('.inputWrapper.select') ;
+// selects = [...selects] ;
+// selects.forEach(select => {
+//     let otherSelects = selects.filter(other => {
+//         return (select!=other)
+//     }) 
+//     new Select(select,otherSelects) ;
+// })
+// //selectSearchs--------------------------------
+// let selectSearchs = document.querySelectorAll('.inputWrapper.selectSearch') ;
+// selectSearchs = [...selectSearchs] ;
+// selectSearchs.forEach(selectSearch => {
+//     let otherSelectSearchs = selectSearchs.filter(other => {
+//         return (selectSearch!=other)
+//     }) 
+//     new SelectSearch(selectSearch,otherSelectSearchs) ;
+// })
+// //LabelHandler--------------------------------
+// document.querySelectorAll('.labelHandler').forEach(labelHandler => {
+//     new LabelHandler(labelHandler) ;
+// })
+// //NumberInput--------------------------------
+// document.querySelectorAll('input[type="number"]').forEach(number => {
+//     new NumberInput(number) ;
+// })
+// //NumberHandler--------------------------------
+// document.querySelectorAll('.inputWrapper.numberHandler').forEach(numberHandler => {
+//     new NumberHandler(numberHandler) ;
+// })
+// //AutoExpand--------------------------------
+// document.querySelectorAll('textarea.autoExpand').forEach(autoExpand => {
+//     new AutoExpand(autoExpand) ;
+// })
+// //Toggle--------------------------------
+// document.querySelectorAll('.inputWrapper.toggle').forEach(toggle => {
+//     new Toggle(toggle) ;
+// })
+// //Ranger--------------------------------
+// document.querySelectorAll('.inputWrapper.range').forEach(ranger => {
+//     new Ranger(ranger) ;
+// });
+// //Timer--------------------------------
+// //RandomCode--------------------------------
+// let codeWrapper = form.querySelector('.inputWrapper.text.code');
+// new RandomCode(codeWrapper,6,0,5,codeWrapper.querySelector('#timer')) ;
+// //StarScore--------------------------------
+// document.querySelectorAll('.inputWrapper.star').forEach(star => {
+//     new StarScore(star) ;
+// })
+// //Separate3Num--------------------------------
+// document.querySelectorAll('.separate3Num').forEach(separate3Num=>{
+//     new Separate3Num(separate3Num,',') ;
+// })
+// //SearchList--------------------------------
+// document.querySelectorAll('.inputWrapper.searchList').forEach(searchList => {
+//     new SearchList(searchList) ;
+// })
+//exports--------------------------------
+//exports--------------------------------
+//exports--------------------------------
+export default{
 	FormValidate,
 	Select,
 	SelectSearch,
@@ -411,5 +726,12 @@ export default {
 	NumberHandler,
 	AutoExpand,
 	Toggle,
-	Ranger
+	Ranger,
+	Timer,
+	getRandInt,
+	getAlphaNumArray,
+	RandomCode,
+	StarScore,
+	Separate3Num,
+	SearchList
 }

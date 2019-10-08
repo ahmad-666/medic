@@ -1,4 +1,3 @@
-import util from '../utilities.js' ;
 function topSlider(wrapper){
     this.wrapper = wrapper ;
     this.slides = this.wrapper.querySelectorAll('.slide') ;
@@ -29,10 +28,11 @@ topSlider.prototype.changeSlide = function(e){
     this.slides[this.currIndex].classList.remove('active') ;
     if(e.target == this.nextBth) this.currIndex = this.currIndex+1<=this.slidesNum-1 ? this.currIndex+1 : 0 ;
     else if(e.target == this.prevBtn) this.currIndex = this.currIndex-1>=0 ? this.currIndex-1 : this.slidesNum-1 ;
-    else this.currIndex = util.getChildIndex(this.dotContainer,e.target) ; //e.target is dot
+    else this.currIndex = getChildIndex(this.dotContainer,e.target) ; //e.target is dot
     this.dots[this.currIndex].classList.add('active') ;
     this.slides[this.currIndex].classList.add('active') ;
 }
+//new topSlider(document.querySelector('.topSlider')) ;
 export default{
-	topSlider,
+	topSlider
 }
