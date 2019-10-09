@@ -4,4 +4,50 @@
 .sliderWrapperMove{
     width: 100% ;
     height: 100%;
+    position: relative ;
+    overflow: hidden;
+    display: flex ;
+    @include flex(row,space-between,center,nowrap,"") ;
+    .btn{
+        flex-shrink: 0;
+        width: 2.5em;
+        height: 4em;
+        position: relative ;
+        cursor: pointer;
+        background-color: darken($textWhite,10%) ;
+        transition: all .2s linear ;
+        z-index: 2;
+        i{
+            @include center-xy ;
+            font-size: $fontL ;
+            color: $textDark ;
+            transition: all .2s linear ;
+        }
+        &:hover{
+            background-color: $primaryColor ;
+            i{
+                color: $textWhite ;
+            }
+        }
+    }
+    .btn.prev{margin-right: $dist1;}    
+    .btn.next{margin-left: $dist1;}    
+    .slider{
+        @include fullSize-abs ;
+        transition: all .3s linear ;
+        display: flex ;
+        @include flex(row,flex-start,flex-start,nowrap,"") ;
+        .slide{
+            flex-shrink: 0 ;
+            width: 100% ;
+            height: 100%;
+            a,img{
+                width: 100% ;
+                height: 100%;
+            }
+            img{
+
+            }
+        }
+    }
 }

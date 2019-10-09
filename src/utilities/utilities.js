@@ -54,11 +54,21 @@ function docClick(e){
     }
 }
 //checkEllipse------------------------------------------------------------------------
-function checkEllipse(ellipse,textAlign){
-    let parent = ellipse.parentElement ;
-    let threshold = parseInt(window.getComputedStyle(parent,null).getPropertyValue('max-height'));
-    if(parent.scrollHeight > threshold) ellipse.classList.add('show') ;  
-    else parent.style.textAlign = textAlign ;  
+function Ellipse(ellipse){
+    this.ellipse = ellipse ;
+    this.parent = this.ellipse.parentElement ;
+    this.textAlign = this.ellipse.getAttribute('data-align') ;
+    this.checkThreshold() ;
+}
+Ellipse.prototype.checkThreshold = function(){
+    let threshold = parseFloat(window.getComputedStyle(this.parent,null).getPropertyValue('max-height')) ;
+    if(this.parent.scrollHeight > threshold) {
+        this.ellipse.style.display = 'block' ;
+        this.parent.style.textAlign = 'justify' ;
+    }
+    else{
+        this.parent.style.textAlign = this.textAlign ;
+    }
 }
 //fixMenu------------------------------------------------------------------------
 function fixMenu(menu,imgChange,img,beforeFixImg,afterFixImg){
@@ -188,7 +198,7 @@ export default{
     getChildIndex,
     getActiveIndex,
     docHandler,
-    checkEllipse,
+    Ellipse,
     fixMenu,
     AnimateCounter,
 	getRandInt,

@@ -4,7 +4,7 @@
 @import '../../utilities/styles/sliderMove.scss';
 #grid{
     @include containerStyle ;
-    padding-top: 2em ;
+    padding: 2em ;
     display: flex ;
     @include flex(column,flex-start,center,nowrap,"") ;
     .row{
@@ -16,16 +16,28 @@
         .article{
             display: flex ;
             @include flex(column,flex-start,flex-start,nowrap,"") ;
-            img{
-                width: 100% ;
+            &:hover{
+                .img{
+                    img{
+                        transform: scale(1.2) ;
+                    }
+                }
             }
+            .img{
+                width: 100% ;
+                overflow: hidden;
+                border-radius: $dist2 ;
+                img{
+                    width: 100% ;
+                    object-fit: cover ;
+                    transition: all .2s linear ;
+                }
+            } 
             h4{
                 width: 100% ;
                 font-size: $fontM ;
                 color: $textDark ;
                 font-weight: 700 ;
-                margin-top: $dist1 ;
-                @include multiEllipse(2,$dist2 + 1em,$textDark) ;              
             }
             .date{
                 font-size: $fontS ;
@@ -33,28 +45,34 @@
             }
         }
         > .article{
-            width: calc((100% / 3) - 2 * 2em) ;
+            width: calc((100% / 3)) ;
             height: auto;
             margin-right: 2em ;
             &:first-child{margin-right: 0;}
             img{
-                height: 8em;
+                height: 15em;
+            }
+            h4{
+                @include multiEllipse(2,$dist2 + .2em,$textDark) ;              
             }
         }
         .col{
             width: 50% ;
-            height: 20em;
+            height: 41em;
             display: flex ;
             @include flex(column,flex-start,flex-start,nowrap,"") ;
             &:nth-child(2){
                 margin-right: 2em ;
                 .article{
                     width: 100% ;
-                    height: calc((100% - 2) - 1 * 2em);
+                    height: calc(100% - 2);
                     margin-top: 2em ;
                     &:first-child{margin-top: 0;}
                     img{
-                        height: 6em;
+                        height: 15em;
+                    }
+                    h4{
+                        @include ellipse ;
                     }
                 }
             }
