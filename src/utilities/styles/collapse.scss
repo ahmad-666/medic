@@ -1,29 +1,30 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-.questions{
+#faq{
     @include containerStyle ;
-    margin: $dist3 auto ;
-    padding: $dist2 $dist1 ;
+    margin: $dist3 auto 0 auto;
+    padding: $dist2 ;
     display: flex ;
-    @include flex(column,flex-start,flex-start,nowrap,"") ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    img{
+        width: 12em ;
+        height: 12em;
+    }
     h4{
-        width: 100% ;
-        height: auto;
-        text-align: center ;
         font-size: $fontL ;
         font-weight: 700 ;
-        color: $textDark ;
+        color: $primaryColor ;
     }
     .question{
         width: 100% ;
         height: auto;
         display: flex ;
         @include flex(column,flex-start,flex-start,nowrap,"") ;
-        border-bottom: 1px solid lighten($textGrey,10%) ;
+        border-bottom: 1px solid lighten($textGrey,20%) ;
         &:last-child{border-bottom: none ;}
         padding-bottom: $dist2 ;
-        margin-top: $dist2 ;
+        margin-top: $dist3 ;
         .content{
             width: 100% ;
             height: auto;
@@ -39,7 +40,7 @@
             i{
                 flex-shrink: 0 ;
                 font-size: $fontL ;
-                color: $textDark ;
+                color: $primaryColor ;
                 cursor: pointer;
                 margin-right: $dist2 ;
                 padding-right: $dist2 ;
@@ -56,6 +57,7 @@
         }
     }
 }
+.collapseTrigger{cursor: pointer;}
 .collapse{
     height: auto;
 }

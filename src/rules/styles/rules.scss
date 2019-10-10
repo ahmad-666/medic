@@ -1,0 +1,25 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+main{
+    #rules{
+        flex-shrink: 0 ;
+        @include containerStyle ;
+        width: 80em ;
+        height: auto;
+        padding: $dist2 ;
+        margin: 0 ;
+        display: flex ;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        h4{
+            font-size: $fontL ;
+            font-weight: 700 ;
+            color: $primaryColor ;
+        }
+        p{
+            margin-top: $dist1 ;
+            font-size: $fontM ;
+            color: darken($textGrey,20%) ;
+        }
+    }
+}
