@@ -1321,14 +1321,15 @@ form#newsLetters {
     }
     .inputWrapper.withSubmit {
         width: 35em;
-        height: 4em;
+        height: 5em;
         position: relative;
         margin-top: $dist1;
         input {
+            border: none ;
             box-shadow: 0 .5em 2em .1em lighten($shadowColor,35%) ;
             width: 100%;
             height: 100%;
-            line-height: 4em;
+            line-height: 5em;
             padding: 0 $dist1;
             color: $darkColor;
             font-size: $fontM;
@@ -1345,7 +1346,7 @@ form#newsLetters {
         button[type="submit"] {
             width: auto;
             height: calc(100% + .1em);
-            line-height: 2.5em;
+            line-height: 3.5em;
             background-color: $primaryColor;
             border-radius: $dist3;
             padding: 0 $dist1 + .5em;
@@ -1704,7 +1705,6 @@ form#contact {
             background-color: white;
             border: 1.2px solid $primaryColor;
         }
-        @include pulse ;
     }
 }
 form#login{
@@ -1982,7 +1982,6 @@ form#login{
         cursor: pointer;
         border: 1.2px solid transparent;
         transition: all .3s linear;
-        @include pulse ;
         &:hover {
             color: $primaryColor;
             background-color: white;
@@ -2190,7 +2189,6 @@ form#forgetPassword{
         cursor: pointer;
         border: 1.2px solid transparent;
         transition: all .3s linear;
-        @include pulse ;
         &:hover {
             color: $primaryColor;
             background-color: white;
@@ -2477,7 +2475,6 @@ form#signup {
         cursor: pointer;
         border: 1.2px solid transparent;
         transition: all .3s linear;
-        @include pulse ;
         &:hover {
             color: $primaryColor;
             background-color: white;
@@ -2607,6 +2604,72 @@ form#signup {
             }
         }
     }
+    form#login {
+        font-size: 8px ;
+        .inputWrapper.text {
+            input.style1 {
+                &:focus {
+                    ~label {font-size: 6px;}                  
+                }
+            }
+            input.style2 {
+                &:focus {
+                    ~label {font-size: 6px;}
+                }
+            }  
+            input.style1 {
+                ~label.top {font-size: 6px;}
+            }
+    
+            input.style2 {
+                ~label.top {font-size: 6px;}
+            }
+        }
+    }
+    form#forgetPassword {
+        font-size: 8px ;
+        .inputWrapper.text {
+            input.style1 {
+                &:focus {
+                    ~label {font-size: 6px;}                  
+                }
+            }
+            input.style2 {
+                &:focus {
+                    ~label {font-size: 6px;}
+                }
+            }  
+            input.style1 {
+                ~label.top {font-size: 6px;}
+            }
+    
+            input.style2 {
+                ~label.top {font-size: 6px;}
+            }
+        }
+    }
+    form#signup {
+        font-size: 8px ;
+        .inputWrapper.text {
+            input.style1 {
+                &:focus {
+                    ~label {font-size: 6px;}                  
+                }
+            }
+            input.style2 {
+                &:focus {
+                    ~label {font-size: 6px;}
+                }
+            }  
+            input.style1 {
+                ~label.top {font-size: 6px;}
+            }
+    
+            input.style2 {
+                ~label.top {font-size: 6px;}
+            }
+        }
+    }
 }
 @include mediaQ-w(600px){
     form#sample {
@@ -2721,6 +2784,72 @@ form#signup {
                 ~label.top {font-size: 4px;}
             }
             textarea.style2 {
+                ~label.top {font-size: 4px;}
+            }
+        }
+    }
+    form#login {
+        font-size: 6px ;
+        .inputWrapper.text {
+            input.style1 {
+                &:focus {
+                    ~label {font-size: 4px;}                  
+                }
+            }
+            input.style2 {
+                &:focus {
+                    ~label {font-size: 4px;}
+                }
+            }  
+            input.style1 {
+                ~label.top {font-size: 4px;}
+            }
+    
+            input.style2 {
+                ~label.top {font-size: 4px;}
+            }
+        }
+    }
+    form#forgetPassword {
+        font-size: 6px ;
+        .inputWrapper.text {
+            input.style1 {
+                &:focus {
+                    ~label {font-size: 4px;}                  
+                }
+            }
+            input.style2 {
+                &:focus {
+                    ~label {font-size: 4px;}
+                }
+            }  
+            input.style1 {
+                ~label.top {font-size: 4px;}
+            }
+    
+            input.style2 {
+                ~label.top {font-size: 4px;}
+            }
+        }
+    }
+    form#signup {
+        font-size: 6px ;
+        .inputWrapper.text {
+            input.style1 {
+                &:focus {
+                    ~label {font-size: 4px;}                  
+                }
+            }
+            input.style2 {
+                &:focus {
+                    ~label {font-size: 4px;}
+                }
+            }  
+            input.style1 {
+                ~label.top {font-size: 4px;}
+            }
+    
+            input.style2 {
                 ~label.top {font-size: 4px;}
             }
         }
