@@ -54,7 +54,7 @@ FormValidate.prototype.validateInput = function(input){
             }
         }
         else if(input.getAttribute('id')=='mobile'){
-            if(input.value.length == 11){
+            if(input.value.length == 11 && input.value.startsWith('09')){
                 this.isValid(input) ;
                 input.removeEventListener('input',this) ;     
                 return true ;
@@ -93,7 +93,7 @@ FormValidate.prototype.handleEvent = function(e){
             else this.isNotValid(input) ;        
         }
         else if(input.getAttribute('id')=='mobile'){
-            if(input.value.length == 11) this.isValid(input) ;     
+            if(input.value.length == 11  && input.value.startsWith('09')) this.isValid(input) ;     
             else this.isNotValid(input) ;        
         }
         else{

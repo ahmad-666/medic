@@ -115,6 +115,7 @@
 @mixin shadowBlurS{box-shadow: 0 0 2em .05em rgba(175,175,175,.5);}
 @mixin shadowBlurL{box-shadow: 0 0 2.5em .2em rgba(135,135,135,.5);}
 @mixin shadowBellow{box-shadow: 0 .3em 1em -.2em $shadowColor ;}
+@mixin shadowPrimary{box-shadow: 0 .6em 1.7em -.5em $primaryColor ;}
 @mixin scrollArrows{
     position: relative;
     .arrows{
