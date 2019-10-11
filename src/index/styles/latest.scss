@@ -31,7 +31,6 @@
         @include flex(column,flex-start,center,nowrap,"") ;
         margin-top: $dist2 ;
         .article{
-            @include containerStyle ;
             width: 100% ;
             margin: 0 ;
             margin-top: $dist2 ;
@@ -136,7 +135,6 @@
             width: auto ;
             height: auto;
             border-radius: $dist2 ;
-            @include shadowBlurS ;
             display: flex ;
             @include flex(row,flex-start,flex-start,nowrap,"") ;
             margin-top: $dist2 ;

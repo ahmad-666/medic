@@ -1,7 +1,7 @@
 //load styles
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css' ;
+import '../framework.scss' ;
 import '../init.scss' ;
-import '../effects.scss' ;
 import '../index/styles/header.scss' ;
 import '../contact/styles/contact.scss' ;
 import '../index/styles/footer.scss' ;

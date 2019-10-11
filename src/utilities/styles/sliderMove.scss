@@ -18,7 +18,6 @@
         transition: all .2s linear ;
         z-index: 2;
         i{
-            @include center-xy ;
             font-size: $fontL ;
             color: $textDark ;
             transition: all .2s linear ;
@@ -33,7 +32,6 @@
     .btn.prev{margin-right: $dist1;}    
     .btn.next{margin-left: $dist1;}    
     .slider{
-        @include fullSize-abs ;
         transition: all .3s linear ;
         display: flex ;
         @include flex(row,flex-start,flex-start,nowrap,"") ;

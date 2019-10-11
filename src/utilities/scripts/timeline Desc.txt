@@ -1,34 +1,34 @@
-<div id="timelineWrapper">
+<div id="timelineWrapper" class="containerStyle">
 	<div id="timeline">
 		<span class="line" style="width:0%"></span>
 		<div class="step active">
 			<p>مرحله 1</p>
 			<div class="circle">
-				<i class="fas fa-check"></i>
+				<i class="fas fa-check center-xy"></i>
 			</div>
 		</div>
 		<div class="step">
 			<p>مرحله 2</p>
 			<div class="circle">
-				<i class="fas fa-check"></i>
+				<i class="fas fa-check center-xy"></i>
 			</div>
 		</div>
 		<div class="step">
 			<p>مرحله 3</p>
 			<div class="circle">
-				<i class="fas fa-check"></i>
+				<i class="fas fa-check center-xy"></i>
 			</div>
 		</div>
 		<div class="step">
 			<p>مرحله 4</p>
 			<div class="circle">
-				<i class="fas fa-check"></i>
+				<i class="fas fa-check center-xy"></i>
 			</div>
 		</div>
 		<div class="step">
 			<p>مرحله 5</p>
 			<div class="circle">
-				<i class="fas fa-check"></i>
+				<i class="fas fa-check center-xy"></i>
 			</div>
 		</div>
 	</div>

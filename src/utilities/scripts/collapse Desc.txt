@@ -1,4 +1,4 @@
-<div class="questions">
+<div class="questions containerStyle">
 	<h4>سوالات متداول</h4>
 	<div class="question withCollapse">
 		<div class="content">

@@ -1,8 +1,7 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-form#sample {
-    @include containerStyle;
+form#sample { 
     width: 80%;
     height: auto;
     padding: $dist1;
@@ -145,7 +144,7 @@ form#sample {
             background-color: $primaryColor;
             position: absolute;
             right: 0;
-            top: calc(100% - .6px);
+            top: calc(100% - 1px);
             transition: all .2s linear;
         }
 
@@ -314,7 +313,6 @@ form#sample {
                 transform: translateX(-.3em);
             }
         }
-
         input.style1 {
             ~label.top {
                 font-size: 8px;
@@ -322,7 +320,6 @@ form#sample {
                 bottom: calc(100% + .5em);
             }
         }
-
         input.style2 {
             ~label.top {
                 font-size: 8px;
@@ -330,12 +327,10 @@ form#sample {
                 bottom: calc(100% + 1.5em);
             }
         }
-
         .arrow {
             cursor: pointer;
             font-size: $fontL;
             color: lighten($textGrey, 20%);
-            @include center-y;
             left: $dist1;
             transition: all .2s linear;
         }
@@ -539,7 +534,6 @@ form#sample {
             cursor: pointer;
             font-size: $fontL;
             color: lighten($textGrey, 20%);
-            @include center-y;
             left: $dist1;
             transition: all .2s linear;
         }
@@ -624,23 +618,16 @@ form#sample {
 
         button[type="submit"] {
             width: auto;
-            height: calc(100% + .1em);
+            height: calc(100%);
             line-height: 2.5em;
-            background-color: $primaryColor;
-            border-radius: $dist3;
+            border-top-left-radius: $dist3;
+            border-bottom-left-radius: $dist3;
             padding: 0 $dist1 + .2em;
             position: absolute;
-            left: -.1em;
-            top: -.1em;
-            cursor: pointer;
-
-            i {
-                color: $whiteColor2;
-                font-size: $fontS;
-                transform: translateY(.2em);
-            }
+            left: 0em;
+            top: 0em;
+            @include swapColor($textWhite,$primaryColor) ;
         }
-
         .msg {
             opacity: 0;
             visibility: hidden;
@@ -787,7 +774,6 @@ form#sample {
                     border-radius: .45em;
 
                     i {
-                        @include center-xy;
                         opacity: 0;
                         font-size: $fontM;
                         color: $whiteColor2;
@@ -797,7 +783,6 @@ form#sample {
 
                 p {
                     max-width: calc(100% - .5em - 1.2em - .5em);
-                    @include ellipse;
                     font-size: $fontM;
                     color: darken($textGrey, 15%);
                     margin-right: .3em;
@@ -957,7 +942,6 @@ form#sample {
                 border-radius: 50%;
                 background-color: $whiteColor2;
                 position: absolute;
-                @include center-y;
                 transition: all .2s linear;
             }
 
@@ -1291,17 +1275,7 @@ form#sample {
         margin: $dist2 auto;
         border-radius: $dist3;
         font-size: $fontL;
-        background-color: $primaryColor;
-        color: $whiteColor2;
-        cursor: pointer;
-        border: 1.2px solid transparent;
-        transition: all .3s linear;
-
-        &:hover {
-            color: $primaryColor;
-            background-color: white;
-            border: 1.2px solid $primaryColor;
-        }
+        @include swapColor($textWhite,$primaryColor) ; 
     }
 }
 form#newsLetters {
@@ -1345,23 +1319,16 @@ form#newsLetters {
         input.error {border: 1.2px solid lighten($redColor2, 5%);}
         button[type="submit"] {
             width: auto;
-            height: calc(100% + .1em);
+            height: calc(100%);
             line-height: 3.5em;
-            background-color: $primaryColor;
-            border-radius: $dist3;
+            border-top-left-radius: $dist3 ;
+            border-bottom-left-radius: $dist3 ;
             padding: 0 $dist1 + .5em;
             position: absolute;
-            left: -.1em;
-            top: -.1em;
-            cursor: pointer;
-            color: $textWhite ;
+            left: 0em;
+            top: 0em;    
             font-size: $fontM ;
-            transition: all .2s linear ;
-            &:hover{
-                background-color: white ;
-                border: 1.2px solid $primaryColor ;
-                color: $primaryColor ;
-            }
+            @include swapColor($textWhite,$primaryColor) ;       
         }
         .msg {
             opacity: 0;
@@ -1394,7 +1361,6 @@ form#newsLetters {
     }
 }
 form#contact {
-    @include containerStyle ;
     width: 60em ;
     height: auto;
     padding: $dist2 0 ;
@@ -1515,7 +1481,7 @@ form#contact {
             background-color: $primaryColor;
             position: absolute;
             right: 0;
-            top: calc(100% - .6px);
+            top: calc(100% - 1.5px);
             transition: all .2s linear;
         }
         .msg {
@@ -1694,21 +1660,11 @@ form#contact {
         margin: 0 auto;
         border-radius: $dist3;
         font-size: $fontL;
-        background-color: $primaryColor;
-        color: $whiteColor2;
-        cursor: pointer;
-        border: 1.2px solid transparent;
-        transition: all .3s linear;
         position: relative ;
-        &:hover {
-            color: $primaryColor;
-            background-color: white;
-            border: 1.2px solid $primaryColor;
-        }
+        @include swapColor($textWhite,$primaryColor) ;
     }
 }
 form#login{
-    @include containerStyle;
     width: 40em;
     height: auto;
     padding: $dist2;
@@ -1842,7 +1798,7 @@ form#login{
             background-color: $primaryColor;
             position: absolute;
             right: 0;
-            top: calc(100% - .6px);
+            top: calc(100% - 1px);
             transition: all .2s linear;
         }
         .msg {
@@ -1950,7 +1906,6 @@ form#login{
                     border-radius: .45em;
 
                     i {
-                        @include center-xy;
                         opacity: 0;
                         font-size: $fontM;
                         color: $whiteColor2;
@@ -1960,7 +1915,6 @@ form#login{
 
                 p {
                     width: auto;
-                    @include ellipse;
                     font-size: $fontS + .2em;
                     color: lighten($textGrey, 0%);
                     margin-right: .3em;
@@ -1970,23 +1924,13 @@ form#login{
         }
     }
     button[type="submit"] {
-        @include shadowPrimary ;
         width: auto;
         height: auto;
         padding: .3em $dist2 + .5em;
         margin: $dist3 auto 0 auto;
         border-radius: $dist3;
         font-size: $fontL;
-        background-color: $primaryColor;
-        color: $whiteColor2;
-        cursor: pointer;
-        border: 1.2px solid transparent;
-        transition: all .3s linear;
-        &:hover {
-            color: $primaryColor;
-            background-color: white;
-            border: 1.2px solid $primaryColor;
-        }
+        @include swapColor($textWhite,$primaryColor) ;
     }
     a.rememberPassword{
         font-size: $fontS + .1em;
@@ -2002,7 +1946,6 @@ form#login{
     }
 }
 form#forgetPassword{
-    @include containerStyle;
     width: 40em;
     height: auto;
     padding: $dist2;
@@ -2177,23 +2120,13 @@ form#forgetPassword{
         }
     }
     button[type="submit"] {
-        @include shadowPrimary ;
         width: auto;
         height: auto;
         padding: .3em $dist2 + .5em;
         margin-top: $dist2 ;
         border-radius: $dist3;
         font-size: $fontL;
-        background-color: $primaryColor;
-        color: $whiteColor2;
-        cursor: pointer;
-        border: 1.2px solid transparent;
-        transition: all .3s linear;
-        &:hover {
-            color: $primaryColor;
-            background-color: white;
-            border: 1.2px solid $primaryColor;
-        }
+        @include swapColor($textWhite,$primaryColor) ;
     }
     a.login{
         font-size: $fontS + .2em ;
@@ -2202,7 +2135,6 @@ form#forgetPassword{
     }
 }
 form#signup {
-    @include containerStyle;
     width: 40em;
     height: auto;
     padding: $dist2;
@@ -2335,7 +2267,7 @@ form#signup {
             background-color: $primaryColor;
             position: absolute;
             right: 0;
-            top: calc(100% - .6px);
+            top: calc(100% - 1px);
             transition: all .2s linear;
         }
         .msg {
@@ -2443,7 +2375,6 @@ form#signup {
                     border-radius: .45em;
 
                     i {
-                        @include center-xy;
                         opacity: 0;
                         font-size: $fontM;
                         color: $whiteColor2;
@@ -2453,7 +2384,6 @@ form#signup {
 
                 p {
                     width: auto;
-                    @include ellipse;
                     font-size: $fontS + .2em;
                     color: lighten($textGrey, 0%);
                     margin-right: .3em;
@@ -2463,23 +2393,13 @@ form#signup {
         }
     }
     button[type="submit"] {
-        @include shadowPrimary ;
         width: auto;
         height: auto;
         padding: .3em $dist2 + .5em;
         margin-top: $dist2 ;
         border-radius: $dist3;
         font-size: $fontL;
-        background-color: $primaryColor;
-        color: $whiteColor2;
-        cursor: pointer;
-        border: 1.2px solid transparent;
-        transition: all .3s linear;
-        &:hover {
-            color: $primaryColor;
-            background-color: white;
-            border: 1.2px solid $primaryColor;
-        }
+        @include swapColor($textWhite,$primaryColor) ;
     }
     a.login{
         font-size: $fontM ;

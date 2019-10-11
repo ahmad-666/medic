@@ -1,9 +1,7 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-body.disableScroll{overflow: hidden;}
 .productSlider{
-    @include containerStyle ;
     width: 55em ;
     height: auto;
     margin: $sectionsDist auto 0 auto ;
@@ -17,7 +15,6 @@ body.disableScroll{overflow: hidden;}
         height: 25em;
         position: relative ;
         .curr{
-            @include fullSize-abs ;
             opacity: 0;
             visibility: hidden ;
             transition: all .3s linear ;
@@ -42,7 +39,6 @@ body.disableScroll{overflow: hidden;}
             width: 4em ;
             height: 4em;
             border-radius: 50% ;
-            @include center-y ;
             background-color: $purpleColor1 ;
             cursor: pointer;
             z-index: 2;
@@ -110,7 +106,6 @@ body.disableScroll{overflow: hidden;}
         padding: $dist1 ;
         font-size: $fontXXL ;
         color: white ;
-        @include center-y ;
         cursor: pointer;
         transition: all .2s linear ;
         &:hover{

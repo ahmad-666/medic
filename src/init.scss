@@ -13,9 +13,8 @@ html,body{
     height: 100%;
     font-size: 10px !important ;
 }
-body.bg{
-    background-color: $bodyColor;
-}
+body.bg{background-color: $bodyColor;}
+body.disableScroll{overflow: hidden;}
 a {
     border: none ;
     text-decoration: none;
@@ -35,9 +34,7 @@ textarea {
 video{
     &:focus{outline: none;}
 }
-ul{
-    list-style: none ;
-}
+ul{list-style: none ;}
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -46,6 +43,4 @@ input[type='number']::-webkit-inner-spin-button {
     -ms-appearance: none;
     appearance: none;
 }
-input[type=number] {
-    -moz-appearance:textfield;
-}
+input[type=number] {-moz-appearance:textfield;}

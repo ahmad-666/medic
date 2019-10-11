@@ -4,7 +4,6 @@
 main{
     #aboutus{
         flex-shrink: 0 ;
-        @include containerStyle ;
         width: 80em ;
         height: auto;
         padding: $dist2 ;

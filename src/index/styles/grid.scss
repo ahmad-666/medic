@@ -3,7 +3,6 @@
 @import '../../colors.scss' ;
 @import '../../utilities/styles/sliderMove.scss';
 #grid{
-    @include containerStyle ;
     padding: 2em ;
     display: flex ;
     @include flex(column,flex-start,center,nowrap,"") ;
@@ -72,7 +71,6 @@
                         height: 15em;
                     }
                     h4{
-                        @include ellipse ;
                     }
                 }
             }

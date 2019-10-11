@@ -1,4 +1,4 @@
-<div class="tabs_wrapper">
+<div class="tabs_wrapper containerStyle">
 	<ul class="tabs">
 		<li class="tab active" data-target="tab1">tab1</li>
 		<li class="tab" data-target="tab2">tab2</li>

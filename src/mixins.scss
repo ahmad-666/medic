@@ -10,11 +10,6 @@
     background: url($url) $pos $repeat ;
     background-size: $size ;
 }
-@mixin ellipse{
-     white-space: nowrap ;
-     overflow: hidden;
-     text-overflow: ellipsis ;
-}
 @mixin multiEllipse($lineNum,$lineHeight,$ellipseColor){
     position: relative ;
     overflow: hidden;
@@ -34,88 +29,30 @@
         display: block ;
     }
 }
-@mixin fullSize{
-    width: 100% ;
-    height: 100%;
-}
-@mixin fullSize-abs{
-    width: 100% ;
-    height: 100%;
-    top: 0 ;
-    right: 0 ;
-    position: absolute ;
-}
-@mixin center-x{
-    position: absolute ;
-    right: 50% ;
-    transform: translateX(50%) ;
-}
-@mixin center-y{
-    position: absolute ;
-    top: 50% ;
-    transform: translateY(-50%) ;
-}
-@mixin center-xy{
-    position: absolute ;
-    top: 50% ;
-    right: 50% ;
-    transform: translate(50%,-50%) ;
-}
-@mixin containerStyle{
-    width: 80% ;
-    height: auto;
-    margin: $dist3 auto 0 auto ;
-    padding: $dist2  ;
-    background-color: $bgColor ;
-    box-shadow: 0 0 1em .01em $shadowColor ;
-    border-radius: $dist2 ;
-}
-@mixin blackFilter{
-    width: 100% ;
-    height: 100vh;
-    z-index: 10;
-    background-color: $blackFilter ;
-    position: fixed ;
-    top: 0 ;
-    right: 0 ;
+@mixin swapColor($color,$bgColor){
+    cursor: pointer;
     transition: all .3s linear ;
-    opacity: 0;
-    visibility: hidden ;
-}
-@mixin shadowS{box-shadow: 0 0 1em .05em rgba(175,175,175,.5);}
-@mixin shadowL{box-shadow: 0 0 1.5em .1em rgba(135,135,135,.5);}
-@mixin shadowBlurS{box-shadow: 0 0 2em .05em rgba(175,175,175,.5);}
-@mixin shadowBlurL{box-shadow: 0 0 2.5em .2em rgba(135,135,135,.5);}
-@mixin shadowBellow{box-shadow: 0 .3em 1em -.2em $shadowColor ;}
-@mixin shadowPrimary{box-shadow: 0 .6em 1.7em -.5em $primaryColor ;}
-@mixin scrollArrows{
-    position: relative;
-    .arrows{
-        display: none ;
-        width: auto ;
-        height: auto;
-        @include flex(row,flex-start,center,nowrap,"") ;
-        position: absolute ;
-        left: 0;
-        bottom: 105% ;
-        i{
-            font-size: $fontL ;
-            color: $primaryColor ;
-            margin-right: .3em ;
-            animation: arrowAnime .6s linear infinite alternate ;
-            &:nth-child(1){animation-delay: 0 ;}
-            &:nth-child(2){animation-delay: .3s ;}
-            &:nth-child(3){animation-delay: .6s ;      
-            }         
-        }
-        @keyframes arrowAnime {
-            from{opacity: 0;}
-            to{opacity: 1;}
-        }     
+    color: $color ;
+    background-color: $bgColor ;
+    border: 1.2px solid transparent ;
+    &:hover{
+        color: $bgColor ;
+        background-color: $color ;
+        border: 1.2px solid $bgColor ;
     }
-    .arrows.show{display: flex ;}
 }
-
+@mixin changeColor($color,$bgColor,$hoverColor,$hoverBgColor){
+    cursor: pointer;
+    transition: all .3s linear ;
+    color: $color ;
+    background-color: $bgColor ;
+    border: 1.2px solid transparent ;
+    &:hover{
+        color: $hoverColor ;
+        background-color: $hoverBgColor ;
+        border: 1.2px solid $hoverColor ;
+    }
+}
 // @include resizeTablet(#container) ;
 // @include resizeTablet(form+#login) ;
 // @include resizeTablet(#wrapper) {
@@ -150,4 +87,48 @@
 }
 @mixin mediaQ-wh($maxWidth,$maxHeight) {
     @media screen and (max-width: $maxWidth) and (max-height: $maxHeight){@content ;}
+}
+//because for ::before,::after we cant add css classes we need to use mixins for them
+//also for times we want to change style for media queries using mixins is better class
+@mixin fullSize{
+    width: 100% ;
+    height: 100%;
+}
+@mixin fullSize-abs{
+    width: 100% ;
+    height: 100%;
+    top: 0 ;
+    right: 0 ;
+    position: absolute ;
+}
+@mixin center-x{
+    position: absolute ;
+    right: 50% ;
+    transform: translateX(50%) ;
+}
+@mixin center-y{
+    position: absolute ;
+    top: 50% ;
+    transform: translateY(-50%) ;
+}
+@mixin center-xy{
+    position: absolute ;
+    top: 50% ;
+    right: 50% ;
+    transform: translate(50%,-50%) ;
+}
+@mixin shadowS{box-shadow: 0 0 1em .05em rgba(175,175,175,.5);}
+@mixin shadowL{box-shadow: 0 0 1.5em .1em rgba(135,135,135,.5);}
+@mixin shadowBlurS{box-shadow: 0 0 2em .05em rgba(175,175,175,.5);}
+@mixin shadowBlurL{box-shadow: 0 0 2.5em .2em rgba(135,135,135,.5);}
+@mixin shadowBellow{box-shadow: 0 .3em 1em -.2em $shadowColor ;}
+@mixin shadowPrimary{box-shadow: 0 .6em 1.7em -.5em $primaryColor ;}
+@mixin containerStyle{
+    width: 80% ;
+    height: auto;
+    margin: $dist3 auto 0 auto ;
+    padding: $dist2  ;
+    background-color: $bgColor ;
+    box-shadow: 0 0 1em .01em $shadowColor ;
+    border-radius: $dist2 ;
 }

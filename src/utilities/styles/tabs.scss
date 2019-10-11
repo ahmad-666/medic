@@ -2,7 +2,6 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 .tabs_wrapper{
-    @include containerStyle ;
     width: 80vw ;
     height: auto;
     padding: 0 ;

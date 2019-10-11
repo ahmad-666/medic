@@ -2,7 +2,6 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 .sliderWrapperFade{
-    @include containerStyle ;
     width: 80% ;
     height: auto;
     padding: $dist1 0 $dist4 + .5em 0;
@@ -21,10 +20,8 @@
         border-radius: 50% ;
         cursor: pointer;
         background-color: $primaryColor ;
-        @include center-y ;
         z-index: 2;
         i{
-            @include center-xy ;
             font-size: $fontXL ;
             color: white ;
         }
@@ -40,7 +37,6 @@
         height: auto;
         font-size: $fontM ;
         color: $textGrey ;
-        @include center-x ;
         bottom: $dist1 ;
         i{
             font-size: $fontS ;

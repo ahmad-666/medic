@@ -2,7 +2,6 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 #video{
-    @include containerStyle ;
     box-shadow: none ;
     background-color: darken($darkBlue,15%) ;
     padding: $dist2 ;
@@ -53,7 +52,6 @@
                     .play{
                         width: auto ;
                         height: auto;
-                        @include center-xy ;
                         display: flex ;
                         @include flex(column,flex-start,center,nowrap,"") ;
                         i{
@@ -80,7 +78,6 @@
                     .info{
                         width: 90% ;
                         height: auto;
-                        @include center-x ;
                         bottom: 0 ;
                         display: flex ;
                         @include flex(column,flex-start,flex-start,nowrap,"") ;
@@ -91,7 +88,6 @@
                             font-weight: 700 ;
                             padding-bottom: $dist1 ;
                             border-bottom: 1.2px solid lighten($textGrey,10%) ;
-                            @include ellipse ;
                         }
                         .row{
                             width: 100% ;
@@ -183,7 +179,6 @@
                             transition: all .2s linear ;
                         }
                         i{
-                            @include center-xy ;
                             width: 4em ;
                             height: 4em;
                             border-radius: 50% ;

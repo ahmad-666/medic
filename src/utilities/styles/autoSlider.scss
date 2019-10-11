@@ -2,7 +2,6 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 .autoSlider{
-    @include containerStyle;
     width: 80% ;
     height: auto;
     position: relative ;
@@ -17,7 +16,6 @@
         font-weight: 700 ;
     }
     .show_more{
-        @include center-x ;
         bottom: $dist1 ;
         font-size: $fontM ;
         color: $textGrey ;

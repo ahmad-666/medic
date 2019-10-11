@@ -2,7 +2,6 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 #faq{
-    @include containerStyle ;
     margin: $dist3 auto 0 auto;
     padding: $dist2 ;
     display: flex ;

@@ -2,7 +2,6 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 #timelineWrapper{
-    @include containerStyle ;
     height: auto;
     margin: $dist3 auto ;
     padding: $dist2 0 ;
@@ -24,18 +23,18 @@
             right: 0 ;
         }
         .line{
+            @include center-y ;
             height: .4em;
             background-color: $greenColor1 ;
-            @include center-y ;
             right: 0 ;
             transition: all .3s linear ;
         }
         .step{
             position: relative;
             p{
+                @include center-x ;
                 width: 200% ;
                 text-align:center ;
-                @include center-x ;
                 top: -2em ;
                 font-size: $fontM ;
                 color: lighten($textGrey,20%) ;
@@ -50,7 +49,6 @@
                 transition: all .2s linear ;
                 position: relative ;
                 i{
-                    @include center-xy ;
                     opacity: 0;
                     font-size: $fontXL ;
                     color: $textWhite ;
