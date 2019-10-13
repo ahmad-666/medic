@@ -1,4 +1,4 @@
-function topSlider(wrapper){
+function topSlider(wrapper,timer){
     this.wrapper = wrapper ;
     this.slides = this.wrapper.querySelectorAll('.slide') ;
     this.slidesNum = this.slides.length ;
@@ -12,13 +12,17 @@ function topSlider(wrapper){
     this.dots.forEach(dot => {
         dot.addEventListener('click',this.changeSlide.bind(this)) ;
     })
-    this.timer = 3000 ;
+    this.timer = timer ;
     this.clearTimer = null ;
     this.autoSlider() ;
 }
 topSlider.prototype.autoSlider = function(){
     this.clearTimer = setInterval(()=>{
-        this.nextBth.click() ;
+        this.dots[this.currIndex].classList.remove('active') ;
+        this.slides[this.currIndex].classList.remove('active') ;
+        this.currIndex = this.currIndex+1<=this.slidesNum-1 ? this.currIndex+1 : 0 ;
+        this.dots[this.currIndex].classList.add('active') ;
+        this.slides[this.currIndex].classList.add('active') ;
     },this.timer)
 }
 topSlider.prototype.changeSlide = function(e){
@@ -32,7 +36,7 @@ topSlider.prototype.changeSlide = function(e){
     this.dots[this.currIndex].classList.add('active') ;
     this.slides[this.currIndex].classList.add('active') ;
 }
-//new topSlider(document.querySelector('.topSlider')) ;
+//new topSlider(document.querySelector('.topSlider'),3000) ;
 export default{
 	topSlider
 }

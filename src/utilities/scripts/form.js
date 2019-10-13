@@ -2,12 +2,14 @@ import util from '../utilities.js' ;
 //form validation------------------------------
 //form validation------------------------------
 //form validation------------------------------
-function FormValidate(form,submit,inputs,send){
+function FormValidate(form,submit,inputs,send,modal){
 	//even if we dont want to send form we should always set 'submit' because we need to click on something to start validation
     this.form = form ;
     this.inputs = inputs ;
     this.submit = submit ;
     this.send = send ;
+    this.modal = modal ;
+    //this.modalTrigger = modalTrigger ;
     this.submit.addEventListener('click',this.formSubmit.bind(this)) ;
     this.validate = false ;
 }
@@ -16,6 +18,9 @@ FormValidate.prototype.formSubmit = function(e){
     if(this.allValidate())  {
         this.validate = true ;
         if(this.send) this.form.submit() ;
+        else {
+            if(this.modal) this.modal.openModal(null) ;        
+        }
     }
 }
 FormValidate.prototype.allValidate = function(){
@@ -83,7 +88,15 @@ FormValidate.prototype.isValid = function(input){
     input.classList.remove('error') ;  
 }
 FormValidate.prototype.isNotValid = function(input){
-    if(input.msg) input.msg.classList.add('show') ;
+    if(input.msg) {
+        input.msg.classList.add('show') ; 
+        //with bellow code if we have error message then when we click outside of 
+        //inputWrapper that error message will disappear
+        document.input = input ;
+        document.msg = input.msg ;
+        document.submit = this.submit ;
+        document.addEventListener('click',this) ;
+    } 
     input.classList.add('error') ;   
 }
 FormValidate.prototype.handleEvent = function(e){
@@ -99,8 +112,22 @@ FormValidate.prototype.handleEvent = function(e){
         }
         else{
             if(input.checkValidity()) this.isValid(input) ;       
-            else this.isNotValid(input) ;        
+            else this.isNotValid(input) ;     
         }       
+    }
+    if(e.currentTarget == document){
+        e.stopPropagation() ;
+        let input = e.currentTarget.input ;
+        let msg = e.currentTarget.msg ;
+        let submit = e.currentTarget.submit ;
+        let clickedElm = e.target ;
+        if(!input.parentElement.contains(clickedElm) && !submit.contains(clickedElm)){
+            msg.classList.remove('show') ;
+            document.input = null ;
+            document.msg = null ;
+            document.submit = null ;
+            document.removeEventListener('click',this) ;
+        }
     }
 }
 //select/option------------------------------------------
@@ -664,7 +691,12 @@ SearchList.prototype.handleEvent = function(e){
 // let form = document.querySelector('form.validate') ;
 // let formSubmit = form.querySelector('button.final') ;
 // let inputs = form.querySelectorAll('.validate') ;
-// new FormValidate(form,formSubmit,inputs,true) ;
+// new FormValidate(form,formSubmit,inputs,true,null) ;
+//OR
+// let form = document.querySelector('form.validate') ;
+// let formSubmit = form.querySelector('button.final') ;
+// let inputs = form.querySelectorAll('.validate') ;
+// new FormValidate(form,formSubmit,inputs,false,<instance-of-Modal>) ;
 // //Select--------------------------------
 // let selects = document.querySelectorAll('.inputWrapper.select') ;
 // selects = [...selects] ;
@@ -697,7 +729,7 @@ SearchList.prototype.handleEvent = function(e){
 // })
 // //AutoExpand--------------------------------
 // document.querySelectorAll('textarea.autoExpand').forEach(autoExpand => {
-//     new AutoExpand(textarea,'2em','15em') ;
+//     new AutoExpand(textarea,'2.6em','15em') ;
 // })
 // //Toggle--------------------------------
 // document.querySelectorAll('.inputWrapper.toggle').forEach(toggle => {

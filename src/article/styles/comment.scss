@@ -68,3 +68,26 @@
         }
     }
 }
+#adminApprove{
+    width: 45em;
+    height: auto;
+    padding: $dist2;
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    display: flex;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    i{
+        font-size: $fontXXL;
+        color: $primaryColor;
+    }
+    p{
+        font-size: $fontL;
+        color: darken($textGrey,20%);
+        margin-top: $dist2;
+    }
+    button.close{margin-top: $dist2;}
+}
+@include resizeTablet('#comments'+' .comment') ;

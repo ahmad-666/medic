@@ -955,13 +955,13 @@ form#sample {
         }
     }
     .inputWrapper.textarea {
-        width: calc((100% - (2 * 3.6em)) / 2);
+        width: 53em;
         height: auto;
         position: relative;
-        margin: $dist2;
+        margin-top: $dist3;
         display: flex;
-
         textarea {
+            // we set height/max-height via js
             width: 100%;
             font-size: $fontM;
             color: $darkColor;
@@ -969,26 +969,21 @@ form#sample {
             line-height: $dist2 ;
             transition: all .2s linear;
             resize: none;
-
             &::placeholder {
                 font-size: $fontM;
                 color: $textGrey;
             }
         }
-
         textarea.style1 {
             height: 8em;
             border: 1.2px solid lighten($textGrey, 25%);
             border-radius: $dist2;
-
             ~label {
                 bottom: 100%;
                 transform: translateY(150%);
             }
-
             &:focus {
                 border: 1.2px solid $primaryColor;
-
                 ~label {
                     font-size: 8px;
                     right: $dist1;
@@ -998,36 +993,28 @@ form#sample {
                 }
             }
         }
-
         textarea.style2 {
-            height: 4em;
-            max-height: 12em;
-            overflow: auto;
+            overflow: hidden;
             border: none;
             border-bottom: 1.2px solid lighten($textGrey, 25%);
-
             ~label {
-                bottom: 50%;
-                transform: translateY(50%);
+                top: 50%;
+                transform: translateY(-50%);
             }
-
             &:focus {
                 border-bottom: 1.2px solid $primaryColor;
-
                 ~label {
                     font-size: 8px;
                     right: 0;
                     color: $primaryColor;
-                    bottom: calc(100% + 0em);
-                    transform: translateY(0);
+                    top: 0;
+                    transform: translateY(-100%);
                 }
-
                 ~.line {
                     width: 100%;
                 }
             }
         }
-
         textarea.style1.error {
             border: 1.2px solid lighten($redColor2, 5%);
 
@@ -1035,15 +1022,12 @@ form#sample {
                 color: lighten($redColor2, 5%);
             }
         }
-
         textarea.style2.error {
             border-bottom: 1.2px solid lighten($redColor2, 5%);
-
             ~label {
                 color: lighten($redColor2, 5%);
             }
         }
-
         textarea.style1 {
             ~label.top {
                 font-size: 8px;
@@ -1052,16 +1036,14 @@ form#sample {
                 right: 0;
             }
         }
-
         textarea.style2 {
             ~label.top {
                 font-size: 8px;
-                bottom: calc(100% + 1em);
-                transform: translateY(50%);
-                right: 0;
+                top: 0;
+                transform: translateY(-100%);
+                right: 0;                            
             }
         }
-
         label {
             width: auto;
             height: auto;
@@ -1071,8 +1053,7 @@ form#sample {
             display: flex;
             @include flex(row, flex-start, center, nowrap, "");
             transition: all .2s linear;
-            color: lighten($textGrey, 25%);
-
+            color: lighten($textGrey,20%);
             i {
                 font-size: $fontM;
             }
@@ -1082,7 +1063,6 @@ form#sample {
                 transform: translateX(-.3em);
             }
         }
-
         .line {
             width: 0%;
             height: 1.2px;
@@ -2593,6 +2573,7 @@ form#userComment{
         margin-top: $dist3;
         display: flex;
         textarea {
+            // we set height/max-height via js
             width: 100%;
             font-size: $fontM;
             color: $darkColor;
@@ -2655,7 +2636,6 @@ form#userComment{
         }
         textarea.style2.error {
             border-bottom: 1.2px solid lighten($redColor2, 5%);
-
             ~label {
                 color: lighten($redColor2, 5%);
             }
@@ -2685,8 +2665,7 @@ form#userComment{
             display: flex;
             @include flex(row, flex-start, center, nowrap, "");
             transition: all .2s linear;
-            color: lighten($textGrey, 25%);
-
+            color: lighten($textGrey,20%);
             i {
                 font-size: $fontM;
             }

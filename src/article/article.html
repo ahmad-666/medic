@@ -872,7 +872,7 @@
                     </label>
                     <span class="line"></span>
                     <div class="msg">
-                        <p>ایمیل صحبح وارد نمایید</p>
+                        <p>ایمیل صحیح وارد نمایید</p>
                         <i class="fas fa-caret-up"></i>
                     </div>
                 </div>
@@ -885,7 +885,7 @@
                 </label>
                 <span class="line"></span>
             </div>
-            <button type="submit" class="pulse">ثبت</button>
+            <button type="submit" class="pulse modalTrigger" data-modal="adminApprove">ثبت</button>
         </form>
         <div class="comment">
             <div class="row">
@@ -912,7 +912,8 @@
                     </label>
                     <span class="line"></span>
                 </div>
-                <button type="submit" class="pulse">ارسال</button>
+
+                <button type="submit" class="pulse modalTrigger" data-modal="adminApprove">ارسال</button>
             </form>
             <div class="commentReply">
                 <div class="row">
@@ -966,9 +967,14 @@
                     </label>
                     <span class="line"></span>
                 </div>
-                <button type="submit" class="pulse">ارسال</button>
+                <button type="submit" class="pulse modalTrigger" data-modal="adminApprove">ارسال</button>
             </form>
         </div>
+    </div>
+    <div id="adminApprove" class="containerStyle modal">
+        <i class="fas fa-user-shield"></i>
+        <p>نظر شما بعد از تایید مدیر نمایش داده میشود</p>
+        <button class="btn small pulse close">بستن</button>
     </div>
     <footer>
         <div class="logo">

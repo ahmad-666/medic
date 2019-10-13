@@ -93,9 +93,32 @@
         }
     }
 }
-// @include resizeTablet(#container) ;
-// @include resizeTablet(form+#login) ;
-// @include resizeTablet(#wrapper) {
+@mixin hiddenShow($elm){
+    #{$elm}{
+        transition: all .3s linear;
+        opacity: 0;
+        visibility: hidden;
+    }
+    #{$elm}.show{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@mixin showHidden($elm){
+    #{$elm}{
+        transition: all .3s linear;
+        opacity: 1;
+        visibility: visible;
+    }
+    #{$elm}.show{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+// @include resizeTablet('#container') ;
+//@include resizeTablet('#container .child') ;
+//@include resizeTablet('#container'+' .child') ;
+// @include resizeTablet('#container') {
 //     .something{color: red ;}
 // }
 // @include mediaQ-w(300px){

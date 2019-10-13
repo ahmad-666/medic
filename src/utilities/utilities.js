@@ -1,6 +1,7 @@
 //getStyle------------------------------------------------------------------------
 let getStyle = (elm,prop) => window.getComputedStyle(elm,null).getPropertyValue(prop) ;
 //convert em to px and revers inside js
+//get px,em as string(10px,10em) and also return string
 function pxToEm(px,elm){
     px = parseFloat(px) ;
     let fontSize = parseFloat(getStyle(elm,'font-size')) ;
@@ -40,6 +41,9 @@ let getActiveIndex = parent => {
     return activeIndex ;
 }
 //docHandler------------------------------------------------------------------------
+//we must call docHandler inside cb function of event so we have access to e.stopPropagation()  
+//and we must call it
+//sometimes we must create another docHandler for our special needs
 function docHandler(container,others){
     //others are elements like BlackFilter,BarsMenu,... that we want to change
     //their css classes if we click outside of container
@@ -64,6 +68,27 @@ function docClick(e){
         document.removeEventListener('click',docClick);
     }
 }
+//docHandler v2------------------------------------------------------------------------
+//in bellow version there is no need for using e.stopPropagation() so we can call it anywhere 
+function docHandler2(container,others){
+    //others are elements like BlackFilter,BarsMenu,... that we want to change
+    //their css classes if we click outside of container
+    document.container = container ;
+    document.others = [] ;
+    others.forEach(other => document.others.push(other));
+    setTimeout(()=>document.addEventListener('click',docClick2),100)
+}
+function docClick2(e){
+    let container = document.container ;
+    let clickedElm = e.target ;
+    if(!container.contains(clickedElm)){
+        container.classList.remove('show') ;
+        document.others.forEach(other => other.classList.remove('show')) ;
+        document.body.classList.remove('disableScroll') ;
+        document.removeEventListener('click',docClick);
+    }
+}
+
 //checkEllipse------------------------------------------------------------------------
 function Ellipse(ellipse){
     this.ellipse = ellipse ;
@@ -209,6 +234,7 @@ export default{
     getChildIndex,
     getActiveIndex,
     docHandler,
+    docHandler2,
     Ellipse,
     fixMenu,
     AnimateCounter,

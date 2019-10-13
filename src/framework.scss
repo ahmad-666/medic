@@ -68,6 +68,21 @@
 .blurM{filter: blur(3px);}
 .blurL{filter: blur(5px);}
 .blurXL{filter: blur(10px);}
+.btn{
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    border-radius: $dist3;
+    @include swapColor(white,$primaryColor) ;
+}
+.btn.small{
+    font-size: $fontM;
+    padding: .3em $dist2 + .2em;
+}
+.btn.large{
+    font-size: $fontL;
+    padding: .5em $dist2 + .5em;
+}
 //text effects--------------------------------------------
 //text effects--------------------------------------------
 //text effects--------------------------------------------
@@ -136,3 +151,7 @@
     }
     .arrows.show{display: flex ;}
 }
+//others-------------------------------------------
+//others-------------------------------------------
+//others-------------------------------------------
+@include hiddenShow('.modal') ;
