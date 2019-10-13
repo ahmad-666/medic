@@ -1,5 +1,16 @@
 //getStyle------------------------------------------------------------------------
 let getStyle = (elm,prop) => window.getComputedStyle(elm,null).getPropertyValue(prop) ;
+//convert em to px and revers inside js
+function pxToEm(px,elm){
+    px = parseFloat(px) ;
+    let fontSize = parseFloat(getStyle(elm,'font-size')) ;
+    return `${px/fontSize}em` ;
+}
+function emtoPx(em,elm){
+    em = parseFloat(em) ;
+    let fontSize = parseFloat(getStyle(elm,'font-size')) ;
+    return `${em*fontSize}px` ;
+}
 //getChildIndex------------------------------------------------------------------------
 let getChildIndex = (parent,targetChild) => {
     let index = null ;
@@ -207,4 +218,6 @@ export default{
 	getAlphaNumArray,
     shuffleArray,
     Timer,
+    pxToEm,
+    emtoPx
 }

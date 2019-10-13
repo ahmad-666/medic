@@ -2,7 +2,7 @@
 	<h4>My Title</h4>
 	<div class="inputs">
 		<div class="inputWrapper text">
-			<input type="text" id="name" name="name" class="style2 labelHandler validate" required>
+			<input type="text" id="name" name="name" class="style1 labelHandler validate" required>
 			<label for="name">
 				<i class="fas fa-user icon"></i>
 				<p>نام و نام خانوادگی</p>

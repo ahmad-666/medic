@@ -1,3 +1,4 @@
+import util from '../utilities.js' ;
 //form validation------------------------------
 //form validation------------------------------
 //form validation------------------------------
@@ -288,19 +289,27 @@ NumberHandler.prototype.minus = function(e){
 //textarea autoExpand-------------------------
 //textarea autoExpand-------------------------
 //textarea autoExpand-------------------------
-function AutoExpand(textarea){
+function AutoExpand(textarea,initHeight,maxHeight){
     this.textarea = textarea ;
+    this.initHeight = initHeight ;
+    this.maxHeight = maxHeight ;
+    this.textarea.style.height = this.initHeight ;
+    this.textarea.style.maxHeight = this.maxHeight ;
     this.textarea.addEventListener('input',this.setHeight.bind(this)) ;
 }
 AutoExpand.prototype.setHeight = function(e){
     this.textarea.style.height = 'auto' ;
     if(this.textarea.value != ''){
         let height = this.textarea.scrollHeight + 
-            parseFloat(window.getComputedStyle(this.textarea,null).getPropertyValue('border-bottom')) ;
-        this.textarea.style.height = `${height}px` ;
+            parseFloat(window.getComputedStyle(this.textarea,null).getPropertyValue('border-bottom')) ;        
+        height = parseFloat(util.pxToEm(height,this.textarea)) ;
+        if(height>parseFloat(this.maxHeight)) this.textarea.style.overflow = 'auto' ;
+        else this.textarea.style.overflow = 'hidden' ;
+        this.textarea.style.height = `${height}em` ;
     }
     else {
-        this.textarea.style.height = `4em` ;
+        this.textarea.style.height = this.initHeight ;
+        this.textarea.style.overflow = 'hidden' ;
     }
 }
 //toggle ------------------------------------
@@ -688,7 +697,7 @@ SearchList.prototype.handleEvent = function(e){
 // })
 // //AutoExpand--------------------------------
 // document.querySelectorAll('textarea.autoExpand').forEach(autoExpand => {
-//     new AutoExpand(autoExpand) ;
+//     new AutoExpand(textarea,'2em','15em') ;
 // })
 // //Toggle--------------------------------
 // document.querySelectorAll('.inputWrapper.toggle').forEach(toggle => {

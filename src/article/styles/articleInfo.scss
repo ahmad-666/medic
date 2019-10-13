@@ -1,0 +1,86 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#article{
+    .infos{
+        padding: $dist2;
+        background-color: white ;
+        border-top-left-radius: $dist2;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") ;
+        #breadcrumb{
+            width: auto;
+            height: auto;
+            display: flex ;
+            @include flex(row,flex-start,center,wrap,flex-start) ;
+            .part{
+                width: auto;
+                height: auto;
+                display: flex;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                color: $textGrey;
+                transition: all .2s linear;
+                &:hover{
+                    color: $textDark;
+                }
+                p,i{
+                    font-size: $fontM - .1em;
+                    color: inherit;
+                }
+                p{
+                    margin-right: .5em;
+                }
+            }
+            .fa-slash{
+                font-size: $fontS;
+                color: $textGrey;
+                margin: 0 $dist1;
+                transform: rotate(90deg);
+            }
+        }
+        .info{
+            width: auto;
+            height: auto;
+            margin-top: $dist2;
+            display: flex ;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            p{
+                &:nth-child(1){
+                    font-size: $fontS;
+                    color: $textGrey;
+                }
+                &:nth-child(2){
+                    font-size: $fontM;
+                    color: $textDark;
+                }
+            }
+        }
+        #tags{
+            width: auto ;
+            height: auto;
+            margin-top: $dist2;
+            display: flex ;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            h4{
+                font-size: $fontM;
+                color: $textDark; 
+                font-weight: 700;
+            }
+            .tags{
+                width: auto;
+                height: auto;
+                display: flex;
+                @include flex(row,flex-start,center,wrap,flex-start) ;
+                .tag{
+                    width: auto;
+                    height: auto;
+                    padding: .3em $dist2 + .2em;
+                    font-size: $fontM - .2em;
+                    margin: $dist1;
+                    border-radius: $dist3;
+                    @include changeColor(white,$primaryColor,$primaryColor,white) ;
+                }
+            }
+        }
+    }
+}

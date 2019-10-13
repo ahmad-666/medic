@@ -1,0 +1,11 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#article{
+    .img{
+        cursor: auto;
+        border-radius: 0;
+        border-top-right-radius: $dist2;
+        @include textBlur(10em,40em,10px,'../../assets/imgs/article1.jpg',white) ;
+    }
+}

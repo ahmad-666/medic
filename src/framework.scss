@@ -20,8 +20,9 @@
     border-radius: $dist2 ;
 }
 .zoom{
-    //we should add this to parent of <img>
-    // should set width/height of parent of <img>
+    // <div class="img zoom">
+    //     <img src="../assets/imgs/article1.jpg" alt="articleImg">     
+    // </div>
     cursor: pointer;
     border-radius: $dist2 ;
     overflow: hidden;
@@ -63,6 +64,10 @@
         }
     }
 }
+.blurS{filter: blur(1px);}
+.blurM{filter: blur(3px);}
+.blurL{filter: blur(5px);}
+.blurXL{filter: blur(10px);}
 //text effects--------------------------------------------
 //text effects--------------------------------------------
 //text effects--------------------------------------------

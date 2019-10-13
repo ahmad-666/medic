@@ -1,0 +1,19 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+@import './articleImg.scss' ;
+@import './articleInfo.scss' ;
+@import './articleRef.scss' ;
+#article{
+    padding: 0;
+    display: flex;
+    @include flex(row,flex-start,flex-start,wrap,flex-start);
+    .img,.infos{
+        width: 50%;
+        height: 40em;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+    }
+}

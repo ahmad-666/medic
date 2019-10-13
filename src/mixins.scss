@@ -53,6 +53,46 @@
         border: 1.2px solid $hoverColor ;
     }
 }
+@mixin textBlur($textHeight,$bgHeight,$blur,$bgURL,$textColor){
+    // <div class="img">
+    //     <img src="../assets/imgs/article1.jpg" alt="articleImg">
+    //     <div class="title">
+    //         <div class="blur"></div>
+    //         <h4> نام مقاله</h4>
+    //     </div>
+    // </div>
+    position: relative ;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        object-position: center center;
+    }
+    .title{
+        width: 100% ;
+        height: $textHeight;
+        padding: $dist1;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        .blur{
+            content: '';
+            @include fullSize-abs ;
+            filter: blur($blur);
+            @include bg($bgURL,bottom center,no-repeat,100% $bgHeight) ;
+        }
+        h4{
+            width: 100%;
+            text-align: center ;
+            font-size: $fontL;
+            color: $textColor;
+            z-index: 2;
+            @include center-xy ;
+        }
+    }
+}
 // @include resizeTablet(#container) ;
 // @include resizeTablet(form+#login) ;
 // @include resizeTablet(#wrapper) {
@@ -88,8 +128,9 @@
 @mixin mediaQ-wh($maxWidth,$maxHeight) {
     @media screen and (max-width: $maxWidth) and (max-height: $maxHeight){@content ;}
 }
-//because for ::before,::after we cant add css classes we need to use mixins for them
-//also for times we want to change style for media queries using mixins is better class
+//for ::before,::after we cant add css classes so we need to use mixins for them
+//for times we want to change style for media queries using mixins is better than classes
+//for times we want to change style for pseudo classes(:hover,...) using mixins is better than classes
 @mixin fullSize{
     width: 100% ;
     height: 100%;
