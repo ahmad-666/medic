@@ -1,73 +1,59 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-.sliderWrapperFade{
+.topSlider{
     width: 80% ;
-    height: auto;
-    padding: $dist1 0 $dist4 + .5em 0;
-    margin: $sectionsDist auto 0 auto ;
-    display: flex ;
-    @include flex(column,flex-start,center,nowrap,"") ;
+    height: 35em;
+    margin: $sectionsDist auto ;
     position: relative ;
-    h4{
-        font-size: $fontL ;
-        color: $textDark; 
-        font-weight: 700 ;
-    }
-    .btn{
-        width: 4em ;
-        height: 4em;
-        border-radius: 50% ;
-        cursor: pointer;
-        background-color: $primaryColor ;
-        z-index: 2;
-        i{
-            font-size: $fontXL ;
-            color: white ;
+    .slide{
+        opacity: 0;
+        visibility: hidden ;
+        transition: all .4s linear ;
+        img{
+            width: 100% ;
+            height: 100%;
         }
     }
-    .btn.prev{
-        right: $dist2 ;
+    .slide.active{
+        opacity: 1;
+        visibility: visible ;
     }
-    .btn.next{
-        left: $dist2 ;
+    .arrow{
+        color: $textWhite ;
+        font-size: $fontXXL ;
+        cursor: pointer;
+        padding: $dist1 ;
+        transition: all .2s linear ;
+        &:hover{
+            transform: translateY(-50%) scale(1.3) ;
+        }
     }
-    .show_more{
+    .arrow.prev{right: 0;}
+    .arrow.next{left: 0;}
+    .dots_container{
         width: auto ;
         height: auto;
-        font-size: $fontM ;
-        color: $textGrey ;
-        bottom: $dist1 ;
-        i{
-            font-size: $fontS ;
-            color: $textGrey ;
-            transform: translate(-.3em,15%) ;
-        }
-    }
-    .helper{
-        width: 100% ;
-        height: auto;
-        overflow: hidden;
-    }
-    .slides{
-        width: 100% ;
-        height: auto;
-        margin-top: $dist2 ;
         display: flex ;
         @include flex(row,flex-start,center,nowrap,"") ;
-        position: relative ;
-        transition: all .3s linear ;
-        .slide{
-            flex-shrink: 0 ;
-            width: calc((100% - (4 * 1.5em)) / 4) ;
-            height: 25em;
+        bottom: $dist1 ;
+        .dot{
+            width: 2em ;
+            height: 2em;
+            border-radius: 50% ;
             margin: 0 $dist1 ;
-            // &:first-child{margin-right: 0;}
-            // &:last-child{margin-left: 0;}
-            &:nth-child(4n+1){background-color: lighten($blueColor1,10%) ;}
-            &:nth-child(4n+2){background-color: lighten($redColor1,10%) ;}
-            &:nth-child(4n+3){background-color: lighten($orangeColor1,10%) ;}
-            &:nth-child(4n+4){background-color: lighten($greenColor1,10%) ;}
+            cursor: pointer;
+            background-color: $textWhite ;
+            transition: all .4s linear ;
+            &:not(.active){
+                &:hover{
+                    background-color: lighten($purpleColor1,20%) ;
+                }
+            }
+        }
+        .dot.active{
+            background-color: $purpleColor1 ;
+            transform: scale(1.2) ;
         }
     }
 }

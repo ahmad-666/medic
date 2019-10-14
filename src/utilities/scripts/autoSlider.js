@@ -1,7 +1,7 @@
 //autoSlide--------------------------------------
 //autoSlide--------------------------------------
 //autoSlide--------------------------------------
-function autoSlider(wrapper){
+function AutoSlider(wrapper){
     this.wrapper = wrapper ;
     this.slider = this.wrapper.querySelector('.slider') ;
     this.slides = this.slider.querySelectorAll('.slide') ;
@@ -17,7 +17,7 @@ function autoSlider(wrapper){
         this.slider.addEventListener('mouseleave',this.resumeSlider.bind(this)) ;
     }
 }
-autoSlider.prototype.autoMove = function(){
+AutoSlider.prototype.autoMove = function(){
     this.animation = anime({
         targets: this.slider ,
         duration: this.slidesNum*this.slideTime ,
@@ -27,10 +27,10 @@ autoSlider.prototype.autoMove = function(){
         right: -this.threshold 
     })
 }
-autoSlider.prototype.pauseSlider = function(e){
+AutoSlider.prototype.pauseSlider = function(e){
     this.animation.pause() ;
 }
-autoSlider.prototype.resumeSlider = function(e){
+AutoSlider.prototype.resumeSlider = function(e){
     this.animation.play() ;
 }
 //init autoSlide--------------------------------------
@@ -38,5 +38,5 @@ autoSlider.prototype.resumeSlider = function(e){
 //init autoSlide--------------------------------------
 //new autoSlider(document.querySelector('.autoSlider'));
 export default{
-	autoSlider
+	AutoSlider
 }

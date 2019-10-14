@@ -1,7 +1,7 @@
 //product slider------------------------------
 //product slider------------------------------
 //product slider------------------------------
-function productSlider(wrapper){
+function ProductSlider(wrapper){
     this.wrapper = wrapper ;
     this.currWrapper = this.wrapper.querySelector('.curr_wrapper') ;
     this.currSlides = this.currWrapper.querySelectorAll('.curr') ;
@@ -23,23 +23,23 @@ function productSlider(wrapper){
     this.slides.forEach(slide => {
         slide.addEventListener('click',this.slideClick.bind(this)) ;
     });
-    this.fixSlider = new fixSlider(document.querySelector('.fix_productSlider')) ;
+    this.fixSlider = new FixSlider(document.querySelector('.fix_productSlider')) ;
     this.currWrapper.addEventListener('click',this.openFixSlider.bind(this)) ;
 }
-productSlider.prototype.openFixSlider = function(e){
+ProductSlider.prototype.openFixSlider = function(e){
     this.fixSlider.wrapper.classList.add('show') ;
     document.body.classList.add('disableScroll') ;
 }
-productSlider.prototype.slideClick = function(e){
+ProductSlider.prototype.slideClick = function(e){
     this.changeSlide('none',e.currentTarget) ;
 }
-productSlider.prototype.nextSlide = function(e){
+ProductSlider.prototype.nextSlide = function(e){
     this.changeSlide('forward',null) ;
 }
-productSlider.prototype.prevSlide = function(e){
+ProductSlider.prototype.prevSlide = function(e){
     this.changeSlide('backward',null) ;
 }
-productSlider.prototype.changeSlide = function(dir,slide){
+ProductSlider.prototype.changeSlide = function(dir,slide){
     this.currSlides[this.currIndex].classList.remove('active') ;
     this.slides[this.currIndex].classList.remove('active') ;
     this.prevIndex = this.currIndex ;
@@ -52,7 +52,7 @@ productSlider.prototype.changeSlide = function(dir,slide){
     this.fixSlider.moveSlider('none') ;
     this.moveSlider(dir) ;
 }
-productSlider.prototype.moveSlider = function(dir){
+ProductSlider.prototype.moveSlider = function(dir){
     let currPos = parseFloat(this.slidesWrapper.style.right) ;
     let movement = null ;
     if(dir == 'forward'){    
@@ -78,7 +78,7 @@ productSlider.prototype.moveSlider = function(dir){
 //fix slider------------------------------
 //fix slider------------------------------
 //fix slider------------------------------
-function fixSlider(wrapper){
+function FixSlider(wrapper){
     this.wrapper = wrapper ;
     this.close = this.wrapper.querySelector('.close') ;
     this.nextBtn = this.wrapper.querySelector('.arrow.next') ;
@@ -91,19 +91,19 @@ function fixSlider(wrapper){
     this.nextBtn.addEventListener('click',this.nextSlide.bind(this)) ;
     this.prevBtn.addEventListener('click',this.prevSlide.bind(this)) ;
 }
-fixSlider.prototype.closeSlider = function(e){
+FixSlider.prototype.closeSlider = function(e){
     this.wrapper.classList.remove('show') ;
     document.body.classList.remove('disableScroll') ;
 }
-fixSlider.prototype.nextSlide = function(e){
+FixSlider.prototype.nextSlide = function(e){
     this.currIndex = this.currIndex+1<=this.slidesNum-1 ? this.currIndex+1 : 0 ;
     this.moveSlider('forward') ;
 }
-fixSlider.prototype.prevSlide = function(e){
+FixSlider.prototype.prevSlide = function(e){
     this.currIndex = this.currIndex-1>=0 ? this.currIndex-1 : this.slidesNum-1 ;
     this.moveSlider('backward') ;
 }
-fixSlider.prototype.moveSlider = function(dir){
+FixSlider.prototype.moveSlider = function(dir){
     let currPos = parseFloat(this.slider.style.right) ;
     let movement = null ;
     if(dir == 'forward') movement = this.currIndex!=0 ? currPos - this.offset : 0 ;
@@ -114,7 +114,7 @@ fixSlider.prototype.moveSlider = function(dir){
 //init productSlider------------------------------
 //init productSlider------------------------------
 //init productSlider------------------------------
-//new productSlider(document.querySelector('.productSlider')) ;
+//new ProductSlider(document.querySelector('.productSlider')) ;
 export default{
-	productSlider
+	ProductSlider
 }

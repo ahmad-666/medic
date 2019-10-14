@@ -1,45 +1,42 @@
-function Slider(wrapper){
+function SliderFade(wrapper,timer){
     this.wrapper = wrapper ;
-    this.slidesWrapper = this.wrapper.querySelector('.slides') ;
-    this.slides = this.slidesWrapper.querySelectorAll('.slide') ;
-    this.nextBtn = this.wrapper.querySelector('.btn.next') ;
-    this.prevBtn = this.wrapper.querySelector('.btn.prev') ;
+    this.slides = this.wrapper.querySelectorAll('.slide') ;
     this.slidesNum = this.slides.length ;
+    this.nextBth= this.wrapper.querySelector('.arrow.next') ;
+    this.prevBtn= this.wrapper.querySelector('.arrow.prev') ;
+    this.dotContainer = this.wrapper.querySelector('.dots_container') ;
+    this.dots = this.dotContainer.querySelectorAll('.dot') ;
     this.currIndex = 0 ;
-    this.offset = this.slides[this.currIndex].offsetWidth+parseFloat(getStyle(this.slides[this.currIndex],'margin-right'))+parseFloat(getStyle(this.slides[this.currIndex],'margin-left')) ;
-    this.viewportSlides = Math.floor(this.slidesWrapper.offsetWidth/this.offset) ;// how many slides are inside this.slidesWrapper at one time   
-    if(this.slidesNum>this.viewportSlides){    
-        this.nextBtn.addEventListener('click',this.nextSlide.bind(this)) ;
-        this.prevBtn.addEventListener('click',this.prevSlide.bind(this)) ;
-    }
-    window.addEventListener('resize',this.update.bind(this)) ;
+    this.nextBth.addEventListener('click',this.changeSlide.bind(this));
+    this.prevBtn.addEventListener('click',this.changeSlide.bind(this));
+    this.dots.forEach(dot => {
+        dot.addEventListener('click',this.changeSlide.bind(this)) ;
+    })
+    this.timer = timer ;
+    this.clearTimer = null ;
+    this.autoSlider() ;
 }
-Slider.prototype.update = function(e){
-    this.offset = this.slides[this.currIndex].offsetWidth+parseFloat(getStyle(this.slides[this.currIndex],'margin-right'))+parseFloat(getStyle(this.slides[this.currIndex],'margin-left')) ;
-    this.viewportSlides = Math.floor(this.slidesWrapper.offsetWidth/this.offset) ;
+SliderFade.prototype.autoSlider = function(){
+    this.clearTimer = setInterval(()=>{
+        this.dots[this.currIndex].classList.remove('active') ;
+        this.slides[this.currIndex].classList.remove('active') ;
+        this.currIndex = this.currIndex+1<=this.slidesNum-1 ? this.currIndex+1 : 0 ;
+        this.dots[this.currIndex].classList.add('active') ;
+        this.slides[this.currIndex].classList.add('active') ;
+    },this.timer)
 }
-Slider.prototype.nextSlide = function(e){
-    this.currIndex = this.currIndex+1<=this.slidesNum-this.viewportSlides ? this.currIndex+1 : 0 ;
-    this.moveSlider('forward') ; 
+SliderFade.prototype.changeSlide = function(e){
+    clearInterval(this.clearTimer) ;
+    this.autoSlider() ;
+    this.dots[this.currIndex].classList.remove('active') ;
+    this.slides[this.currIndex].classList.remove('active') ;
+    if(e.target == this.nextBth) this.currIndex = this.currIndex+1<=this.slidesNum-1 ? this.currIndex+1 : 0 ;
+    else if(e.target == this.prevBtn) this.currIndex = this.currIndex-1>=0 ? this.currIndex-1 : this.slidesNum-1 ;
+    else this.currIndex = getChildIndex(this.dotContainer,e.target) ; //e.target is dot
+    this.dots[this.currIndex].classList.add('active') ;
+    this.slides[this.currIndex].classList.add('active') ;
 }
-Slider.prototype.prevSlide = function(e){
-    this.currIndex = this.currIndex-1>=0 ? this.currIndex-1 : this.slidesNum-this.viewportSlides ;
-    this.moveSlider('backward') ; 
-}
-Slider.prototype.moveSlider = function(dir){
-    let currPos = parseFloat(this.slidesWrapper.style.right) ;
-    let movement = null ;
-    if(dir == 'forward'){
-        if(this.currIndex !=0 ) movement = currPos - this.offset ;           
-        else movement = 0 ;    
-    }
-    else if(dir == 'backward'){
-        if(this.currIndex != this.slidesNum-this.viewportSlides) movement  = currPos + this.offset ;     
-        else movement = -1*((this.slidesNum*this.offset) - this.slidesWrapper.offsetWidth) ;
-    }
-    this.slidesWrapper.style.right = `${movement}px` ;
-}
-//new Slider(document.querySelector('.sliderWrapperFade')) ;
+//new SliderFade(document.querySelector('.sliderFade'),3000) ;
 export default{
-	Slider
+	SliderFade
 }
