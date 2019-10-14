@@ -2389,14 +2389,8 @@ form#signup {
 }
 form#userComment{
     width: auto;
-    height: auto;
     display: flex;
     @include flex(column,flex-start,flex-start,nowrap,"") ;
-    h4 {
-        font-size: $fontL - .2em;
-        font-weight: 700;
-        color: $darkColor;
-    }
     .row{
         width: auto ;
         height: auto;

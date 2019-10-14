@@ -5,12 +5,14 @@
     display: flex;
     @include flex(column,flex-start,flex-start,nowrap,"") ;
     .content{
+        border-top: 1px solid lighten($textGrey,20%) ;
+        margin-top: $dist3 + 1em;
+        // padding-top: $dist2;
         .text{
             width: 100%;
             height: auto;
             // margin-top: $dist1;
-            padding: $dist2;
-            padding-bottom: $dist3;
+            padding: $dist3 $dist2;
             border-bottom: 1px solid lighten($textGrey,20%);
             p{
                 font-size: $fontM;

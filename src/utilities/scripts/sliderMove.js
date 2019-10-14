@@ -1,26 +1,39 @@
+import util from '../utilities.js' ;
 function SliderMove(wrapper){
     this.wrapper = wrapper ;
-    this.prevBth = this.wrapper.querySelector('.btn.prev');
-    this.nextBth = this.wrapper.querySelector('.btn.next');
     this.slider = this.wrapper.querySelector('.slider') ;
     this.slidesNum = this.slider.querySelectorAll('.slide').length ;
     this.currIndex = 0 ;
-    this.offset = this.slider.querySelector('.slide').offsetWidth ;
-    this.prevBth.addEventListener('click',this.changeSlide.bind(this)) ;
-    this.nextBth.addEventListener('click',this.changeSlide.bind(this)) ;
+    this.offset = 100 ; //100%
+    this.movement = null ; //how many slides will move
+    this.btns = this.wrapper.querySelectorAll('.btn') ; //for prev/next btn
+    this.dots = this.wrapper.querySelectorAll('.dot') ;
+    this.btns.forEach(btn => btn.addEventListener('click',this.changeSlide.bind(this))) ;
+    this.dots.forEach(dot => dot.addEventListener('click',this.changeSlide.bind(this))) ;
 }
 SliderMove.prototype.changeSlide = function(e){
+    let clickedElm = e.currentTarget ;
     let currPos = parseFloat(this.slider.style.right) ;
-    if(e.currentTarget.classList.contains('prev')){
-        this.currIndex = this.currIndex-1>=0?this.currIndex-1:this.slidesNum-1;
-        if(this.currIndex!=this.slidesNum-1) this.slider.style.right = `${currPos+this.offset}px`;  
-        else this.slider.style.right = `-${(this.slidesNum-1)*this.offset}px` ;    
+    this.dots[this.currIndex].classList.remove('active') ;
+    if(clickedElm.classList.contains('next')) {
+        this.currIndex = this.currIndex+1<=this.slidesNum-1?this.currIndex+1 :0 ;
+        this.movement = -1 ;
+        if(this.currIndex == 0) this.slider.style.right = `0%` ;
+        else this.slider.style.right = `${currPos+(this.movement*this.offset)}%` ; 
     }
-    else if(e.currentTarget.classList.contains('next')){
-        this.currIndex = this.currIndex+1<this.slidesNum?this.currIndex+1:0 ;
-        if(this.currIndex!=0) this.slider.style.right = `-${Math.abs(currPos)+this.offset}px`;
-        else this.slider.style.right = '0px' ;
+    else if(clickedElm.classList.contains('prev')) {
+        this.currIndex = this.currIndex-1>=0?this.currIndex-1 :this.slidesNum-1 ;
+        this.movement = 1
+        if(this.currIndex == this.slidesNum-1) this.slider.style.right = `-${(this.slidesNum-1)*this.offset}%` ;
+        else this.slider.style.right = `${currPos+(this.movement*this.offset)}%` ; 
     }
+    else {
+        let oldIndex = this.currIndex ;
+        this.currIndex = util.getChildIndex(clickedElm.parentElement,clickedElm) ;
+        this.movement = oldIndex - this.currIndex ;
+        this.slider.style.right = `${currPos+(this.movement*this.offset)}%` ; 
+    }
+    this.dots[this.currIndex].classList.add('active') ;
 }
 export default{
     SliderMove

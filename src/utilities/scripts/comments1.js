@@ -1,4 +1,5 @@
 import FontFaceObserver from 'fontfaceobserver' ;
+import util from '../../utilities/utilities.js' ;
 import form from '../../utilities/scripts/form.js' ;
 import collapse from '../../utilities/scripts/collapse' ;
 import modal from '../../utilities/scripts/modal.js' ;

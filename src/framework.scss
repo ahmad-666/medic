@@ -11,7 +11,7 @@
 .shadowBellow{box-shadow: 0 .3em 1em -.2em $shadowColor ;}
 .shadowPrimary{box-shadow: 0 .6em 1.7em -.5em $primaryColor ;}
 .containerStyle{
-    width: 80% ;
+    width: 90% ;
     height: auto;
     margin: $dist3 auto 0 auto ;
     padding: $dist2  ;
@@ -78,6 +78,10 @@
 .btn.small{
     font-size: $fontM;
     padding: .3em $dist2 + .2em;
+}
+.btn.mid{
+    font-size: $fontM + .3em;
+    padding: .4em $dist2 + .3em;
 }
 .btn.large{
     font-size: $fontL;

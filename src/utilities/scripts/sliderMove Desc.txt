@@ -1,10 +1,16 @@
-<div class="sliderMove">
+<div class="sliderWrapperMove">
 	<button class="btn prev">
 		<i class="fas fa-angle-right center-xy"></i>
 	</button>
 	<button class="btn next">
 		<i class="fas fa-angle-left center-xy"></i>
 	</button>
+	<div class="dots center-x">
+		<span class="dot active"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
 	<div class="slider fullSize-abs" style="right:0">
 		<div class="slide">
 			<a href="article.html">

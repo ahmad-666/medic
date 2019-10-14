@@ -57,7 +57,7 @@
         }
         .col{
             width: 50% ;
-            height: 41em;
+            height: 50em;
             display: flex ;
             @include flex(column,flex-start,flex-start,nowrap,"") ;
             &:nth-child(2){
@@ -68,7 +68,7 @@
                     margin-top: 2em ;
                     &:first-child{margin-top: 0;}
                     img{
-                        height: 15em;
+                        height: 19em;
                     }
                     h4{
                     }

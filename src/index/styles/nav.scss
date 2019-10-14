@@ -70,15 +70,15 @@ header{
                     top: 105% ;
                     width: 80% ;
                     height: auto;
-                    padding: $dist2 $dist3;
+                    // padding: $dist2 $dist3;
                     background-color: $textWhite ;
                     display: flex ;
                     @include flex(row,flex-start,flex-start,wrap,flex-start);
                     .col{
                         width: auto ;
                         height: auto;
-                        margin-right: $dist4 ;
-                        &:first-child{margin-right: 0;}
+                        margin: $dist2 $dist3 ;
+                        // &:first-child{margin-right: 0;}
                         display: flex ;
                         @include flex(column,flex-start,flex-start,nowrap,"") ;
                         &:hover{h4{border-bottom: 1.5px solid $primaryColor ;}}

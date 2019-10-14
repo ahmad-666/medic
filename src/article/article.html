@@ -817,11 +817,16 @@
         <div class="content">
             <div class="text">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores distinctio dolorum illo porro eveniet iusto quam ab ipsam vero architecto commodi placeat, aspernatur officiis, est dolore ducimus dicta harum. Magni!
-                    Sunt impedit, rem ipsam quia cum accusamus cupiditate expedita dolore modi praesentium hic veritatis natus quod minus fugit magnam, soluta odio? Magni minima hic accusamus alias dolorem laudantium ea sunt.
-                    Iure quibusdam quos doloremque ea error commodi libero delectus placeat molestiae repudiandae, hic repellendus. Veritatis explicabo sapiente dolore atque, aliquam minus vitae distinctio, nulla dolorem fugiat possimus modi non maiores.
-                    Quis pariatur obcaecati dolores ad ducimus accusamus possimus consectetur, tenetur, fugiat eos voluptatibus officiis. Excepturi animi consectetur nisi, odio quo iure, harum saepe accusantium aperiam veritatis pariatur. Nam, rem eum?
-                    Illum et reiciendis explicabo itaque autem culpa, architecto provident rem. Assumenda reprehenderit consectetur voluptatibus porro commodi aperiam ea quibusdam possimus. Odio nostrum deleniti consequatur quo omnis ea, quos quis corrupti.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. A dolorum laudantium sed repellat doloribus. Quidem nulla atque earum ratione alias vel excepturi fugiat temporibus. Voluptatem ratione ut assumenda recusandae natus?
+                    Consequuntur libero reiciendis, debitis, ratione explicabo aperiam non perferendis, voluptatibus eum earum est aliquam! Voluptates at obcaecati, ducimus officiis natus reprehenderit reiciendis, similique, amet commodi dolorem iusto. Labore, quas nisi.
+                    Et quod vero, eaque omnis maiores officia cumque ipsam quasi, voluptas sint veniam quaerat nulla dignissimos odit nihil saepe assumenda. Debitis sunt a, vero blanditiis voluptate optio amet consequuntur deleniti.
+                    Velit possimus corrupti cum dolores molestias ipsam architecto ipsa voluptatibus eum reprehenderit quidem, quasi quisquam, commodi libero vitae doloremque recusandae ab sunt, dolor minus eveniet distinctio magnam odio. Rerum, inventore.
+                    Adipisci voluptate excepturi eius quis vitae numquam quasi expedita ab aliquam quidem! Aut asperiores et doloremque velit enim quaerat quidem sint, illo facilis odit distinctio natus dignissimos cumque iure laborum!
+                    Voluptate ab soluta perferendis magni nemo culpa quisquam harum corrupti error ea doloribus earum, velit sed non libero maxime illo vero nam aliquid accusantium inventore dolorem fuga? Fugiat, facere pariatur!
+                    Iure sapiente nesciunt quia autem odio, quam delectus dolore. Assumenda, mollitia nesciunt? Eius quibusdam, ex esse blanditiis aliquam minus optio, facilis dicta nostrum consectetur sunt cupiditate obcaecati in, nemo sequi.
+                    Amet unde nesciunt, incidunt eveniet veniam, ratione magnam debitis vero doloribus quasi voluptatem sed officia ipsam libero id quos nobis praesentium est facilis magni recusandae quod. Quo sunt facere quia?
+                    Itaque atque laborum rem nam sequi? Repellendus voluptates, nemo saepe nisi hic unde et adipisci ad voluptate, minima possimus laboriosam ipsa iure. Voluptatum qui ab quas facilis odio vero neque!
+                    Omnis, aperiam. Voluptate officia et fugiat magni debitis aperiam, accusamus, quam minima sunt dolore sed facilis dolor molestias. Aperiam non reprehenderit aliquam? Molestias natus eum aspernatur numquam commodi nam ipsum.
                 </p>
             </div>
             <div id="ref">
@@ -849,45 +854,48 @@
         </div>
     </div>
     <div id="comments" class="containerStyle">
-        <form novalidate id="userComment" name="userComment" class="validate" method="GET" action="#!" enctype="text/plain">
+        <div id="userCommentWrapper" class="withCollapse">
             <h4>نظر خود را وارد کنید</h4>
-            <div class="row">
-                <div class="inputWrapper text">
-                    <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
-                    <label for="name">
-                        <i class="fas fa-user icon"></i>
-                        <p>نام و نام خانوادگی</p>
-                    </label>
-                    <span class="line"></span>
-                    <div class="msg">
-                        <p>نام و نام خانوادگی خود را وارد نمایید</p>
-                        <i class="fas fa-caret-up"></i>
+            <button class="btn small pulse collapseTrigger">ارسال نظر</button>
+            <form novalidate id="userComment" name="userComment" class="validate collapse" method="GET" action="#!" enctype="text/plain">
+                <div class="row">
+                    <div class="inputWrapper text">
+                        <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+                        <label for="name">
+                            <i class="fas fa-user icon"></i>
+                            <p>نام و نام خانوادگی</p>
+                        </label>
+                        <span class="line"></span>
+                        <div class="msg">
+                            <p>نام و نام خانوادگی خود را وارد نمایید</p>
+                            <i class="fas fa-caret-up"></i>
+                        </div>
+                    </div>
+                    <div class="inputWrapper text">
+                        <input type="email" id="email" name="email" class="style1 labelHandler validate" required>
+                        <label for="email">
+                            <i class="fas fa-envelope icon"></i>
+                            <p>پست الکترونیکی</p>
+                        </label>
+                        <span class="line"></span>
+                        <div class="msg">
+                            <p>ایمیل صحیح وارد نمایید</p>
+                            <i class="fas fa-caret-up"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="inputWrapper text">
-                    <input type="email" id="email" name="email" class="style1 labelHandler validate" required>
-                    <label for="email">
-                        <i class="fas fa-envelope icon"></i>
-                        <p>پست الکترونیکی</p>
+                <div class="inputWrapper textarea">
+                    <textarea name="commentContent" id="commentContent" class="style2 labelHandler autoExpand validate" required></textarea>
+                    <label for="commentContent">
+                        <i class="fas fa-comments"></i>
+                        <p>نظر خود را وارد نمایید</p>
                     </label>
                     <span class="line"></span>
-                    <div class="msg">
-                        <p>ایمیل صحیح وارد نمایید</p>
-                        <i class="fas fa-caret-up"></i>
-                    </div>
                 </div>
-            </div>
-            <div class="inputWrapper textarea">
-                <textarea name="commentContent" id="commentContent" class="style2 labelHandler autoExpand validate" required></textarea>
-                <label for="commentContent">
-                    <i class="fas fa-comments"></i>
-                    <p>نظر خود را وارد نمایید</p>
-                </label>
-                <span class="line"></span>
-            </div>
-            <button type="submit" class="pulse modalTrigger" data-modal="adminApprove">ثبت</button>
-        </form>
-        <div class="comment">
+                <button type="submit" class="modalTrigger" data-modal="adminApprove">ثبت</button>
+            </form>
+        </div>   
+        <div class="comment withCollapse">
             <div class="row">
                 <div class="info">
                     <p>نام کاربر</p>
@@ -897,13 +905,13 @@
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quisquam distinctio officia magni! Enim deleniti eos iusto at illo temporibus, rem accusantium, eaque quos voluptate ut sapiente quam reiciendis delectus.Non corrupti quasi eligendi in, dolor quod vel similique molestiae ratione molestias dignissimos minima facere explicabo iure dicta quisquam neque eos est? Officia exercitationem officiis perspiciatis, cumque ea repellat aliquam!
                     </p>
-                    <div class="reply">
+                    <div class="reply collapseTrigger">
                         <p>پاسخ</p>
                         <i class="fas fa-reply"></i>
                     </div>
                 </div>
             </div>
-            <form novalidate id="reply1" name="reply1" class="validate reply" method="GET" action="#!" enctype="text/plain">
+            <form novalidate id="reply1" name="reply1" class="validate reply collapse" method="GET" action="#!" enctype="text/plain">
                 <div class="inputWrapper textarea">
                     <textarea name="reply1Content" id="reply1Content" class="style2 labelHandler autoExpand validate" required></textarea>
                     <label for="reply1Content">
@@ -913,7 +921,7 @@
                     <span class="line"></span>
                 </div>
 
-                <button type="submit" class="pulse modalTrigger" data-modal="adminApprove">ارسال</button>
+                <button type="submit" class="modalTrigger" data-modal="adminApprove">ارسال</button>
             </form>
             <div class="commentReply">
                 <div class="row">
@@ -942,7 +950,7 @@
                 </div>
             </div>
         </div>
-        <div class="comment">
+        <div class="comment withCollapse">
             <div class="row">
                 <div class="info">
                     <p>نام کاربر</p>
@@ -952,24 +960,25 @@
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quisquam distinctio officia magni! Enim deleniti eos iusto at illo temporibus, rem accusantium, eaque quos voluptate ut sapiente quam reiciendis delectus.Non corrupti quasi eligendi in, dolor quod vel similique molestiae ratione molestias dignissimos minima facere explicabo iure dicta quisquam neque eos est? Officia exercitationem officiis perspiciatis, cumque ea repellat aliquam!
                     </p>
-                    <div class="reply">
+                    <div class="reply collapseTrigger">
                         <p>پاسخ</p>
                         <i class="fas fa-reply"></i>
                     </div>
                 </div>
             </div>
-            <form novalidate id="reply1" name="reply1" class="validate reply" method="GET" action="#!" enctype="text/plain">
+            <form novalidate id="reply1" name="reply1" class="validate reply collapse" method="GET" action="#!" enctype="text/plain">
                 <div class="inputWrapper textarea">
                     <textarea name="reply1Content" id="reply1Content" class="style2 labelHandler autoExpand validate" required></textarea>
-                    <label for="reply1Content">
+                    <label for="reply1Content" class="collapseTrigger">
                         <i class="fas fa-comments"></i>
                         <p>نظر خود را وارد نمایید</p>
                     </label>
                     <span class="line"></span>
                 </div>
-                <button type="submit" class="pulse modalTrigger" data-modal="adminApprove">ارسال</button>
+                <button type="submit" class="modalTrigger" data-modal="adminApprove">ارسال</button>
             </form>
         </div>
+        <button class="btn mid showMore">نظرات بیشتر</button>
     </div>
     <div id="adminApprove" class="containerStyle modal">
         <i class="fas fa-user-shield"></i>
