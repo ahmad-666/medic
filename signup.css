@@ -4453,7 +4453,7 @@ readers do not read off random characters that represent icons */
           box-shadow: 0 0.6em 1.7em -0.5em #26a69a; }
 
 .containerStyle {
-  width: 80%;
+  width: 95%;
   height: auto;
   margin: 3em auto 0 auto;
   padding: 1.5em;
@@ -4535,6 +4535,43 @@ readers do not read off random characters that represent icons */
 .blurXL {
   -webkit-filter: blur(10px);
           filter: blur(10px); }
+
+.btn {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  border-radius: 3em; }
+
+.btn.small {
+  font-size: 1.6em;
+  padding: 0.3em 1.7em; }
+
+.btn.mid {
+  font-size: 1.9em;
+  padding: 0.4em 1.8em; }
+
+.btn.large {
+  font-size: 2em;
+  padding: 0.5em 2em; }
+
+.collapseTrigger {
+  cursor: pointer; }
+
+.collapse {
+  height: auto; }
+
+.collapse.close {
+  opacity: 0;
+  visibility: hidden;
+  height: 0; }
+
+.collapse.addTransition {
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.collapse.open {
+  opacity: 1;
+  visibility: visible; }
 
 .ellipse {
   white-space: nowrap;
@@ -4634,6 +4671,16 @@ readers do not read off random characters that represent icons */
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+
+.modal {
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  opacity: 0;
+  visibility: hidden; }
+
+.modal.show {
+  opacity: 1;
+  visibility: visible; }
 
 @font-face {
   font-family: iranSans;
@@ -5744,11 +5791,10 @@ form#sample {
         left: -webkit-calc(100% - 1.5em - .4em);
         left: calc(100% - 1.5em - .4em); }
   form#sample .inputWrapper.textarea {
-    width: -webkit-calc((100% - (2 * 3.6em)) / 2);
-    width: calc((100% - (2 * 3.6em)) / 2);
+    width: 53em;
     height: auto;
     position: relative;
-    margin: 1.5em;
+    margin-top: 3em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -5798,27 +5844,24 @@ form#sample {
               -ms-transform: translateY(0);
                   transform: translateY(0); }
     form#sample .inputWrapper.textarea textarea.style2 {
-      height: 4em;
-      max-height: 12em;
-      overflow: auto;
+      overflow: hidden;
       border: none;
       border-bottom: 1.2px solid #d3d3d7; }
       form#sample .inputWrapper.textarea textarea.style2 ~ label {
-        bottom: 50%;
-        -webkit-transform: translateY(50%);
-            -ms-transform: translateY(50%);
-                transform: translateY(50%); }
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
       form#sample .inputWrapper.textarea textarea.style2:focus {
         border-bottom: 1.2px solid #26a69a; }
         form#sample .inputWrapper.textarea textarea.style2:focus ~ label {
           font-size: 8px;
           right: 0;
           color: #26a69a;
-          bottom: -webkit-calc(100% + 0em);
-          bottom: calc(100% + 0em);
-          -webkit-transform: translateY(0);
-              -ms-transform: translateY(0);
-                  transform: translateY(0); }
+          top: 0;
+          -webkit-transform: translateY(-100%);
+              -ms-transform: translateY(-100%);
+                  transform: translateY(-100%); }
         form#sample .inputWrapper.textarea textarea.style2:focus ~ .line {
           width: 100%; }
     form#sample .inputWrapper.textarea textarea.style1.error {
@@ -5839,11 +5882,10 @@ form#sample {
       right: 0; }
     form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 8px;
-      bottom: -webkit-calc(100% + 1em);
-      bottom: calc(100% + 1em);
-      -webkit-transform: translateY(50%);
-          -ms-transform: translateY(50%);
-              transform: translateY(50%);
+      top: 0;
+      -webkit-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+              transform: translateY(-100%);
       right: 0; }
     form#sample .inputWrapper.textarea label {
       width: auto;
@@ -5876,7 +5918,7 @@ form#sample {
               align-content: "";
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
-      color: #d3d3d7; }
+      color: #c6c6cb; }
       form#sample .inputWrapper.textarea label i {
         font-size: 1.6em; }
       form#sample .inputWrapper.textarea label p {
@@ -6271,7 +6313,7 @@ form#newsLetters {
       width: auto;
       height: -webkit-calc(100%);
       height: calc(100%);
-      line-height: 3.5em;
+      line-height: 3em;
       border-top-left-radius: 3em;
       border-bottom-left-radius: 3em;
       padding: 0 1.25em;
@@ -6315,7 +6357,7 @@ form#newsLetters {
       opacity: 1;
       visibility: visible; }
 
-form#contact {
+form#contact, form#report, form#requestAd {
   width: 60em;
   height: auto;
   padding: 1.5em 0;
@@ -6342,15 +6384,15 @@ form#contact {
   -webkit-align-content: "";
       -ms-flex-line-pack: "";
           align-content: ""; }
-  form#contact img {
+  form#contact img, form#report img, form#requestAd img {
     width: 14em;
     height: 16em;
     margin-top: -1.5em; }
-  form#contact h4 {
+  form#contact h4, form#report h4, form#requestAd h4 {
     font-size: 2em;
     font-weight: 700;
     color: #26a69a; }
-  form#contact .inputs {
+  form#contact .inputs, form#report .inputs, form#requestAd .inputs {
     width: 100%;
     height: auto;
     display: -webkit-box;
@@ -6376,13 +6418,13 @@ form#contact {
     -webkit-align-content: flex-start;
         -ms-flex-line-pack: start;
             align-content: flex-start; }
-  form#contact .inputWrapper.text {
+  form#contact .inputWrapper.text, form#report .inputWrapper.text, form#requestAd .inputWrapper.text {
     width: -webkit-calc((100% - (2 * 3em)) / 2);
     width: calc((100% - (2 * 3em)) / 2);
     height: 4em;
     position: relative;
     margin: 1.5em; }
-    form#contact .inputWrapper.text input {
+    form#contact .inputWrapper.text input, form#report .inputWrapper.text input, form#requestAd .inputWrapper.text input {
       width: 100%;
       height: 100%;
       line-height: 4em;
@@ -6391,25 +6433,25 @@ form#contact {
       color: #2d2d31;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text input::-webkit-input-placeholder {
+      form#contact .inputWrapper.text input::-webkit-input-placeholder, form#report .inputWrapper.text input::-webkit-input-placeholder, form#requestAd .inputWrapper.text input::-webkit-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::-moz-placeholder {
+      form#contact .inputWrapper.text input::-moz-placeholder, form#report .inputWrapper.text input::-moz-placeholder, form#requestAd .inputWrapper.text input::-moz-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input:-ms-input-placeholder {
+      form#contact .inputWrapper.text input:-ms-input-placeholder, form#report .inputWrapper.text input:-ms-input-placeholder, form#requestAd .inputWrapper.text input:-ms-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::-ms-input-placeholder {
+      form#contact .inputWrapper.text input::-ms-input-placeholder, form#report .inputWrapper.text input::-ms-input-placeholder, form#requestAd .inputWrapper.text input::-ms-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::placeholder {
+      form#contact .inputWrapper.text input::placeholder, form#report .inputWrapper.text input::placeholder, form#requestAd .inputWrapper.text input::placeholder {
         color: #90909b;
         font-size: 1.6em; }
-    form#contact .inputWrapper.text input.style1 {
+    form#contact .inputWrapper.text input.style1, form#report .inputWrapper.text input.style1, form#requestAd .inputWrapper.text input.style1 {
       border: none;
       border-bottom: 1.2px solid #d3d3d7; }
-      form#contact .inputWrapper.text input.style1:focus ~ label {
+      form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
         color: #26a69a;
         font-size: 8px;
         bottom: -webkit-calc(100% + .5em);
@@ -6418,14 +6460,14 @@ form#contact {
             -ms-transform: translateY(50%);
                 transform: translateY(50%);
         right: 0; }
-      form#contact .inputWrapper.text input.style1:focus ~ .line {
+      form#contact .inputWrapper.text input.style1:focus ~ .line, form#report .inputWrapper.text input.style1:focus ~ .line, form#requestAd .inputWrapper.text input.style1:focus ~ .line {
         width: 100%; }
-    form#contact .inputWrapper.text input.style2 {
+    form#contact .inputWrapper.text input.style2, form#report .inputWrapper.text input.style2, form#requestAd .inputWrapper.text input.style2 {
       border: 1.2px solid #d3d3d7;
       border-radius: 3em; }
-      form#contact .inputWrapper.text input.style2:focus {
+      form#contact .inputWrapper.text input.style2:focus, form#report .inputWrapper.text input.style2:focus, form#requestAd .inputWrapper.text input.style2:focus {
         border: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.text input.style2:focus ~ label {
+        form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
           color: #26a69a;
           font-size: 8px;
           bottom: -webkit-calc(100% + 1.5em);
@@ -6434,19 +6476,19 @@ form#contact {
               -ms-transform: translateY(50%);
                   transform: translateY(50%);
           right: 0.75em; }
-        form#contact .inputWrapper.text input.style2:focus ~ .line {
+        form#contact .inputWrapper.text input.style2:focus ~ .line, form#report .inputWrapper.text input.style2:focus ~ .line, form#requestAd .inputWrapper.text input.style2:focus ~ .line {
           width: 0%; }
-    form#contact .inputWrapper.text input.style1.error {
+    form#contact .inputWrapper.text input.style1.error, form#report .inputWrapper.text input.style1.error, form#requestAd .inputWrapper.text input.style1.error {
       border-bottom: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.text input.style1.error ~ label {
+      form#contact .inputWrapper.text input.style1.error ~ label, form#report .inputWrapper.text input.style1.error ~ label, form#requestAd .inputWrapper.text input.style1.error ~ label {
         color: #ea6161; }
-      form#contact .inputWrapper.text input.style1.error ~ .line {
+      form#contact .inputWrapper.text input.style1.error ~ .line, form#report .inputWrapper.text input.style1.error ~ .line, form#requestAd .inputWrapper.text input.style1.error ~ .line {
         background-color: #ea6161; }
-    form#contact .inputWrapper.text input.style2.error {
+    form#contact .inputWrapper.text input.style2.error, form#report .inputWrapper.text input.style2.error, form#requestAd .inputWrapper.text input.style2.error {
       border: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.text input.style2.error ~ label {
+      form#contact .inputWrapper.text input.style2.error ~ label, form#report .inputWrapper.text input.style2.error ~ label, form#requestAd .inputWrapper.text input.style2.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.text label {
+    form#contact .inputWrapper.text label, form#report .inputWrapper.text label, form#requestAd .inputWrapper.text label {
       width: auto;
       height: auto;
       position: absolute;
@@ -6481,14 +6523,14 @@ form#contact {
       color: #c6c6cb;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text label .icon {
+      form#contact .inputWrapper.text label .icon, form#report .inputWrapper.text label .icon, form#requestAd .inputWrapper.text label .icon {
         font-size: 1.6em; }
-      form#contact .inputWrapper.text label p {
+      form#contact .inputWrapper.text label p, form#report .inputWrapper.text label p, form#requestAd .inputWrapper.text label p {
         font-size: 1.5em;
         -webkit-transform: translateX(-0.3em);
             -ms-transform: translateX(-0.3em);
                 transform: translateX(-0.3em); }
-    form#contact .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + .5em);
       bottom: calc(100% + .5em);
@@ -6496,7 +6538,7 @@ form#contact {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 1.5em);
       bottom: calc(100% + 1.5em);
@@ -6504,7 +6546,7 @@ form#contact {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0.75em; }
-    form#contact .inputWrapper.text .line {
+    form#contact .inputWrapper.text .line, form#report .inputWrapper.text .line, form#requestAd .inputWrapper.text .line {
       width: 0%;
       height: 1.2px;
       background-color: #26a69a;
@@ -6514,7 +6556,7 @@ form#contact {
       top: calc(100% - 1.5px);
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-    form#contact .inputWrapper.text .msg {
+    form#contact .inputWrapper.text .msg, form#report .inputWrapper.text .msg, form#requestAd .inputWrapper.text .msg {
       width: auto;
       height: auto;
       border-radius: 3em;
@@ -6528,21 +6570,21 @@ form#contact {
       visibility: hidden;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text .msg p {
+      form#contact .inputWrapper.text .msg p, form#report .inputWrapper.text .msg p, form#requestAd .inputWrapper.text .msg p {
         color: #fbfbfb;
         font-size: 1.4em; }
-      form#contact .inputWrapper.text .msg i {
+      form#contact .inputWrapper.text .msg i, form#report .inputWrapper.text .msg i, form#requestAd .inputWrapper.text .msg i {
         font-size: 2.4em;
         color: #ea6161;
         position: absolute;
         right: 1.5em;
         top: -webkit-calc(0% - .6em);
         top: calc(0% - .6em); }
-    form#contact .inputWrapper.text .msg.show {
+    form#contact .inputWrapper.text .msg.show, form#report .inputWrapper.text .msg.show, form#requestAd .inputWrapper.text .msg.show {
       opacity: 1;
       visibility: visible;
       z-index: 2; }
-  form#contact .inputWrapper.textarea {
+  form#contact .inputWrapper.textarea, form#report .inputWrapper.textarea, form#requestAd .inputWrapper.textarea {
     width: 100%;
     height: auto;
     position: relative;
@@ -6551,7 +6593,7 @@ form#contact {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    form#contact .inputWrapper.textarea textarea {
+    form#contact .inputWrapper.textarea textarea, form#report .inputWrapper.textarea textarea, form#requestAd .inputWrapper.textarea textarea {
       width: 100%;
       font-size: 1.6em;
       color: #2d2d31;
@@ -6560,33 +6602,33 @@ form#contact {
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
       resize: none; }
-      form#contact .inputWrapper.textarea textarea::-webkit-input-placeholder {
+      form#contact .inputWrapper.textarea textarea::-webkit-input-placeholder, form#report .inputWrapper.textarea textarea::-webkit-input-placeholder, form#requestAd .inputWrapper.textarea textarea::-webkit-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::-moz-placeholder {
+      form#contact .inputWrapper.textarea textarea::-moz-placeholder, form#report .inputWrapper.textarea textarea::-moz-placeholder, form#requestAd .inputWrapper.textarea textarea::-moz-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea:-ms-input-placeholder {
+      form#contact .inputWrapper.textarea textarea:-ms-input-placeholder, form#report .inputWrapper.textarea textarea:-ms-input-placeholder, form#requestAd .inputWrapper.textarea textarea:-ms-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::-ms-input-placeholder {
+      form#contact .inputWrapper.textarea textarea::-ms-input-placeholder, form#report .inputWrapper.textarea textarea::-ms-input-placeholder, form#requestAd .inputWrapper.textarea textarea::-ms-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::placeholder {
+      form#contact .inputWrapper.textarea textarea::placeholder, form#report .inputWrapper.textarea textarea::placeholder, form#requestAd .inputWrapper.textarea textarea::placeholder {
         font-size: 1.6em;
         color: #90909b; }
-    form#contact .inputWrapper.textarea textarea.style1 {
+    form#contact .inputWrapper.textarea textarea.style1, form#report .inputWrapper.textarea textarea.style1, form#requestAd .inputWrapper.textarea textarea.style1 {
       height: 8em;
       border: 1.2px solid #d3d3d7;
       border-radius: 1.5em; }
-      form#contact .inputWrapper.textarea textarea.style1 ~ label {
+      form#contact .inputWrapper.textarea textarea.style1 ~ label, form#report .inputWrapper.textarea textarea.style1 ~ label, form#requestAd .inputWrapper.textarea textarea.style1 ~ label {
         bottom: 100%;
         -webkit-transform: translateY(150%);
             -ms-transform: translateY(150%);
                 transform: translateY(150%); }
-      form#contact .inputWrapper.textarea textarea.style1:focus {
+      form#contact .inputWrapper.textarea textarea.style1:focus, form#report .inputWrapper.textarea textarea.style1:focus, form#requestAd .inputWrapper.textarea textarea.style1:focus {
         border: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+        form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
           font-size: 8px;
           right: 0.75em;
           color: #26a69a;
@@ -6595,20 +6637,20 @@ form#contact {
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
                   transform: translateY(0); }
-    form#contact .inputWrapper.textarea textarea.style2 {
+    form#contact .inputWrapper.textarea textarea.style2, form#report .inputWrapper.textarea textarea.style2, form#requestAd .inputWrapper.textarea textarea.style2 {
       height: 4em;
       max-height: 12em;
       overflow: auto;
       border: none;
       border-bottom: 1.2px solid #d3d3d7; }
-      form#contact .inputWrapper.textarea textarea.style2 ~ label {
+      form#contact .inputWrapper.textarea textarea.style2 ~ label, form#report .inputWrapper.textarea textarea.style2 ~ label, form#requestAd .inputWrapper.textarea textarea.style2 ~ label {
         bottom: 50%;
         -webkit-transform: translateY(50%);
             -ms-transform: translateY(50%);
                 transform: translateY(50%); }
-      form#contact .inputWrapper.textarea textarea.style2:focus {
+      form#contact .inputWrapper.textarea textarea.style2:focus, form#report .inputWrapper.textarea textarea.style2:focus, form#requestAd .inputWrapper.textarea textarea.style2:focus {
         border-bottom: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+        form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
           font-size: 8px;
           right: 0;
           color: #26a69a;
@@ -6617,17 +6659,17 @@ form#contact {
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
                   transform: translateY(0); }
-        form#contact .inputWrapper.textarea textarea.style2:focus ~ .line {
+        form#contact .inputWrapper.textarea textarea.style2:focus ~ .line, form#report .inputWrapper.textarea textarea.style2:focus ~ .line, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ .line {
           width: 100%; }
-    form#contact .inputWrapper.textarea textarea.style1.error {
+    form#contact .inputWrapper.textarea textarea.style1.error, form#report .inputWrapper.textarea textarea.style1.error, form#requestAd .inputWrapper.textarea textarea.style1.error {
       border: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.textarea textarea.style1.error ~ label {
+      form#contact .inputWrapper.textarea textarea.style1.error ~ label, form#report .inputWrapper.textarea textarea.style1.error ~ label, form#requestAd .inputWrapper.textarea textarea.style1.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.textarea textarea.style2.error {
+    form#contact .inputWrapper.textarea textarea.style2.error, form#report .inputWrapper.textarea textarea.style2.error, form#requestAd .inputWrapper.textarea textarea.style2.error {
       border-bottom: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.textarea textarea.style2.error ~ label {
+      form#contact .inputWrapper.textarea textarea.style2.error ~ label, form#report .inputWrapper.textarea textarea.style2.error ~ label, form#requestAd .inputWrapper.textarea textarea.style2.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 2em);
       bottom: calc(100% + 2em);
@@ -6635,7 +6677,7 @@ form#contact {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 1em);
       bottom: calc(100% + 1em);
@@ -6643,7 +6685,7 @@ form#contact {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.textarea label {
+    form#contact .inputWrapper.textarea label, form#report .inputWrapper.textarea label, form#requestAd .inputWrapper.textarea label {
       width: auto;
       height: auto;
       position: absolute;
@@ -6675,14 +6717,14 @@ form#contact {
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
       color: #d3d3d7; }
-      form#contact .inputWrapper.textarea label i {
+      form#contact .inputWrapper.textarea label i, form#report .inputWrapper.textarea label i, form#requestAd .inputWrapper.textarea label i {
         font-size: 1.6em; }
-      form#contact .inputWrapper.textarea label p {
+      form#contact .inputWrapper.textarea label p, form#report .inputWrapper.textarea label p, form#requestAd .inputWrapper.textarea label p {
         font-size: 1.5em;
         -webkit-transform: translateX(-0.3em);
             -ms-transform: translateX(-0.3em);
                 transform: translateX(-0.3em); }
-    form#contact .inputWrapper.textarea .line {
+    form#contact .inputWrapper.textarea .line, form#report .inputWrapper.textarea .line, form#requestAd .inputWrapper.textarea .line {
       width: 0%;
       height: 1.2px;
       background-color: #26a69a;
@@ -6692,7 +6734,7 @@ form#contact {
       top: calc(100% - .6px);
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-  form#contact button[type="submit"] {
+  form#contact button[type="submit"], form#report button[type="submit"], form#requestAd button[type="submit"] {
     width: auto;
     height: auto;
     padding: 0.5em 2.5em;
@@ -6706,10 +6748,14 @@ form#contact {
     color: #fbfbfb;
     background-color: #26a69a;
     border: 1.2px solid transparent; }
-    form#contact button[type="submit"]:hover {
+    form#contact button[type="submit"]:hover, form#report button[type="submit"]:hover, form#requestAd button[type="submit"]:hover {
       color: #26a69a;
       background-color: #fbfbfb;
       border: 1.2px solid #26a69a; }
+
+form#requestAd img {
+  width: 14em;
+  height: 14em; }
 
 form#login {
   width: 40em;
@@ -7627,7 +7673,6 @@ form#signup {
 
 form#userComment {
   width: auto;
-  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7651,10 +7696,6 @@ form#userComment {
   -webkit-align-content: "";
       -ms-flex-line-pack: "";
           align-content: ""; }
-  form#userComment h4 {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: #2d2d31; }
   form#userComment .row {
     width: auto;
     height: auto;
@@ -7976,7 +8017,7 @@ form#userComment {
               align-content: "";
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
-      color: #d3d3d7; }
+      color: #c6c6cb; }
       form#userComment .inputWrapper.textarea label i {
         font-size: 1.6em; }
       form#userComment .inputWrapper.textarea label p {
@@ -8238,23 +8279,23 @@ form.reply {
       font-size: 6px; }
     form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 6px; }
-  form#contact {
+  form#contact, form#report, form#requestAd {
     font-size: 8px; }
-    form#contact .inputWrapper.text input.style1:focus ~ label {
+    form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style2:focus ~ label {
+    form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 6px; }
   form#login {
     font-size: 8px; }
@@ -8350,23 +8391,23 @@ form.reply {
       font-size: 4px; }
     form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 4px; }
-  form#contact {
+  form#contact, form#report, form#requestAd {
     font-size: 6px; }
-    form#contact .inputWrapper.text input.style1:focus ~ label {
+    form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style2:focus ~ label {
+    form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 4px; }
   form#login {
     font-size: 6px; }

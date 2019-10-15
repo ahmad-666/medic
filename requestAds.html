@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-<link href="rules.css" rel="stylesheet"></head>
+<link href="requestAds.css" rel="stylesheet"></head>
 <body class="bg">
     <header>
         <div id="top">
@@ -765,28 +765,45 @@
             </ul>
         </nav>
     </header>
-    <div id="rules">
-        <div id="persian" class="containerStyle">
-            <h4>قوانین</h4>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quo quas at. Quidem optio doloremque architecto accusantium incidunt distinctio similique repellat aperiam facilis sequi numquam, dolor dolorem dolores voluptate magnam!
-                Laudantium id eveniet impedit maxime asperiores porro dicta repellendus officiis temporibus animi dolorum culpa error, ullam, dolore consectetur quasi provident odit. Aliquam similique porro eligendi quasi esse, illo fugit eum!
-                Odit quae esse a saepe! Ipsam eaque optio ad dolorum libero, porro ratione veniam dolorem exercitationem sit pariatur. Eveniet aspernatur est a perferendis magnam ex at vel expedita quam molestiae.
-                Et, rem laudantium mollitia sit est minima quis, pariatur, dolorum tenetur modi quibusdam dolor impedit ullam laboriosam! Sint odio dolores soluta autem. Eveniet ipsam recusandae minima mollitia totam non vitae!
-                Cumque, nobis voluptatibus! Aliquam tempore quos eveniet dolores laboriosam, enim in praesentium cupiditate possimus impedit nostrum. Autem quod voluptatem, est ea et qui, quibusdam vel beatae, laborum impedit odit cumque.
-            </p>
+    <form novalidate id="requestAd" name="requestAd" class="validate containerStyle" method="GET" action="#!" enctype="text/plain">
+        <img src="assets/imgs/requestAds.png" alt="requestImg">
+        <h4>درخواست تبلیغ</h4>
+        <div class="inputs">
+            <div class="inputWrapper text">
+                <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+                <label for="name">
+                    <i class="fas fa-user icon"></i>
+                    <p>نام و نام خانوادگی</p>
+                </label>
+                <span class="line"></span>
+                <div class="msg">
+                    <p>نام و نام خانوادگی خود را وارد نمایید</p>
+                    <i class="fas fa-caret-up"></i>
+                </div>
+            </div>
+            <div class="inputWrapper text">
+                <input type="text" id="emailPhone" name="emailPhone" class="style1 labelHandler validate" required>
+                <label for="emailPhone">
+                    <i class="fas fa-envelope icon"></i>
+                    <p>ایمیل یا شماره موبایل</p>
+                </label>
+                <span class="line"></span>
+                <div class="msg">
+                    <p>لطفا مقداری وارد نمایید</p>
+                    <i class="fas fa-caret-up"></i>
+                </div>
+            </div>
+            <div class="inputWrapper textarea">
+                <textarea name="comment1" id="comment1" class="style1 labelHandler validate" required></textarea>
+                <label for="comment1">
+                    <i class="fas fa-comments"></i>
+                    <p>توضیح خود درباره تبلیغ را وارد نمایید</p>
+                </label>
+                <span class="line"></span>
+            </div>
         </div>
-        <div id="english" class="containerStyle">
-            <h4>rules</h4>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quo quas at. Quidem optio doloremque architecto accusantium incidunt distinctio similique repellat aperiam facilis sequi numquam, dolor dolorem dolores voluptate magnam!
-                Laudantium id eveniet impedit maxime asperiores porro dicta repellendus officiis temporibus animi dolorum culpa error, ullam, dolore consectetur quasi provident odit. Aliquam similique porro eligendi quasi esse, illo fugit eum!
-                Odit quae esse a saepe! Ipsam eaque optio ad dolorum libero, porro ratione veniam dolorem exercitationem sit pariatur. Eveniet aspernatur est a perferendis magnam ex at vel expedita quam molestiae.
-                Et, rem laudantium mollitia sit est minima quis, pariatur, dolorum tenetur modi quibusdam dolor impedit ullam laboriosam! Sint odio dolores soluta autem. Eveniet ipsam recusandae minima mollitia totam non vitae!
-                Cumque, nobis voluptatibus! Aliquam tempore quos eveniet dolores laboriosam, enim in praesentium cupiditate possimus impedit nostrum. Autem quod voluptatem, est ea et qui, quibusdam vel beatae, laborum impedit odit cumque.
-            </p>
-        </div>
-    </div>
+        <button type="submit" class="btn small pulse">ارسال</button>
+    </form>
     <footer>
         <div class="logo">
             <img src="assets/imgs/logo.png" alt="logoImg">
@@ -847,5 +864,5 @@
             </a>          
         </div>
     </footer>
-<script type="text/javascript" src="rules.js"></script></body>
+<script type="text/javascript" src="requestAds.js"></script></body>
 </html>

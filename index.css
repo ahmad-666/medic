@@ -4453,7 +4453,7 @@ readers do not read off random characters that represent icons */
           box-shadow: 0 0.6em 1.7em -0.5em #26a69a; }
 
 .containerStyle {
-  width: 80%;
+  width: 95%;
   height: auto;
   margin: 3em auto 0 auto;
   padding: 1.5em;
@@ -4535,6 +4535,43 @@ readers do not read off random characters that represent icons */
 .blurXL {
   -webkit-filter: blur(10px);
           filter: blur(10px); }
+
+.btn {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  border-radius: 3em; }
+
+.btn.small {
+  font-size: 1.6em;
+  padding: 0.3em 1.7em; }
+
+.btn.mid {
+  font-size: 1.9em;
+  padding: 0.4em 1.8em; }
+
+.btn.large {
+  font-size: 2em;
+  padding: 0.5em 2em; }
+
+.collapseTrigger {
+  cursor: pointer; }
+
+.collapse {
+  height: auto; }
+
+.collapse.close {
+  opacity: 0;
+  visibility: hidden;
+  height: 0; }
+
+.collapse.addTransition {
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.collapse.open {
+  opacity: 1;
+  visibility: visible; }
 
 .ellipse {
   white-space: nowrap;
@@ -4634,6 +4671,16 @@ readers do not read off random characters that represent icons */
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+
+.modal {
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  opacity: 0;
+  visibility: hidden; }
+
+.modal.show {
+  opacity: 1;
+  visibility: visible; }
 
 @font-face {
   font-family: iranSans;
@@ -4760,14 +4807,14 @@ header nav {
           font-size: 1.6em;
           color: #2d2d31; }
         header nav ul .logo a img {
-          width: 8em;
-          height: 5em;
+          width: 4.5em;
+          height: 3.5em;
           margin-right: 0.75em; }
     header nav ul li:not(.logo) {
       width: auto;
       height: 100%;
       margin-right: 0;
-      padding: 1.5em 3em;
+      padding: 0.75em 3em;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -4820,7 +4867,6 @@ header nav {
         top: 105%;
         width: 80%;
         height: auto;
-        padding: 1.5em 3em;
         background-color: #fbfbfb;
         display: -webkit-box;
         display: -webkit-flex;
@@ -4848,7 +4894,7 @@ header nav {
         header nav ul li:not(.logo) .menu .col {
           width: auto;
           height: auto;
-          margin-right: 6em;
+          margin: 1.5em 3em;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -4872,8 +4918,6 @@ header nav {
           -webkit-align-content: "";
               -ms-flex-line-pack: "";
                   align-content: ""; }
-          header nav ul li:not(.logo) .menu .col:first-child {
-            margin-right: 0; }
           header nav ul li:not(.logo) .menu .col:hover h4 {
             border-bottom: 1.5px solid #26a69a; }
           header nav ul li:not(.logo) .menu .col h4 {
@@ -5014,7 +5058,7 @@ header {
       -webkit-align-content: "";
           -ms-flex-line-pack: "";
               align-content: "";
-      padding: 1.5em 3em; }
+      padding: 0.75em 3em; }
       header #top .right a, header #top .right .phone, header #top .left a, header #top .left .phone {
         width: auto;
         height: 100%;
@@ -5054,7 +5098,7 @@ header {
               -ms-transform: translateX(-0.5em);
                   transform: translateX(-0.5em); }
 
-.sliderWrapperMove {
+.sliderMove {
   width: 100%;
   height: 100%;
   position: relative;
@@ -5082,7 +5126,7 @@ header {
   -webkit-align-content: "";
       -ms-flex-line-pack: "";
           align-content: ""; }
-  .sliderWrapperMove .btn {
+  .sliderMove .btn {
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
@@ -5094,20 +5138,64 @@ header {
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
     z-index: 2; }
-    .sliderWrapperMove .btn i {
+    .sliderMove .btn i {
       font-size: 2em;
       color: #2d2d31;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-    .sliderWrapperMove .btn:hover {
+    .sliderMove .btn:hover {
       background-color: #26a69a; }
-      .sliderWrapperMove .btn:hover i {
+      .sliderMove .btn:hover i {
         color: #fbfbfb; }
-  .sliderWrapperMove .btn.prev {
+  .sliderMove .btn.prev {
     margin-right: 0.75em; }
-  .sliderWrapperMove .btn.next {
+  .sliderMove .btn.next {
     margin-left: 0.75em; }
-  .sliderWrapperMove .slider {
+  .sliderMove .dots {
+    width: auto;
+    height: auto;
+    bottom: 0.75em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+    z-index: 2; }
+    .sliderMove .dots .dot {
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear;
+      cursor: pointer;
+      width: 1.6em;
+      height: 1.6em;
+      border-radius: 50%;
+      margin: 0 0.75em;
+      background-color: #fbfbfb; }
+      .sliderMove .dots .dot:hover {
+        background-color: #44d4c7; }
+    .sliderMove .dots .dot.active {
+      background-color: #26a69a;
+      -webkit-transform: scale(1.3);
+          -ms-transform: scale(1.3);
+              transform: scale(1.3); }
+  .sliderMove .slider {
     -webkit-transition: all .3s linear;
     transition: all .3s linear;
     display: -webkit-box;
@@ -5133,15 +5221,584 @@ header {
     -webkit-align-content: "";
         -ms-flex-line-pack: "";
             align-content: ""; }
-    .sliderWrapperMove .slider .slide {
+    .sliderMove .slider .slide {
       -webkit-flex-shrink: 0;
           -ms-flex-negative: 0;
               flex-shrink: 0;
       width: 100%;
       height: 100%; }
-      .sliderWrapperMove .slider .slide a, .sliderWrapperMove .slider .slide img {
+      .sliderMove .slider .slide a, .sliderMove .slider .slide img {
         width: 100%;
         height: 100%; }
+
+#popularWrapper > .article {
+  width: 100%;
+  height: -webkit-calc((100% / 3) + 3em);
+  height: calc((100% / 3) + 3em);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: ""; }
+  #popularWrapper > .article .img {
+    width: 100%;
+    height: 10em; }
+    #popularWrapper > .article .img img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  #popularWrapper > .article h4 {
+    width: 100%;
+    font-size: 1.6em;
+    color: #2d2d31;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    line-height: 1.5em;
+    max-height: 3em;
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 0;
+    margin-top: .3em; }
+    #popularWrapper > .article h4 .ellipse {
+      color: #2d2d31;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: none; }
+    #popularWrapper > .article h4 .ellipse.show {
+      display: block; }
+  #popularWrapper > .article .row {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start;
+    margin-top: .15em; }
+    #popularWrapper > .article .row p {
+      font-size: 1.2em;
+      color: #90909b; }
+      #popularWrapper > .article .row p:nth-child(2) {
+        margin-right: 1.5em; }
+
+#popularWrapper .popular {
+  width: 100%;
+  height: -webkit-calc((2 * (100% / 3)) - 2em);
+  height: calc((2 * (100% / 3)) - 2em);
+  margin-top: 0em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: ""; }
+  #popularWrapper .popular .title {
+    width: 100%;
+    height: 3em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+    padding: 0; }
+    #popularWrapper .popular .title h4 {
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      width: auto;
+      height: auto;
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #26a69a; }
+    #popularWrapper .popular .title .line {
+      width: 100%;
+      height: .2em;
+      background-color: #26a69a;
+      margin-right: .3em; }
+  #popularWrapper .popular .articles {
+    width: 100%;
+    max-height: -webkit-calc(100% - 3em);
+    max-height: calc(100% - 3em);
+    overflow: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: ""; }
+    #popularWrapper .popular .articles .article {
+      width: 100%;
+      height: auto;
+      padding: 0.75em 0;
+      border-bottom: 1px solid #c6c6cb;
+      background-color: white;
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear; }
+      #popularWrapper .popular .articles .article:hover {
+        background-color: #ebebeb; }
+      #popularWrapper .popular .articles .article p {
+        font-size: 1.6em;
+        color: #2d2d31; }
+
+#latest .title {
+  width: 100%;
+  height: auto;
+  background-color: #343743;
+  overflow: hidden; }
+  #latest .title .skew {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: #26a69a;
+    -webkit-transform: translateX(2em) skewX(-30deg);
+        -ms-transform: translateX(2em) skewX(-30deg);
+            transform: translateX(2em) skewX(-30deg);
+    padding: 0.75em 1.5em 0.75em 12em; }
+    #latest .title .skew h4 {
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #fbfbfb;
+      -webkit-transform: skewX(30deg) translateX(-1.5em);
+          -ms-transform: skewX(30deg) translateX(-1.5em);
+              transform: skewX(30deg) translateX(-1.5em); }
+
+#latest .articles {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  margin-top: 1em; }
+  #latest .articles .article {
+    width: -webkit-calc((100% - (2 * 2em)) / 2);
+    width: calc((100% - (2 * 2em)) / 2);
+    height: auto;
+    margin: 1em 0;
+    padding: 0.75em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: "";
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear; }
+    #latest .articles .article:hover {
+      -webkit-box-shadow: 0 0 2.5em 0.5em rgba(135, 135, 135, 0.5);
+              box-shadow: 0 0 2.5em 0.5em rgba(135, 135, 135, 0.5); }
+      #latest .articles .article:hover .img img {
+        -webkit-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+                transform: scale(1.3); }
+    #latest .articles .article .img {
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      width: 15em;
+      height: 10em;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.5em; }
+      #latest .articles .article .img img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear; }
+      #latest .articles .article .img .tags {
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+        -webkit-align-content: "";
+            -ms-flex-line-pack: "";
+                align-content: ""; }
+        #latest .articles .article .img .tags .tag {
+          width: auto;
+          height: auto;
+          padding: 0.5em 1em;
+          font-weight: 1.2em;
+          color: #fbfbfb;
+          margin-top: .5em; }
+          #latest .articles .article .img .tags .tag:first-child {
+            margin-top: 0; }
+        #latest .articles .article .img .tags .tag.news {
+          background-color: #004782; }
+        #latest .articles .article .img .tags .tag.new {
+          background-color: #26a69a; }
+        #latest .articles .article .img .tags .tag.special {
+          background-color: #ea6161; }
+    #latest .articles .article .info {
+      width: 100%;
+      height: auto;
+      margin-right: 0.75em;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+      -webkit-align-content: "";
+          -ms-flex-line-pack: "";
+              align-content: ""; }
+      #latest .articles .article .info h4 {
+        font-size: 1.6em;
+        color: #2d2d31;
+        font-weight: 700; }
+      #latest .articles .article .info .row {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+        -webkit-align-content: "";
+            -ms-flex-line-pack: "";
+                align-content: ""; }
+        #latest .articles .article .info .row p {
+          font-size: 1.2em;
+          color: #90909b; }
+        #latest .articles .article .info .row .right {
+          width: 100%;
+          height: auto;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-pack: start;
+          -webkit-justify-content: flex-start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-flex-wrap: nowrap;
+              -ms-flex-wrap: nowrap;
+                  flex-wrap: nowrap;
+          -webkit-align-content: "";
+              -ms-flex-line-pack: "";
+                  align-content: ""; }
+          #latest .articles .article .info .row .right p {
+            margin-right: 1.5em; }
+            #latest .articles .article .info .row .right p:first-child {
+              margin-right: 0; }
+        #latest .articles .article .info .row .left {
+          -webkit-flex-shrink: 0;
+              -ms-flex-negative: 0;
+                  flex-shrink: 0;
+          margin-right: 0.75em;
+          width: auto;
+          height: auto;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-pack: start;
+          -webkit-justify-content: flex-start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -webkit-box-align: start;
+          -webkit-align-items: flex-start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          -webkit-flex-wrap: nowrap;
+              -ms-flex-wrap: nowrap;
+                  flex-wrap: nowrap;
+          -webkit-align-content: "";
+              -ms-flex-line-pack: "";
+                  align-content: ""; }
+          #latest .articles .article .info .row .left .like, #latest .articles .article .info .row .left .comment {
+            width: auto;
+            height: auto;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+            -webkit-align-content: "";
+                -ms-flex-line-pack: "";
+                    align-content: "";
+            color: #ababb3; }
+            #latest .articles .article .info .row .left .like:not(:first-child), #latest .articles .article .info .row .left .comment:not(:first-child) {
+              margin-right: 1.5em; }
+            #latest .articles .article .info .row .left .like i, #latest .articles .article .info .row .left .comment i {
+              width: 2.2em;
+              height: 2.2em;
+              border-radius: 50%;
+              border: 1px solid #ababb3;
+              position: relative; }
+              #latest .articles .article .info .row .left .like i::before, #latest .articles .article .info .row .left .comment i::before {
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                -webkit-transform: translate(50%, -50%);
+                    -ms-transform: translate(50%, -50%);
+                        transform: translate(50%, -50%);
+                font-size: 1.2em;
+                color: inherit; }
+            #latest .articles .article .info .row .left .like p, #latest .articles .article .info .row .left .comment p {
+              font-size: 1.2em;
+              margin-top: .2em;
+              color: inherit; }
+
+#latest .pagination {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  margin: 2em auto .5em auto; }
+  #latest .pagination a, #latest .pagination span {
+    width: auto;
+    height: auto;
+    font-size: 1.6em;
+    color: #2d2d31;
+    padding: 0.5em 1em;
+    background-color: white;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    border-left: 1px solid #c6c6cb; }
+    #latest .pagination a:first-child, #latest .pagination span:first-child {
+      border-top-right-radius: 1.5em;
+      border-bottom-right-radius: 1.5em; }
+    #latest .pagination a:last-child, #latest .pagination span:last-child {
+      border-top-left-radius: 1.5em;
+      border-bottom-left-radius: 1.5em;
+      border-left: none; }
+  #latest .pagination a:hover {
+    color: #fbfbfb;
+    background-color: #26a69a; }
+  #latest .pagination a.active {
+    color: #fbfbfb;
+    background-color: #26a69a; }
 
 #grid {
   padding: 2em;
@@ -5168,224 +5825,14 @@ header {
   -webkit-align-content: "";
       -ms-flex-line-pack: "";
           align-content: ""; }
-  #grid .row {
+  #grid > .row {
     width: 100%;
-    height: auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-align-content: "";
-        -ms-flex-line-pack: "";
-            align-content: ""; }
-    #grid .row:not(:first-child) {
-      margin-top: 2em; }
-    #grid .row .article {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      -webkit-box-align: start;
-      -webkit-align-items: flex-start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      -webkit-flex-wrap: nowrap;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap;
-      -webkit-align-content: "";
-          -ms-flex-line-pack: "";
-              align-content: ""; }
-      #grid .row .article:hover .img img {
-        -webkit-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-                transform: scale(1.2); }
-      #grid .row .article .img {
-        width: 100%;
-        overflow: hidden;
-        border-radius: 1.5em; }
-        #grid .row .article .img img {
-          width: 100%;
-          -o-object-fit: cover;
-             object-fit: cover;
-          -webkit-transition: all .2s linear;
-          transition: all .2s linear; }
-      #grid .row .article h4 {
-        width: 100%;
-        font-size: 1.6em;
-        color: #2d2d31;
-        font-weight: 700; }
-      #grid .row .article .date {
-        font-size: 1.2em;
-        color: #90909b; }
-    #grid .row > .article {
-      width: -webkit-calc((100% / 3));
-      width: calc((100% / 3));
-      height: auto;
-      margin-right: 2em; }
-      #grid .row > .article:first-child {
-        margin-right: 0; }
-      #grid .row > .article img {
-        height: 15em; }
-      #grid .row > .article h4 {
-        position: relative;
-        overflow: hidden;
-        line-height: 1.7em;
-        max-height: 3.4em;
-        text-align: justify;
-        padding-left: 2em;
-        padding-right: 0; }
-        #grid .row > .article h4 .ellipse {
-          color: #2d2d31;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          display: none; }
-        #grid .row > .article h4 .ellipse.show {
-          display: block; }
-    #grid .row .col {
-      width: 50%;
-      height: 41em;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      -webkit-box-align: start;
-      -webkit-align-items: flex-start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      -webkit-flex-wrap: nowrap;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap;
-      -webkit-align-content: "";
-          -ms-flex-line-pack: "";
-              align-content: ""; }
-      #grid .row .col:nth-child(2) {
-        margin-right: 2em; }
-        #grid .row .col:nth-child(2) .article {
-          width: 100%;
-          height: -webkit-calc(100% - 2);
-          height: calc(100% - 2);
-          margin-top: 2em; }
-          #grid .row .col:nth-child(2) .article:first-child {
-            margin-top: 0; }
-          #grid .row .col:nth-child(2) .article img {
-            height: 15em; }
-
-#latest {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  -webkit-align-content: "";
-      -ms-flex-line-pack: "";
-          align-content: ""; }
-  #latest .title {
-    width: 100%;
-    height: auto;
-    background-color: #343743;
-    overflow: hidden; }
-    #latest .title .skew {
-      display: inline-block;
-      width: auto;
-      height: auto;
-      background-color: #26a69a;
-      -webkit-transform: translateX(2em) skewX(-30deg);
-          -ms-transform: translateX(2em) skewX(-30deg);
-              transform: translateX(2em) skewX(-30deg);
-      padding: 0.75em 1.5em 0.75em 12em; }
-      #latest .title .skew h4 {
-        font-size: 1.6em;
-        font-weight: 700;
-        color: #fbfbfb;
-        -webkit-transform: skewX(30deg) translateX(-1.5em);
-            -ms-transform: skewX(30deg) translateX(-1.5em);
-                transform: skewX(30deg) translateX(-1.5em); }
-  #latest .articles {
-    width: 100%;
-    height: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-align-content: "";
-        -ms-flex-line-pack: "";
-            align-content: "";
-    margin-top: 1.5em; }
-    #latest .articles .article {
-      width: 100%;
-      margin: 0;
-      margin-top: 1.5em;
-      padding: 0.75em;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
+    display: flex; }
+    #grid > .row:nth-child(1) {
+      height: 40em;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -webkit-flex-direction: row;
@@ -5399,58 +5846,14 @@ header {
       -webkit-align-items: flex-start;
           -ms-flex-align: start;
               align-items: flex-start;
-      -webkit-flex-wrap: nowrap;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap;
-      -webkit-align-content: "";
-          -ms-flex-line-pack: "";
-              align-content: "";
-      -webkit-transition: all .3s linear;
-      transition: all .3s linear; }
-      #latest .articles .article:first-child {
-        margin-top: 0; }
-      #latest .articles .article:hover {
-        -webkit-box-shadow: 0 0 2.5em 0.5em rgba(135, 135, 135, 0.5);
-                box-shadow: 0 0 2.5em 0.5em rgba(135, 135, 135, 0.5); }
-        #latest .articles .article:hover .img img {
-          -webkit-transform: scale(1.3);
-              -ms-transform: scale(1.3);
-                  transform: scale(1.3); }
-      #latest .articles .article .img {
-        -webkit-flex-shrink: 0;
-            -ms-flex-negative: 0;
-                flex-shrink: 0;
-        width: 20em;
-        height: 15em;
-        position: relative;
-        overflow: hidden;
-        border-radius: 1.5em; }
-        #latest .articles .article .img img {
-          width: 100%;
-          height: 100%;
-          -o-object-fit: cover;
-             object-fit: cover;
-          -webkit-transition: all .2s linear;
-          transition: all .2s linear; }
-        #latest .articles .article .img .tag {
-          width: auto;
-          height: auto;
-          padding: 0.5em 1em;
-          font-weight: 1.2em;
-          color: #fbfbfb;
-          position: absolute;
-          top: 0;
-          right: 0; }
-        #latest .articles .article .img .tag.news {
-          background-color: #004782; }
-        #latest .articles .article .img .tag.new {
-          background-color: #26a69a; }
-        #latest .articles .article .img .tag.special {
-          background-color: #ea6161; }
-      #latest .articles .article .info {
-        width: 100%;
-        height: auto;
-        margin-right: 0.75em;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-align-content: flex-start;
+          -ms-flex-line-pack: start;
+              align-content: flex-start; }
+      #grid > .row:nth-child(1) .col {
+        height: 100%;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -5474,130 +5877,34 @@ header {
         -webkit-align-content: "";
             -ms-flex-line-pack: "";
                 align-content: ""; }
-        #latest .articles .article .info h4 {
-          font-size: 1.6em;
-          color: #2d2d31;
-          font-weight: 700; }
-        #latest .articles .article .info .row {
+        #grid > .row:nth-child(1) .col:not(:first-child) {
+          margin-right: 2em; }
+        #grid > .row:nth-child(1) .col:nth-child(1), #grid > .row:nth-child(1) .col:nth-child(3) {
+          width: -webkit-calc((100% / 3.9) - 2em);
+          width: calc((100% / 3.9) - 2em); }
+        #grid > .row:nth-child(1) .col:nth-child(2) {
+          width: -webkit-calc((100% / 2) - 2em);
+          width: calc((100% / 2) - 2em); }
+      #grid > .row:nth-child(1) #ads .ad {
+        width: 100%; }
+        #grid > .row:nth-child(1) #ads .ad:nth-child(1) {
+          height: -webkit-calc(100% / 3);
+          height: calc(100% / 3); }
+        #grid > .row:nth-child(1) #ads .ad:nth-child(2) {
+          height: -webkit-calc((2 * (100% / 3)) - 2em);
+          height: calc((2 * (100% / 3)) - 2em);
+          margin-top: 2em; }
+        #grid > .row:nth-child(1) #ads .ad img {
           width: 100%;
-          height: auto;
-          margin-top: 0;
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: row;
-              -ms-flex-direction: row;
-                  flex-direction: row;
-          -webkit-box-pack: justify;
-          -webkit-justify-content: space-between;
-              -ms-flex-pack: justify;
-                  justify-content: space-between;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-flex-wrap: nowrap;
-              -ms-flex-wrap: nowrap;
-                  flex-wrap: nowrap;
-          -webkit-align-content: "";
-              -ms-flex-line-pack: "";
-                  align-content: ""; }
-          #latest .articles .article .info .row p {
-            font-size: 1.2em;
-            color: #90909b; }
-          #latest .articles .article .info .row .right {
-            width: 100%;
-            height: auto;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: row;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-            -webkit-box-pack: start;
-            -webkit-justify-content: flex-start;
-                -ms-flex-pack: start;
-                    justify-content: flex-start;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -webkit-flex-wrap: nowrap;
-                -ms-flex-wrap: nowrap;
-                    flex-wrap: nowrap;
-            -webkit-align-content: "";
-                -ms-flex-line-pack: "";
-                    align-content: ""; }
-            #latest .articles .article .info .row .right p {
-              margin-right: 1.5em; }
-              #latest .articles .article .info .row .right p:first-child {
-                margin-right: 0; }
-          #latest .articles .article .info .row .left {
-            -webkit-flex-shrink: 0;
-                -ms-flex-negative: 0;
-                    flex-shrink: 0;
-            margin-right: 0.75em;
-            width: auto;
-            height: auto;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: start;
-            -webkit-justify-content: flex-start;
-                -ms-flex-pack: start;
-                    justify-content: flex-start;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -webkit-flex-wrap: nowrap;
-                -ms-flex-wrap: nowrap;
-                    flex-wrap: nowrap;
-            -webkit-align-content: "";
-                -ms-flex-line-pack: "";
-                    align-content: ""; }
-            #latest .articles .article .info .row .left i {
-              width: 2.5em;
-              height: 2.5em;
-              border-radius: 50%;
-              border: 1px solid #ababb3;
-              position: relative; }
-              #latest .articles .article .info .row .left i::before {
-                position: absolute;
-                top: 50%;
-                right: 50%;
-                -webkit-transform: translate(50%, -50%);
-                    -ms-transform: translate(50%, -50%);
-                        transform: translate(50%, -50%);
-                font-size: 1.2em;
-                color: #ababb3; }
-            #latest .articles .article .info .row .left p {
-              margin-top: 0; }
-    #latest .articles .pagination {
-      width: auto;
+          height: 100%; }
+    #grid > .row:nth-child(2) {
       height: auto;
-      border-radius: 1.5em;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
+      padding-top: 2em;
+      -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
           -ms-flex-pack: start;
@@ -5611,195 +5918,7 @@ header {
               flex-wrap: nowrap;
       -webkit-align-content: "";
           -ms-flex-line-pack: "";
-              align-content: "";
-      margin-top: 1.5em; }
-      #latest .articles .pagination a, #latest .articles .pagination span {
-        width: auto;
-        height: auto;
-        font-size: 1.6em;
-        color: #2d2d31;
-        padding: 0.5em 1em;
-        background-color: white;
-        -webkit-transition: all .2s linear;
-        transition: all .2s linear;
-        border-left: 1px solid #c6c6cb; }
-        #latest .articles .pagination a:first-child, #latest .articles .pagination span:first-child {
-          border-top-right-radius: 1.5em;
-          border-bottom-right-radius: 1.5em; }
-        #latest .articles .pagination a:last-child, #latest .articles .pagination span:last-child {
-          border-top-left-radius: 1.5em;
-          border-bottom-left-radius: 1.5em;
-          border-left: none; }
-      #latest .articles .pagination a:hover {
-        color: #fbfbfb;
-        background-color: #26a69a; }
-      #latest .articles .pagination a.active {
-        color: #fbfbfb;
-        background-color: #26a69a; }
-
-#popular {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  -webkit-align-content: "";
-      -ms-flex-line-pack: "";
-          align-content: ""; }
-  #popular .title {
-    width: 100%;
-    height: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-align-content: "";
-        -ms-flex-line-pack: "";
-            align-content: "";
-    padding: 1.5em 0.75em; }
-    #popular .title h4 {
-      -webkit-flex-shrink: 0;
-          -ms-flex-negative: 0;
-              flex-shrink: 0;
-      width: auto;
-      height: auto;
-      font-size: 1.6em;
-      font-weight: 700;
-      color: #26a69a; }
-    #popular .title .line {
-      width: 100%;
-      height: .2em;
-      background-color: #26a69a;
-      margin-right: .3em; }
-  #popular .article {
-    width: 100%;
-    height: auto;
-    padding: 1.5em 0.75em;
-    border-bottom: 1px solid #c6c6cb;
-    background-color: white;
-    -webkit-transition: all .2s linear;
-    transition: all .2s linear; }
-    #popular .article:last-child {
-      border-bottom: none; }
-    #popular .article:nth-child(2) {
-      margin-top: -1.5em; }
-    #popular .article:hover {
-      background-color: #ebebeb; }
-    #popular .article p {
-      font-size: 1.6em;
-      color: #2d2d31; }
-
-main {
-  width: 80%;
-  height: auto;
-  margin: 3em auto 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  -webkit-align-content: "";
-      -ms-flex-line-pack: "";
-          align-content: ""; }
-  main #latest {
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-    width: 60em;
-    height: auto; }
-  main #popular {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    margin-right: 3em;
-    padding: 0; }
-  main #ads {
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-    width: 20em;
-    height: auto;
-    margin-right: 3em;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-align-content: "";
-        -ms-flex-line-pack: "";
-            align-content: ""; }
-    main #ads .ad {
-      width: 100%;
-      height: 25em;
-      margin-top: 1.5em; }
-      main #ads .ad:first-child {
-        margin-top: 0; }
-      main #ads .ad img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover; }
+              align-content: ""; }
 
 #video {
   -webkit-box-shadow: none;
@@ -7306,11 +7425,10 @@ form#sample {
         left: -webkit-calc(100% - 1.5em - .4em);
         left: calc(100% - 1.5em - .4em); }
   form#sample .inputWrapper.textarea {
-    width: -webkit-calc((100% - (2 * 3.6em)) / 2);
-    width: calc((100% - (2 * 3.6em)) / 2);
+    width: 53em;
     height: auto;
     position: relative;
-    margin: 1.5em;
+    margin-top: 3em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7360,27 +7478,24 @@ form#sample {
               -ms-transform: translateY(0);
                   transform: translateY(0); }
     form#sample .inputWrapper.textarea textarea.style2 {
-      height: 4em;
-      max-height: 12em;
-      overflow: auto;
+      overflow: hidden;
       border: none;
       border-bottom: 1.2px solid #d3d3d7; }
       form#sample .inputWrapper.textarea textarea.style2 ~ label {
-        bottom: 50%;
-        -webkit-transform: translateY(50%);
-            -ms-transform: translateY(50%);
-                transform: translateY(50%); }
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
       form#sample .inputWrapper.textarea textarea.style2:focus {
         border-bottom: 1.2px solid #26a69a; }
         form#sample .inputWrapper.textarea textarea.style2:focus ~ label {
           font-size: 8px;
           right: 0;
           color: #26a69a;
-          bottom: -webkit-calc(100% + 0em);
-          bottom: calc(100% + 0em);
-          -webkit-transform: translateY(0);
-              -ms-transform: translateY(0);
-                  transform: translateY(0); }
+          top: 0;
+          -webkit-transform: translateY(-100%);
+              -ms-transform: translateY(-100%);
+                  transform: translateY(-100%); }
         form#sample .inputWrapper.textarea textarea.style2:focus ~ .line {
           width: 100%; }
     form#sample .inputWrapper.textarea textarea.style1.error {
@@ -7401,11 +7516,10 @@ form#sample {
       right: 0; }
     form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 8px;
-      bottom: -webkit-calc(100% + 1em);
-      bottom: calc(100% + 1em);
-      -webkit-transform: translateY(50%);
-          -ms-transform: translateY(50%);
-              transform: translateY(50%);
+      top: 0;
+      -webkit-transform: translateY(-100%);
+          -ms-transform: translateY(-100%);
+              transform: translateY(-100%);
       right: 0; }
     form#sample .inputWrapper.textarea label {
       width: auto;
@@ -7438,7 +7552,7 @@ form#sample {
               align-content: "";
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
-      color: #d3d3d7; }
+      color: #c6c6cb; }
       form#sample .inputWrapper.textarea label i {
         font-size: 1.6em; }
       form#sample .inputWrapper.textarea label p {
@@ -7833,7 +7947,7 @@ form#newsLetters {
       width: auto;
       height: -webkit-calc(100%);
       height: calc(100%);
-      line-height: 3.5em;
+      line-height: 3em;
       border-top-left-radius: 3em;
       border-bottom-left-radius: 3em;
       padding: 0 1.25em;
@@ -7877,7 +7991,7 @@ form#newsLetters {
       opacity: 1;
       visibility: visible; }
 
-form#contact {
+form#contact, form#report, form#requestAd {
   width: 60em;
   height: auto;
   padding: 1.5em 0;
@@ -7904,15 +8018,15 @@ form#contact {
   -webkit-align-content: "";
       -ms-flex-line-pack: "";
           align-content: ""; }
-  form#contact img {
+  form#contact img, form#report img, form#requestAd img {
     width: 14em;
     height: 16em;
     margin-top: -1.5em; }
-  form#contact h4 {
+  form#contact h4, form#report h4, form#requestAd h4 {
     font-size: 2em;
     font-weight: 700;
     color: #26a69a; }
-  form#contact .inputs {
+  form#contact .inputs, form#report .inputs, form#requestAd .inputs {
     width: 100%;
     height: auto;
     display: -webkit-box;
@@ -7938,13 +8052,13 @@ form#contact {
     -webkit-align-content: flex-start;
         -ms-flex-line-pack: start;
             align-content: flex-start; }
-  form#contact .inputWrapper.text {
+  form#contact .inputWrapper.text, form#report .inputWrapper.text, form#requestAd .inputWrapper.text {
     width: -webkit-calc((100% - (2 * 3em)) / 2);
     width: calc((100% - (2 * 3em)) / 2);
     height: 4em;
     position: relative;
     margin: 1.5em; }
-    form#contact .inputWrapper.text input {
+    form#contact .inputWrapper.text input, form#report .inputWrapper.text input, form#requestAd .inputWrapper.text input {
       width: 100%;
       height: 100%;
       line-height: 4em;
@@ -7953,25 +8067,25 @@ form#contact {
       color: #2d2d31;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text input::-webkit-input-placeholder {
+      form#contact .inputWrapper.text input::-webkit-input-placeholder, form#report .inputWrapper.text input::-webkit-input-placeholder, form#requestAd .inputWrapper.text input::-webkit-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::-moz-placeholder {
+      form#contact .inputWrapper.text input::-moz-placeholder, form#report .inputWrapper.text input::-moz-placeholder, form#requestAd .inputWrapper.text input::-moz-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input:-ms-input-placeholder {
+      form#contact .inputWrapper.text input:-ms-input-placeholder, form#report .inputWrapper.text input:-ms-input-placeholder, form#requestAd .inputWrapper.text input:-ms-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::-ms-input-placeholder {
+      form#contact .inputWrapper.text input::-ms-input-placeholder, form#report .inputWrapper.text input::-ms-input-placeholder, form#requestAd .inputWrapper.text input::-ms-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::placeholder {
+      form#contact .inputWrapper.text input::placeholder, form#report .inputWrapper.text input::placeholder, form#requestAd .inputWrapper.text input::placeholder {
         color: #90909b;
         font-size: 1.6em; }
-    form#contact .inputWrapper.text input.style1 {
+    form#contact .inputWrapper.text input.style1, form#report .inputWrapper.text input.style1, form#requestAd .inputWrapper.text input.style1 {
       border: none;
       border-bottom: 1.2px solid #d3d3d7; }
-      form#contact .inputWrapper.text input.style1:focus ~ label {
+      form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
         color: #26a69a;
         font-size: 8px;
         bottom: -webkit-calc(100% + .5em);
@@ -7980,14 +8094,14 @@ form#contact {
             -ms-transform: translateY(50%);
                 transform: translateY(50%);
         right: 0; }
-      form#contact .inputWrapper.text input.style1:focus ~ .line {
+      form#contact .inputWrapper.text input.style1:focus ~ .line, form#report .inputWrapper.text input.style1:focus ~ .line, form#requestAd .inputWrapper.text input.style1:focus ~ .line {
         width: 100%; }
-    form#contact .inputWrapper.text input.style2 {
+    form#contact .inputWrapper.text input.style2, form#report .inputWrapper.text input.style2, form#requestAd .inputWrapper.text input.style2 {
       border: 1.2px solid #d3d3d7;
       border-radius: 3em; }
-      form#contact .inputWrapper.text input.style2:focus {
+      form#contact .inputWrapper.text input.style2:focus, form#report .inputWrapper.text input.style2:focus, form#requestAd .inputWrapper.text input.style2:focus {
         border: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.text input.style2:focus ~ label {
+        form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
           color: #26a69a;
           font-size: 8px;
           bottom: -webkit-calc(100% + 1.5em);
@@ -7996,19 +8110,19 @@ form#contact {
               -ms-transform: translateY(50%);
                   transform: translateY(50%);
           right: 0.75em; }
-        form#contact .inputWrapper.text input.style2:focus ~ .line {
+        form#contact .inputWrapper.text input.style2:focus ~ .line, form#report .inputWrapper.text input.style2:focus ~ .line, form#requestAd .inputWrapper.text input.style2:focus ~ .line {
           width: 0%; }
-    form#contact .inputWrapper.text input.style1.error {
+    form#contact .inputWrapper.text input.style1.error, form#report .inputWrapper.text input.style1.error, form#requestAd .inputWrapper.text input.style1.error {
       border-bottom: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.text input.style1.error ~ label {
+      form#contact .inputWrapper.text input.style1.error ~ label, form#report .inputWrapper.text input.style1.error ~ label, form#requestAd .inputWrapper.text input.style1.error ~ label {
         color: #ea6161; }
-      form#contact .inputWrapper.text input.style1.error ~ .line {
+      form#contact .inputWrapper.text input.style1.error ~ .line, form#report .inputWrapper.text input.style1.error ~ .line, form#requestAd .inputWrapper.text input.style1.error ~ .line {
         background-color: #ea6161; }
-    form#contact .inputWrapper.text input.style2.error {
+    form#contact .inputWrapper.text input.style2.error, form#report .inputWrapper.text input.style2.error, form#requestAd .inputWrapper.text input.style2.error {
       border: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.text input.style2.error ~ label {
+      form#contact .inputWrapper.text input.style2.error ~ label, form#report .inputWrapper.text input.style2.error ~ label, form#requestAd .inputWrapper.text input.style2.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.text label {
+    form#contact .inputWrapper.text label, form#report .inputWrapper.text label, form#requestAd .inputWrapper.text label {
       width: auto;
       height: auto;
       position: absolute;
@@ -8043,14 +8157,14 @@ form#contact {
       color: #c6c6cb;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text label .icon {
+      form#contact .inputWrapper.text label .icon, form#report .inputWrapper.text label .icon, form#requestAd .inputWrapper.text label .icon {
         font-size: 1.6em; }
-      form#contact .inputWrapper.text label p {
+      form#contact .inputWrapper.text label p, form#report .inputWrapper.text label p, form#requestAd .inputWrapper.text label p {
         font-size: 1.5em;
         -webkit-transform: translateX(-0.3em);
             -ms-transform: translateX(-0.3em);
                 transform: translateX(-0.3em); }
-    form#contact .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + .5em);
       bottom: calc(100% + .5em);
@@ -8058,7 +8172,7 @@ form#contact {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 1.5em);
       bottom: calc(100% + 1.5em);
@@ -8066,7 +8180,7 @@ form#contact {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0.75em; }
-    form#contact .inputWrapper.text .line {
+    form#contact .inputWrapper.text .line, form#report .inputWrapper.text .line, form#requestAd .inputWrapper.text .line {
       width: 0%;
       height: 1.2px;
       background-color: #26a69a;
@@ -8076,7 +8190,7 @@ form#contact {
       top: calc(100% - 1.5px);
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-    form#contact .inputWrapper.text .msg {
+    form#contact .inputWrapper.text .msg, form#report .inputWrapper.text .msg, form#requestAd .inputWrapper.text .msg {
       width: auto;
       height: auto;
       border-radius: 3em;
@@ -8090,21 +8204,21 @@ form#contact {
       visibility: hidden;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text .msg p {
+      form#contact .inputWrapper.text .msg p, form#report .inputWrapper.text .msg p, form#requestAd .inputWrapper.text .msg p {
         color: #fbfbfb;
         font-size: 1.4em; }
-      form#contact .inputWrapper.text .msg i {
+      form#contact .inputWrapper.text .msg i, form#report .inputWrapper.text .msg i, form#requestAd .inputWrapper.text .msg i {
         font-size: 2.4em;
         color: #ea6161;
         position: absolute;
         right: 1.5em;
         top: -webkit-calc(0% - .6em);
         top: calc(0% - .6em); }
-    form#contact .inputWrapper.text .msg.show {
+    form#contact .inputWrapper.text .msg.show, form#report .inputWrapper.text .msg.show, form#requestAd .inputWrapper.text .msg.show {
       opacity: 1;
       visibility: visible;
       z-index: 2; }
-  form#contact .inputWrapper.textarea {
+  form#contact .inputWrapper.textarea, form#report .inputWrapper.textarea, form#requestAd .inputWrapper.textarea {
     width: 100%;
     height: auto;
     position: relative;
@@ -8113,7 +8227,7 @@ form#contact {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    form#contact .inputWrapper.textarea textarea {
+    form#contact .inputWrapper.textarea textarea, form#report .inputWrapper.textarea textarea, form#requestAd .inputWrapper.textarea textarea {
       width: 100%;
       font-size: 1.6em;
       color: #2d2d31;
@@ -8122,33 +8236,33 @@ form#contact {
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
       resize: none; }
-      form#contact .inputWrapper.textarea textarea::-webkit-input-placeholder {
+      form#contact .inputWrapper.textarea textarea::-webkit-input-placeholder, form#report .inputWrapper.textarea textarea::-webkit-input-placeholder, form#requestAd .inputWrapper.textarea textarea::-webkit-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::-moz-placeholder {
+      form#contact .inputWrapper.textarea textarea::-moz-placeholder, form#report .inputWrapper.textarea textarea::-moz-placeholder, form#requestAd .inputWrapper.textarea textarea::-moz-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea:-ms-input-placeholder {
+      form#contact .inputWrapper.textarea textarea:-ms-input-placeholder, form#report .inputWrapper.textarea textarea:-ms-input-placeholder, form#requestAd .inputWrapper.textarea textarea:-ms-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::-ms-input-placeholder {
+      form#contact .inputWrapper.textarea textarea::-ms-input-placeholder, form#report .inputWrapper.textarea textarea::-ms-input-placeholder, form#requestAd .inputWrapper.textarea textarea::-ms-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::placeholder {
+      form#contact .inputWrapper.textarea textarea::placeholder, form#report .inputWrapper.textarea textarea::placeholder, form#requestAd .inputWrapper.textarea textarea::placeholder {
         font-size: 1.6em;
         color: #90909b; }
-    form#contact .inputWrapper.textarea textarea.style1 {
+    form#contact .inputWrapper.textarea textarea.style1, form#report .inputWrapper.textarea textarea.style1, form#requestAd .inputWrapper.textarea textarea.style1 {
       height: 8em;
       border: 1.2px solid #d3d3d7;
       border-radius: 1.5em; }
-      form#contact .inputWrapper.textarea textarea.style1 ~ label {
+      form#contact .inputWrapper.textarea textarea.style1 ~ label, form#report .inputWrapper.textarea textarea.style1 ~ label, form#requestAd .inputWrapper.textarea textarea.style1 ~ label {
         bottom: 100%;
         -webkit-transform: translateY(150%);
             -ms-transform: translateY(150%);
                 transform: translateY(150%); }
-      form#contact .inputWrapper.textarea textarea.style1:focus {
+      form#contact .inputWrapper.textarea textarea.style1:focus, form#report .inputWrapper.textarea textarea.style1:focus, form#requestAd .inputWrapper.textarea textarea.style1:focus {
         border: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+        form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
           font-size: 8px;
           right: 0.75em;
           color: #26a69a;
@@ -8157,20 +8271,20 @@ form#contact {
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
                   transform: translateY(0); }
-    form#contact .inputWrapper.textarea textarea.style2 {
+    form#contact .inputWrapper.textarea textarea.style2, form#report .inputWrapper.textarea textarea.style2, form#requestAd .inputWrapper.textarea textarea.style2 {
       height: 4em;
       max-height: 12em;
       overflow: auto;
       border: none;
       border-bottom: 1.2px solid #d3d3d7; }
-      form#contact .inputWrapper.textarea textarea.style2 ~ label {
+      form#contact .inputWrapper.textarea textarea.style2 ~ label, form#report .inputWrapper.textarea textarea.style2 ~ label, form#requestAd .inputWrapper.textarea textarea.style2 ~ label {
         bottom: 50%;
         -webkit-transform: translateY(50%);
             -ms-transform: translateY(50%);
                 transform: translateY(50%); }
-      form#contact .inputWrapper.textarea textarea.style2:focus {
+      form#contact .inputWrapper.textarea textarea.style2:focus, form#report .inputWrapper.textarea textarea.style2:focus, form#requestAd .inputWrapper.textarea textarea.style2:focus {
         border-bottom: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+        form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
           font-size: 8px;
           right: 0;
           color: #26a69a;
@@ -8179,17 +8293,17 @@ form#contact {
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
                   transform: translateY(0); }
-        form#contact .inputWrapper.textarea textarea.style2:focus ~ .line {
+        form#contact .inputWrapper.textarea textarea.style2:focus ~ .line, form#report .inputWrapper.textarea textarea.style2:focus ~ .line, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ .line {
           width: 100%; }
-    form#contact .inputWrapper.textarea textarea.style1.error {
+    form#contact .inputWrapper.textarea textarea.style1.error, form#report .inputWrapper.textarea textarea.style1.error, form#requestAd .inputWrapper.textarea textarea.style1.error {
       border: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.textarea textarea.style1.error ~ label {
+      form#contact .inputWrapper.textarea textarea.style1.error ~ label, form#report .inputWrapper.textarea textarea.style1.error ~ label, form#requestAd .inputWrapper.textarea textarea.style1.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.textarea textarea.style2.error {
+    form#contact .inputWrapper.textarea textarea.style2.error, form#report .inputWrapper.textarea textarea.style2.error, form#requestAd .inputWrapper.textarea textarea.style2.error {
       border-bottom: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.textarea textarea.style2.error ~ label {
+      form#contact .inputWrapper.textarea textarea.style2.error ~ label, form#report .inputWrapper.textarea textarea.style2.error ~ label, form#requestAd .inputWrapper.textarea textarea.style2.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 2em);
       bottom: calc(100% + 2em);
@@ -8197,7 +8311,7 @@ form#contact {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 1em);
       bottom: calc(100% + 1em);
@@ -8205,7 +8319,7 @@ form#contact {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.textarea label {
+    form#contact .inputWrapper.textarea label, form#report .inputWrapper.textarea label, form#requestAd .inputWrapper.textarea label {
       width: auto;
       height: auto;
       position: absolute;
@@ -8237,14 +8351,14 @@ form#contact {
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
       color: #d3d3d7; }
-      form#contact .inputWrapper.textarea label i {
+      form#contact .inputWrapper.textarea label i, form#report .inputWrapper.textarea label i, form#requestAd .inputWrapper.textarea label i {
         font-size: 1.6em; }
-      form#contact .inputWrapper.textarea label p {
+      form#contact .inputWrapper.textarea label p, form#report .inputWrapper.textarea label p, form#requestAd .inputWrapper.textarea label p {
         font-size: 1.5em;
         -webkit-transform: translateX(-0.3em);
             -ms-transform: translateX(-0.3em);
                 transform: translateX(-0.3em); }
-    form#contact .inputWrapper.textarea .line {
+    form#contact .inputWrapper.textarea .line, form#report .inputWrapper.textarea .line, form#requestAd .inputWrapper.textarea .line {
       width: 0%;
       height: 1.2px;
       background-color: #26a69a;
@@ -8254,7 +8368,7 @@ form#contact {
       top: calc(100% - .6px);
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-  form#contact button[type="submit"] {
+  form#contact button[type="submit"], form#report button[type="submit"], form#requestAd button[type="submit"] {
     width: auto;
     height: auto;
     padding: 0.5em 2.5em;
@@ -8268,10 +8382,14 @@ form#contact {
     color: #fbfbfb;
     background-color: #26a69a;
     border: 1.2px solid transparent; }
-    form#contact button[type="submit"]:hover {
+    form#contact button[type="submit"]:hover, form#report button[type="submit"]:hover, form#requestAd button[type="submit"]:hover {
       color: #26a69a;
       background-color: #fbfbfb;
       border: 1.2px solid #26a69a; }
+
+form#requestAd img {
+  width: 14em;
+  height: 14em; }
 
 form#login {
   width: 40em;
@@ -9189,7 +9307,6 @@ form#signup {
 
 form#userComment {
   width: auto;
-  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9213,10 +9330,6 @@ form#userComment {
   -webkit-align-content: "";
       -ms-flex-line-pack: "";
           align-content: ""; }
-  form#userComment h4 {
-    font-size: 1.8em;
-    font-weight: 700;
-    color: #2d2d31; }
   form#userComment .row {
     width: auto;
     height: auto;
@@ -9538,7 +9651,7 @@ form#userComment {
               align-content: "";
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
-      color: #d3d3d7; }
+      color: #c6c6cb; }
       form#userComment .inputWrapper.textarea label i {
         font-size: 1.6em; }
       form#userComment .inputWrapper.textarea label p {
@@ -9800,23 +9913,23 @@ form.reply {
       font-size: 6px; }
     form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 6px; }
-  form#contact {
+  form#contact, form#report, form#requestAd {
     font-size: 8px; }
-    form#contact .inputWrapper.text input.style1:focus ~ label {
+    form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style2:focus ~ label {
+    form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 6px; }
   form#login {
     font-size: 8px; }
@@ -9912,23 +10025,23 @@ form.reply {
       font-size: 4px; }
     form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 4px; }
-  form#contact {
+  form#contact, form#report, form#requestAd {
     font-size: 6px; }
-    form#contact .inputWrapper.text input.style1:focus ~ label {
+    form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style2:focus ~ label {
+    form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 4px; }
   form#login {
     font-size: 6px; }

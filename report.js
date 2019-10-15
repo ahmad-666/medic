@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/contact/contact.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/report/report.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1551,41 +1551,6 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ "./src/contact/contact.js":
-/*!********************************!*\
-  !*** ./src/contact/contact.js ***!
-  \********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../framework.scss */ \"./src/framework.scss\");\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_framework_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../init.scss */ \"./src/init.scss\");\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_init_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../index/styles/header.scss */ \"./src/index/styles/header.scss\");\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _contact_styles_contact_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../contact/styles/contact.scss */ \"./src/contact/styles/contact.scss\");\n/* harmony import */ var _contact_styles_contact_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_contact_styles_contact_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../index/styles/footer.scss */ \"./src/index/styles/footer.scss\");\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _contact_scripts_contact_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../contact/scripts/contact.js */ \"./src/contact/scripts/contact.js\");\n//load styles\n\n\n\n\n\n //load scripts\n\n //load videos\n\n//# sourceURL=webpack:///./src/contact/contact.js?");
-
-/***/ }),
-
-/***/ "./src/contact/scripts/contact.js":
-/*!****************************************!*\
-  !*** ./src/contact/scripts/contact.js ***!
-  \****************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ \"./node_modules/core-js/modules/es.array.for-each.js\");\n/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ \"./node_modules/core-js/modules/web.dom-collections.for-each.js\");\n/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/scripts/form.js */ \"./src/utilities/scripts/form.js\");\n\n\n\nvar contactForm = document.querySelector('form#contact');\nvar contactSubmit = contactForm.querySelector('button[type=\"submit\"]');\nvar contactInputs = contactForm.querySelectorAll('.validate');\nnew _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].FormValidate(contactForm, contactSubmit, contactInputs, true, null);\ncontactForm.querySelectorAll('.labelHandler').forEach(function (labelHandler) {\n  new _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].LabelHandler(labelHandler);\n});\n\n//# sourceURL=webpack:///./src/contact/scripts/contact.js?");
-
-/***/ }),
-
-/***/ "./src/contact/styles/contact.scss":
-/*!*****************************************!*\
-  !*** ./src/contact/styles/contact.scss ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/contact/styles/contact.scss?");
-
-/***/ }),
-
 /***/ "./src/framework.scss":
 /*!****************************!*\
   !*** ./src/framework.scss ***!
@@ -1627,6 +1592,41 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/init.scss?");
+
+/***/ }),
+
+/***/ "./src/report/report.js":
+/*!******************************!*\
+  !*** ./src/report/report.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../framework.scss */ \"./src/framework.scss\");\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_framework_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../init.scss */ \"./src/init.scss\");\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_init_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../index/styles/header.scss */ \"./src/index/styles/header.scss\");\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _report_styles_report_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../report/styles/report.scss */ \"./src/report/styles/report.scss\");\n/* harmony import */ var _report_styles_report_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_report_styles_report_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../index/styles/footer.scss */ \"./src/index/styles/footer.scss\");\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _report_scripts_report_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../report/scripts/report.js */ \"./src/report/scripts/report.js\");\n//load styles\n\n\n\n\n\n //load scripts\n\n //load videos\n\n//# sourceURL=webpack:///./src/report/report.js?");
+
+/***/ }),
+
+/***/ "./src/report/scripts/report.js":
+/*!**************************************!*\
+  !*** ./src/report/scripts/report.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ \"./node_modules/core-js/modules/es.array.for-each.js\");\n/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ \"./node_modules/core-js/modules/web.dom-collections.for-each.js\");\n/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/scripts/form.js */ \"./src/utilities/scripts/form.js\");\n\n\n\nvar reportForm = document.querySelector('form#report');\nvar reportSubmit = reportForm.querySelector('button[type=\"submit\"]');\nvar reportInputs = reportForm.querySelectorAll('.validate');\nnew _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].FormValidate(reportForm, reportSubmit, reportInputs, true, null);\nreportForm.querySelectorAll('.labelHandler').forEach(function (labelHandler) {\n  return new _utilities_scripts_form_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].LabelHandler(labelHandler);\n});\n\n//# sourceURL=webpack:///./src/report/scripts/report.js?");
+
+/***/ }),
+
+/***/ "./src/report/styles/report.scss":
+/*!***************************************!*\
+  !*** ./src/report/styles/report.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/report/styles/report.scss?");
 
 /***/ }),
 
