@@ -765,100 +765,45 @@
             </ul>
         </nav>
     </header>
-    <div id="faq">
-        <div id="persian" class="faq containerStyle">
-            <img src="../assets/icons/faq.png" alt="faqImg">
-            <h4>سوالات متداول</h4>
-            <div class="question withCollapse">
-                <div class="content collapseTrigger">
-                    <p>
-                        متن سوال متن سوال متن سوال متن سوال
-                    </p>
-                    <i class="fas fa-plus collapseIcon"></i>
-                </div>
-                <div class="answer collapse">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
-                    </p>
+    <form novalidate id="report" name="report" class="validate containerStyle" method="GET" action="#!" enctype="text/plain">
+        <img src="../assets/icons/contact.png" alt="contactImg">
+        <h4>ثبت شکایات</h4>
+        <div class="inputs">
+            <div class="inputWrapper text">
+                <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+                <label for="name">
+                    <i class="fas fa-user icon"></i>
+                    <p>نام و نام خانوادگی</p>
+                </label>
+                <span class="line"></span>
+                <div class="msg">
+                    <p>نام و نام خانوادگی خود را وارد نمایید</p>
+                    <i class="fas fa-caret-up"></i>
                 </div>
             </div>
-            <div class="question withCollapse">
-                <div class="content collapseTrigger">
-                    <p>
-                        متن سوال متن سوال متن سوال متن سوال
-                    </p>
-                    <i class="fas fa-plus collapseIcon"></i>
-                </div>
-                <div class="answer collapse">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
-                    </p>
+            <div class="inputWrapper text">
+                <input type="text" id="emailPhone" name="emailPhone" class="style1 labelHandler validate" required>
+                <label for="emailPhone">
+                    <i class="fas fa-envelope icon"></i>
+                    <p>ایمیل یا شماره موبایل</p>
+                </label>
+                <span class="line"></span>
+                <div class="msg">
+                    <p>لطفا مقداری وارد نمایید</p>
+                    <i class="fas fa-caret-up"></i>
                 </div>
             </div>
-            <div class="question withCollapse">
-                <div class="content collapseTrigger">
-                    <p>
-                        متن سوال متن سوال متن سوال متن سوال
-                    </p>
-                    <i class="fas fa-plus collapseIcon"></i>
-                </div>
-                <div class="answer collapse">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
-                    </p>
-                </div>
+            <div class="inputWrapper textarea">
+                <textarea name="comment1" id="comment1" class="style1 labelHandler validate" required></textarea>
+                <label for="comment1">
+                    <i class="fas fa-comments"></i>
+                    <p>نظر خود را وارد نمایید</p>
+                </label>
+                <span class="line"></span>
             </div>
         </div>
-        <div id="english" class="faq containerStyle">
-            <img src="../assets/icons/faq.png" alt="faqImg">
-            <h4>faq</h4>
-            <div class="question withCollapse">
-                <div class="content collapseTrigger">
-                    <p>
-                        متن سوال متن سوال متن سوال متن سوال
-                    </p>
-                    <i class="fas fa-plus collapseIcon"></i>
-                </div>
-                <div class="answer collapse">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
-                    </p>
-                </div>
-            </div>
-            <div class="question withCollapse">
-                <div class="content collapseTrigger">
-                    <p>
-                        متن سوال متن سوال متن سوال متن سوال
-                    </p>
-                    <i class="fas fa-plus collapseIcon"></i>
-                </div>
-                <div class="answer collapse">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
-                    </p>
-                </div>
-            </div>
-            <div class="question withCollapse">
-                <div class="content collapseTrigger">
-                    <p>
-                        متن سوال متن سوال متن سوال متن سوال
-                    </p>
-                    <i class="fas fa-plus collapseIcon"></i>
-                </div>
-                <div class="answer collapse">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Possimus quisquam eius optio fugiat, perspiciatis totam ducimus
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+        <button type="submit" class="btn small pulse">ارسال</button>
+    </form>
     <footer>
         <div class="logo">
             <img src="../assets/icons/logo.png" alt="logoImg">

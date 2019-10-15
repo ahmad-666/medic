@@ -1,24 +1,30 @@
 @import '../../variables.scss' ;
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
-main{
-    #rules{
-        flex-shrink: 0 ;
-        width: 80em ;
-        height: auto;
-        padding: $dist2 ;
-        margin: 0 ;
-        display: flex ;
+#rules{
+    width: 95%;
+    height: auto;
+    margin: $dist3 auto 0 auto;
+    display: flex;
+    @include flex(row,flex-start,flex-start,nowrap,"") ;
+    #persian,#english{
+        width: 50%;
+        margin: 0;
+        display: flex;
         @include flex(column,flex-start,flex-start,nowrap,"") ;
+        &:nth-child(2){margin-right: $dist3;}
         h4{
-            font-size: $fontL ;
-            font-weight: 700 ;
-            color: $primaryColor ;
+            font-size: $fontL;
+            font-weight: 700;
+            color: $textDark;
         }
         p{
-            margin-top: $dist1 ;
-            font-size: $fontM ;
-            color: darken($textGrey,20%) ;
+            margin-top: $dist1;
+            font-size: $fontM;
+            color: darken($textGrey,20%);
         }
+    }
+    #english{
+        direction: ltr;
     }
 }

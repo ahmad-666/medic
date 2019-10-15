@@ -1300,7 +1300,7 @@ form#newsLetters {
         button[type="submit"] {
             width: auto;
             height: calc(100%);
-            line-height: 3.5em;
+            line-height: 3em;
             border-top-left-radius: $dist3 ;
             border-bottom-left-radius: $dist3 ;
             padding: 0 $dist1 + .5em;
@@ -1340,7 +1340,7 @@ form#newsLetters {
         }
     }
 }
-form#contact {
+form#contact,form#report,form#requestAd {
     width: 60em ;
     height: auto;
     padding: $dist2 0 ;
@@ -1642,6 +1642,12 @@ form#contact {
         font-size: $fontL;
         position: relative ;
         @include swapColor($textWhite,$primaryColor) ;
+    }
+}
+form#requestAd{
+    img{
+        width: 14em ;
+        height: 14em;
     }
 }
 form#login{
@@ -2902,7 +2908,7 @@ form.reply{
             }
         }
     }
-    form#contact {
+    form#contact,form#report,form#requestAd {
         font-size: 8px ;
         .inputWrapper.text {
             input.style1 {
@@ -3147,7 +3153,7 @@ form.reply{
             }
         }
     }
-    form#contact {
+    form#contact,form#report,form#requestAd {
         font-size: 6px ;
         .inputWrapper.text {
             input.style1 {

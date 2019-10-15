@@ -18,7 +18,7 @@ header{
             height: 100%;
             display: flex ;
             @include flex(row,flex-start,center,nowrap,"") ;
-            padding: $dist2 $dist3 ;
+            padding: $dist1 $dist3 ;
             a,.phone{
                 width: auto ;
                 height: 100%;

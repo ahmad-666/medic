@@ -55,6 +55,37 @@
                 }
             }
         }
+        #likesComments{
+            width: auto;
+            height: auto;
+            margin-top: $dist2;
+            display: flex;
+            @include flex(row,flex-start,flex-start,nowrap,"") ;
+            .like,.comment{
+                width: auto;
+                height: auto;
+                display: flex;
+                @include flex(column,flex-start,center,nowrap,"") ;
+                &:not(:first-child){margin-right: $dist3;}
+                i{
+                    width: 3em;
+                    height: 3em;
+                    border-radius: 50%;
+                    border: 1px solid $textGrey ;
+                    position: relative;
+                    &::before{
+                        @include center-xy ;
+                        font-size: $fontM;
+                        color: lighten($textGrey,15%);
+                    }
+                }
+                p{
+                    color: $textDark;
+                    font-size: $fontM;
+                    margin-top: .3em;
+                }
+            }
+        }
         #tags{
             width: auto ;
             height: auto;

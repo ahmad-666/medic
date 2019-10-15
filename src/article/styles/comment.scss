@@ -58,21 +58,34 @@
                     color: darken($textGrey,20%);
                     line-height: $dist2 + .2em;
                 }
-                .reply{
+                .commentAction{
                     width: auto;
                     height: auto;
-                    margin-top: $dist1;
-                    cursor: pointer;
+                    margin-top: 0;
                     display: flex;
                     @include flex(row,flex-start,center,nowrap,"") ;
-                    color: $textGrey;
-                    transition: all .2s linear;
-                    &:hover{color: $primaryColor;}
-                    p,i{
-                       font-size: $fontM;
-                       color: inherit;
+                    .like,.reply{
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        @include flex(row,flex-start,center,nowrap,"") ;
+                        &:not(:first-child){margin-right: $dist3;}
+                        cursor: pointer;
+                        i{
+                            font-size: $fontM;
+                            color: $textGrey;
+                        }
+                        p{
+                            font-size: $fontM;
+                        }
                     }
-                    i{margin-right: .5em;}
+                    .like{
+                        p{margin-right: .5em;}
+                        i.active{color: lighten($redColor2,5%);}
+                    }
+                    .reply{
+                        i{margin-right: .5em;}
+                    }
                 }
             }
         }

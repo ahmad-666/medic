@@ -14,13 +14,14 @@ module.exports = {
         'contact' : './src/contact/contact.js' ,    
         'aboutus' : './src/aboutus/aboutus.js' ,    
         'faq' : './src/faq/faq.js' ,    
-        'ads' : './src/ads/ads.js' ,    
+        'requestAds' : './src/requestAds/requestAds.js' ,    
         'login' : './src/login/login.js' ,    
         'signup' : './src/signup/signup.js' ,    
         'forgetPassword' : './src/forgetPassword/forgetPassword.js' ,    
         'articles' : './src/articles/articles.js' ,    
         'article' : './src/article/article.js' ,    
         'video' : './src/video/video.js' ,    
+        'report' : './src/report/report.js' ,    
     },
     output: {//for each entry point we create one .js bundle(with the same name of entry point)
         filename: '[name].js',
@@ -169,10 +170,10 @@ module.exports = {
             template: './src/faq/faq.html' //should point to target html file that we want to add <script>,<link>
         }),
         new HtmlWebpackPlugin({ //for each .html file we need new instance of 'HtmlWebpackPlugin'
-            filename: 'ads.html' , //name of file inside ./dist folder
+            filename: 'requestAds.html' , //name of file inside ./dist folder
             inject: true,
-            chunks: ['ads'],
-            template: './src/ads/ads.html' //should point to target html file that we want to add <script>,<link>
+            chunks: ['requestAds'],
+            template: './src/requestAds/requestAds.html' //should point to target html file that we want to add <script>,<link>
         }),
         new HtmlWebpackPlugin({ //for each .html file we need new instance of 'HtmlWebpackPlugin'
             filename: 'login.html' , //name of file inside ./dist folder
@@ -209,6 +210,12 @@ module.exports = {
             inject: true,
             chunks: ['video'],
             template: './src/video/video.html' //should point to target html file that we want to add <script>,<link>
+        }),
+        new HtmlWebpackPlugin({ //for each .html file we need new instance of 'HtmlWebpackPlugin'
+            filename: 'report.html' , //name of file inside ./dist folder
+            inject: true,
+            chunks: ['report'],
+            template: './src/report/report.html' //should point to target html file that we want to add <script>,<link>
         }),
         new CleanWebpackPlugin()
     ]

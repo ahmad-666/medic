@@ -14,10 +14,49 @@
             // margin-top: $dist1;
             padding: $dist3 $dist2;
             border-bottom: 1px solid lighten($textGrey,20%);
+            display: flex;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
             p{
                 font-size: $fontM;
                 color: darken($textGrey,20%);
                 line-height: $dist2 + .2em;
+            }
+            #userLike{
+                cursor: pointer;
+                width: auto;
+                height: auto;
+                margin-top: $dist2;
+                display: flex;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                i{
+                    width: 4em;
+                    height: 4em;
+                    border-radius: 50%;
+                    position: relative;
+                    @include swapColor(lighten($redColor2,5%),white) ;
+                    border: 1px solid lighten($redColor2,5%) ;
+                    &::before{
+                        font-size: $fontM + .3em;
+                        @include center-xy
+                    }
+                }
+                i.active{
+                    border: 1.2px solid transparent ;
+                    color: white;
+                    background-color: lighten($redColor2,5%);
+                }
+                .col{
+                    width: auto;
+                    height: auto;
+                    margin-right: $dist1;
+                    display: flex;
+                    @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    p{
+                        font-size: $fontS + .2em;
+                        &:nth-child(1){color: $textDark;}
+                        &:nth-child(2){color: $textGrey;}
+                    }
+                }
             }
         }
         #ref{

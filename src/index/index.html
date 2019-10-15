@@ -24,6 +24,10 @@
                     <i class="fas fa-copy"></i>
                     <p>ارتباط با ما</p>
                 </a>
+                <a href="report.html">
+                    <i class="fas fa-address-card"></i>
+                    <p>ثبت شکایات</p>
+                </a>
                 <div class="phone">
                     <i class="fas fa-phone"></i>
                     <p>051-38670000</p>
@@ -759,7 +763,7 @@
                 <li class="logo center-y">
                     <a href="index.html">
                         <p>عنوان سایت</p>
-                        <img src="../assets/imgs/logo.png" alt="logoImg">
+                        <img src="../assets/icons/logo.png" alt="logoImg">
                     </a>
                 </li>
             </ul>
@@ -767,8 +771,16 @@
     </header>
     <div id="grid" class="containerStyle">
         <div class="row">
-            <div class="col">
-                <div class="sliderWrapperMove">
+            <div id="ads" class="col">
+                <a href="#!" class="ad">
+                    <img src="../assets/imgs/side1.jpg" alt="adImg">
+                </a>
+                <a href="#!" class="ad">
+                    <img src="../assets/imgs/side2.jpg" alt="adImg">
+                </a>
+            </div>
+            <div id="sliderMoveWrapper" class="col">
+                <div class="sliderMove">
                     <button class="btn prev">
                         <i class="fas fa-angle-right center-xy"></i>
                     </button>
@@ -805,58 +817,61 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div id="popularWrapper" class="col">
                 <a href="article.html" class="article">
-                    <div class="img">
+                    <div class="img zoom">
                         <img src="../assets/imgs/article1.jpg" alt="articleImg">
                     </div>
-                    <h4 class="ellipse">عنوان مقاله </h4>
-                    <p class="date">1398/10/10</p>
-                </a>
-                <a href="article.html" class="article">
-                    <div class="img">
-                        <img src="../assets/imgs/article1.jpg" alt="articleImg">
+                    <h4>
+                        <span class="ellipse" data-align="right">...</span>
+                        عنوان مقاله
+                    </h4>
+                    <div class="row">
+                        <p class="writer">نام نویسنده</p>
+                        <p class="date">1398/10/10</p>
                     </div>
-                    <h4 class="ellipse">عنوان مقاله</h4>
-                    <p class="date">1398/10/10</p>
                 </a>
+                <div class="popular">
+                    <div class="title">
+                        <h4>پربازدیدترین ها</h4>
+                        <span class="line"></span>
+                    </div>
+                    <div class="articles">
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                        <a href="article.html" class="article">
+                            <p>عنوان مقاله</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <a href="article.html" class="article">
-                <div class="img">
-                    <img src="../assets/imgs/article1.jpg" alt="articleImg">
-                </div>
-                <h4>
-                    <span class="ellipse" data-align="right">...</span>
-                    عنوان مقاله
-                </h4>
-                <p class="date">1398/10/10</p>
-            </a>
-            <a href="article.html" class="article">
-                <div class="img">
-                    <img src="../assets/imgs/article2.jpg" alt="articleImg">
-                </div>
-                <h4>
-                    <span class="ellipse" data-align="right">...</span>
-                    عنوان مقاله
-                </h4>
-                <p class="date">1398/10/10</p>
-            </a>
-            <a href="article.html" class="article">
-                <div class="img">
-                    <img src="../assets/imgs/article3.jpg" alt="articleImg">
-                </div>
-                <h4>
-                    <span class="ellipse" data-align="right">...</span>
-                    عنوان مقاله
-                </h4>
-                <p class="date">1398/10/10</p>
-            </a>
-        </div>
-    </div>
-    <main>
-        <div id="latest">
+        <div id="latest" class="row">
             <div class="title">
                 <div class="skew">
                     <h4>آخرین مطالب</h4>
@@ -866,7 +881,9 @@
                 <a href="article.html" class="article containerStyle">
                     <div class="img">
                         <img src="../assets/imgs/article1.jpg" alt="articleImg">
-                        <span class="tag news">خبار</span>
+                        <div class="tags">
+                            <span class="tag news">اخبار</span>
+                        </div>
                     </div>
                     <div class="info">
                         <h4>عنوان مقاله</h4>
@@ -876,8 +893,14 @@
                                 <p>1398/10/10</p>
                             </div>
                             <div class="left">
-                                <i class="fas fa-comment"></i>
-                                <p>۱۰نظر</p>
+                                <div class="like">
+                                    <i class="fas fa-heart"></i>
+                                    <p>100</p>        
+                                </div>
+                                <div class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <p>10نظر</p>
+                                </div>              
                             </div>
                         </div>
                     </div>
@@ -885,7 +908,9 @@
                 <a href="article.html" class="article containerStyle">
                     <div class="img">
                         <img src="../assets/imgs/article1.jpg" alt="articleImg">
-                        <span class="tag new">جدید</span>
+                        <div class="tags">
+                            <span class="tag new">جدید</span>
+                        </div>
                     </div>
                     <div class="info">
                         <h4>عنوان مقاله</h4>
@@ -895,8 +920,14 @@
                                 <p>1398/10/10</p>
                             </div>
                             <div class="left">
-                                <i class="fas fa-comment"></i>
-                                <p>۱۰نظر</p>
+                                <div class="like">
+                                    <i class="fas fa-heart"></i>
+                                    <p>100</p>        
+                                </div>
+                                <div class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <p>10نظر</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -904,7 +935,9 @@
                 <a href="article.html" class="article containerStyle">
                     <div class="img">
                         <img src="../assets/imgs/article1.jpg" alt="articleImg">
-                        <span class="tag special">ویژه</span>
+                        <div class="tags">              
+                            <span class="tag special">اختصاصی</span>
+                        </div>
                     </div>
                     <div class="info">
                         <h4>عنوان مقاله</h4>
@@ -914,8 +947,14 @@
                                 <p>1398/10/10</p>
                             </div>
                             <div class="left">
-                                <i class="fas fa-comment"></i>
-                                <p>۱۰نظر</p>
+                                <div class="like">
+                                    <i class="fas fa-heart"></i>
+                                    <p>100</p>        
+                                </div>
+                                <div class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <p>10نظر</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -923,7 +962,9 @@
                 <a href="article.html" class="article containerStyle">
                     <div class="img">
                         <img src="../assets/imgs/article1.jpg" alt="articleImg">
-                        <span class="tag news">خبار</span>
+                        <div class="tags">
+                            <span class="tag news">اخبار</span>
+                        </div>
                     </div>
                     <div class="info">
                         <h4>عنوان مقاله</h4>
@@ -933,8 +974,14 @@
                                 <p>1398/10/10</p>
                             </div>
                             <div class="left">
-                                <i class="fas fa-comment"></i>
-                                <p>۱۰نظر</p>
+                                <div class="like">
+                                    <i class="fas fa-heart"></i>
+                                    <p>100</p>        
+                                </div>
+                                <div class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <p>10نظر</p>
+                                </div>              
                             </div>
                         </div>
                     </div>
@@ -942,7 +989,9 @@
                 <a href="article.html" class="article containerStyle">
                     <div class="img">
                         <img src="../assets/imgs/article1.jpg" alt="articleImg">
-                        <span class="tag new">جدید</span>
+                        <div class="tags">
+                            <span class="tag new">جدید</span>
+                        </div>
                     </div>
                     <div class="info">
                         <h4>عنوان مقاله</h4>
@@ -952,8 +1001,14 @@
                                 <p>1398/10/10</p>
                             </div>
                             <div class="left">
-                                <i class="fas fa-comment"></i>
-                                <p>۱۰نظر</p>
+                                <div class="like">
+                                    <i class="fas fa-heart"></i>
+                                    <p>100</p>        
+                                </div>
+                                <div class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <p>10نظر</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -961,7 +1016,9 @@
                 <a href="article.html" class="article containerStyle">
                     <div class="img">
                         <img src="../assets/imgs/article1.jpg" alt="articleImg">
-                        <span class="tag special">ویژه</span>
+                        <div class="tags">              
+                            <span class="tag special">اختصاصی</span>
+                        </div>
                     </div>
                     <div class="info">
                         <h4>عنوان مقاله</h4>
@@ -971,72 +1028,28 @@
                                 <p>1398/10/10</p>
                             </div>
                             <div class="left">
-                                <i class="fas fa-comment"></i>
-                                <p>۱۰نظر</p>
+                                <div class="like">
+                                    <i class="fas fa-heart"></i>
+                                    <p>100</p>        
+                                </div>
+                                <div class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <p>10نظر</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </a>
-                <div class="pagination shadowBlurS">
-                    <a href="#!" class="active">1</a>
-                    <a href="#!">2</a>
-                    <a href="#!">3</a>
-                    <span>...</span>
-                    <a href="#!">صفحه آخر</a>
-                </div>
+                </a>                 
+            </div>
+            <div class="pagination shadowBlurL">
+                <a href="#!" class="active">1</a>
+                <a href="#!">2</a>
+                <a href="#!">3</a>
+                <span>...</span>
+                <a href="#!">صفحه آخر</a>
             </div>
         </div>
-        <div id="popular" class="containerStyle">
-            <div class="title">
-                <h4>پربازدیدترین ها</h4>
-                <span class="line"></span>
-            </div>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-            <a href="article.html" class="article">
-                <p>عنوان مقاله</p>
-            </a>
-        </div>
-        <div id="ads">
-            <a href="#!" class="ad">
-                <img src="../assets/imgs/side1.jpg" alt="adImg">
-            </a>
-            <a href="#!" class="ad">
-                <img src="../assets/imgs/side2.jpg" alt="adImg">
-            </a>
-            <a href="#!" class="ad">
-                <img src="../assets/imgs/side1.jpg" alt="adImg">
-            </a>
-            <a href="#!" class="ad">
-                <img src="../assets/imgs/side2.jpg" alt="adImg">
-            </a>
-        </div>
-    </main>
+    </div>
     <div id="video" class="containerStyle">
         <h4>آخرین ویدیوها</h4>
         <div class="cols">
@@ -1126,7 +1139,7 @@
     </form>
     <footer>
         <div class="logo">
-            <img src="../assets/imgs/logo.png" alt="logoImg">
+            <img src="../assets/icons/logo.png" alt="logoImg">
             <h6>نام سایت</h6>
         </div>
         <div class="info">
@@ -1165,15 +1178,15 @@
                 <a href="aboutus.html">درباره ما</a>
                 <a href="rules.html">قوانین</a>
                 <a href="faq.html">سوالات متداول</a>
-                <a href="ads.html">تبلیغات</a>
+                <a href="requestAds.html">تبلیغات</a>
             </div>
             <div class="col apps">
                 <h6>دریافت اپلیکیشن</h6>
                 <a href="#!">
-                    <img src="../assets/imgs/apps1.png" alt="appImg">
+                    <img src="../assets/icons/apps1.png" alt="appImg">
                 </a>
                 <a href="#!">
-                    <img src="../assets/imgs/apps2.png" alt="appImg">
+                    <img src="../assets/icons/apps2.png" alt="appImg">
                 </a>        
             </div>
         </div>

@@ -22,4 +22,13 @@ commentsWrapper.querySelectorAll('.withCollapse').forEach((withCollapse,i,all) =
    let font = new FontFaceObserver('iranSans');
    font.load().then(()=>new collapse.Collapse(withCollapse,others));
 })
-
+commentsWrapper.querySelectorAll('.likeTrigger').forEach(likeTrigger => likeTrigger.addEventListener('click',likeToggle)) ;
+function likeToggle(e){
+    let icon = this.querySelector('i') ;
+    let likeNum = this.querySelector('p') ;
+    icon.classList.toggle('far') ;
+    icon.classList.toggle('fas') ;
+    icon.classList.toggle('active') ;
+    if(icon.classList.contains('active')) likeNum.textContent = parseInt(likeNum.textContent)+1 ;
+    else likeNum.textContent = parseInt(likeNum.textContent)-1 ;
+}

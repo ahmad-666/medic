@@ -759,7 +759,7 @@
                 <li class="logo center-y">
                     <a href="index.html">
                         <p>عنوان سایت</p>
-                        <img src="../assets/imgs/logo.png" alt="logoImg">
+                        <img src="../assets/icons/logo.png" alt="logoImg">
                     </a>
                 </li>
             </ul>
@@ -802,6 +802,16 @@
                 <p>تاریخ</p>
                 <p>1398/10/10</p>
             </div>
+            <div id="likesComments">
+                <div class="like">
+                    <i class="fas fa-heart"></i>
+                    <p>100</p>
+                </div>
+                <div class="comment">
+                    <i class="fas fa-comment"></i>
+                    <p>10نظر</p>
+                </div>
+            </div>
             <div id="tags">
                 <h4>برچست ها</h4>
                 <div class="tags">
@@ -827,7 +837,14 @@
                     Amet unde nesciunt, incidunt eveniet veniam, ratione magnam debitis vero doloribus quasi voluptatem sed officia ipsam libero id quos nobis praesentium est facilis magni recusandae quod. Quo sunt facere quia?
                     Itaque atque laborum rem nam sequi? Repellendus voluptates, nemo saepe nisi hic unde et adipisci ad voluptate, minima possimus laboriosam ipsa iure. Voluptatum qui ab quas facilis odio vero neque!
                     Omnis, aperiam. Voluptate officia et fugiat magni debitis aperiam, accusamus, quam minima sunt dolore sed facilis dolor molestias. Aperiam non reprehenderit aliquam? Molestias natus eum aspernatur numquam commodi nam ipsum.
-                </p>
+                </p>        
+                <div id="userLike">
+                    <i class="fas fa-heart"></i>
+                    <div class="col">
+                        <p>آیا این مقاله مفید بود؟</p>
+                        <p>100نفر این مقاله را دوست داشتند</p>
+                    </div>
+                </div>   
             </div>
             <div id="ref">
                 <div class="section right">
@@ -872,14 +889,14 @@
                         </div>
                     </div>
                     <div class="inputWrapper text">
-                        <input type="email" id="email" name="email" class="style1 labelHandler validate" required>
-                        <label for="email">
+                        <input type="text" id="emailPhone" name="emailPhone" class="style1 labelHandler validate" required>
+                        <label for="emailPhone">
                             <i class="fas fa-envelope icon"></i>
-                            <p>پست الکترونیکی</p>
+                            <p>ایمیل یا شماره موبایل</p>
                         </label>
                         <span class="line"></span>
                         <div class="msg">
-                            <p>ایمیل صحیح وارد نمایید</p>
+                            <p>لطفا مقداری وارد نمایید</p>
                             <i class="fas fa-caret-up"></i>
                         </div>
                     </div>
@@ -905,10 +922,16 @@
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quisquam distinctio officia magni! Enim deleniti eos iusto at illo temporibus, rem accusantium, eaque quos voluptate ut sapiente quam reiciendis delectus.Non corrupti quasi eligendi in, dolor quod vel similique molestiae ratione molestias dignissimos minima facere explicabo iure dicta quisquam neque eos est? Officia exercitationem officiis perspiciatis, cumque ea repellat aliquam!
                     </p>
-                    <div class="reply collapseTrigger">
-                        <p>پاسخ</p>
-                        <i class="fas fa-reply"></i>
-                    </div>
+                    <div class="commentAction">
+                        <div class="like likeTrigger">
+                            <i class="far fa-heart"></i>
+                            <p>10</p>
+                        </div>
+                        <div class="reply collapseTrigger">
+                            <p>پاسخ</p>
+                            <i class="fas fa-reply"></i>
+                        </div>
+                    </div>            
                 </div>
             </div>
             <form novalidate id="reply1" name="reply1" class="validate reply collapse" method="GET" action="#!" enctype="text/plain">
@@ -960,10 +983,16 @@
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quisquam distinctio officia magni! Enim deleniti eos iusto at illo temporibus, rem accusantium, eaque quos voluptate ut sapiente quam reiciendis delectus.Non corrupti quasi eligendi in, dolor quod vel similique molestiae ratione molestias dignissimos minima facere explicabo iure dicta quisquam neque eos est? Officia exercitationem officiis perspiciatis, cumque ea repellat aliquam!
                     </p>
-                    <div class="reply collapseTrigger">
-                        <p>پاسخ</p>
-                        <i class="fas fa-reply"></i>
-                    </div>
+                    <div class="commentAction">
+                        <div class="like likeTrigger">
+                            <i class="far fa-heart"></i>
+                            <p>10</p>
+                        </div>
+                        <div class="reply collapseTrigger">
+                            <p>پاسخ</p>
+                            <i class="fas fa-reply"></i>
+                        </div>
+                    </div>        
                 </div>
             </div>
             <form novalidate id="reply1" name="reply1" class="validate reply collapse" method="GET" action="#!" enctype="text/plain">
@@ -987,7 +1016,7 @@
     </div>
     <footer>
         <div class="logo">
-            <img src="../assets/imgs/logo.png" alt="logoImg">
+            <img src="../assets/icons/logo.png" alt="logoImg">
             <h6>نام سایت</h6>
         </div>
         <div class="info">
@@ -1031,10 +1060,10 @@
             <div class="col apps">
                 <h6>دریافت اپلیکیشن</h6>
                 <a href="#!">
-                    <img src="../assets/imgs/apps1.png" alt="appImg">
+                    <img src="../assets/icons/apps1.png" alt="appImg">
                 </a>
                 <a href="#!">
-                    <img src="../assets/imgs/apps2.png" alt="appImg">
+                    <img src="../assets/icons/apps2.png" alt="appImg">
                 </a>        
             </div>
         </div>

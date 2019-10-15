@@ -11,7 +11,7 @@
 .shadowBellow{box-shadow: 0 .3em 1em -.2em $shadowColor ;}
 .shadowPrimary{box-shadow: 0 .6em 1.7em -.5em $primaryColor ;}
 .containerStyle{
-    width: 90% ;
+    width: 95% ;
     height: auto;
     margin: $dist3 auto 0 auto ;
     padding: $dist2  ;
@@ -73,7 +73,6 @@
     height: auto;
     cursor: pointer;
     border-radius: $dist3;
-    @include swapColor(white,$primaryColor) ;
 }
 .btn.small{
     font-size: $fontM;
@@ -86,6 +85,18 @@
 .btn.large{
     font-size: $fontL;
     padding: .5em $dist2 + .5em;
+}
+.collapseTrigger{cursor: pointer;}
+.collapse{height: auto;}
+.collapse.close{
+    opacity: 0;
+    visibility: hidden ;
+    height: 0;
+}
+.collapse.addTransition{transition: all .15s linear ;}
+.collapse.open{
+    opacity: 1;
+    visibility: visible ;
 }
 //text effects--------------------------------------------
 //text effects--------------------------------------------

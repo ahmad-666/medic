@@ -27,8 +27,8 @@ header{
                         color: $textDark ;                    
                     }
                     img{
-                        width: 8em ;
-                        height: 5em;
+                        width: 4.5em ;
+                        height: 3.5em;
                         margin-right: $dist1 ;
                     }
                 }
@@ -37,7 +37,7 @@ header{
                 width: auto ;
                 height: 100%;
                 margin-right: 0 ;
-                padding: $dist2 $dist3 ;
+                padding: $dist1 $dist3 ;
                 &:first-child{margin-right: 0;}
                 display: flex ;
                 @include flex(row,flex-start,center,nowrap,"");
