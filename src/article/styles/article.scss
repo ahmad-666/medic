@@ -8,7 +8,7 @@
     padding: 0;
     display: flex;
     @include flex(row,flex-start,flex-start,wrap,flex-start);
-    .img,.infos{
+    .img,.video,.infos{
         width: 50%;
         height: 45em;
     }

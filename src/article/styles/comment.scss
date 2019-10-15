@@ -122,6 +122,9 @@
         color: darken($textGrey,20%);
         margin-top: $dist2;
     }
-    button.close{margin-top: $dist2;}
+    button.close{
+        margin-top: $dist2;
+        @include swapColor(white,$primaryColor) ;
+    }
 }
 @include resizeTablet('#comments'+' .comment') ;
