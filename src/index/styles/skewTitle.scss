@@ -1,0 +1,31 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#latest,#articles{
+    .title{
+        width: 100% ;
+        height: auto;
+        background-color: darken($darkBlue,10%) ;
+        overflow: hidden;
+        .skew{
+            display: inline-block ;
+            width: auto ;
+            height: auto;
+            background-color: $primaryColor ;
+            transform: translateX($dist2 + .5em) skewX(-30deg) ;
+            padding: $dist1 $dist2 $dist1 $dist4 * 2 ;
+            h4{
+                font-size: $fontM ;
+                font-weight: 700 ;
+                color: $textWhite ;
+                transform: skewX(30deg) translateX(-$dist2) ;
+            }
+        }
+    }
+}
+#articles{
+    .title{
+        border-top-right-radius: $dist2;
+        border-top-left-radius: $dist2;
+    }
+}
