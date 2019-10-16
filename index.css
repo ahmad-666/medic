@@ -4814,7 +4814,7 @@ header nav {
       width: auto;
       height: 100%;
       margin-right: 0;
-      padding: 0.75em 3em;
+      padding: 0.75em 2em;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -5098,6 +5098,22 @@ header {
               -ms-transform: translateX(-0.5em);
                   transform: translateX(-0.5em); }
 
+@media screen and (max-width: 1000px) {
+  header {
+    font-size: 8px; } }
+
+@media screen and (max-width: 800px) {
+  header #top .right a, header #top .right .phone, header #top .left a, header #top .left .phone {
+    margin-right: 1.5em; } }
+
+@media screen and (max-width: 700px) {
+  header {
+    font-size: 6px; } }
+
+@media screen and (max-width: 400px) {
+  header {
+    font-size: 4px; } }
+
 .sliderMove {
   width: 100%;
   height: 100%;
@@ -5231,99 +5247,100 @@ header {
         width: 100%;
         height: 100%; }
 
-#popularWrapper > .article {
-  width: 100%;
-  height: -webkit-calc((100% / 3) + 3em);
-  height: calc((100% / 3) + 3em);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  -webkit-align-content: "";
-      -ms-flex-line-pack: "";
-          align-content: ""; }
-  #popularWrapper > .article .img {
+#popularWrapper {
+  height: 100%; }
+  #popularWrapper > .article {
     width: 100%;
-    height: 10em; }
-    #popularWrapper > .article .img img {
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-         object-fit: cover; }
-  #popularWrapper > .article h4 {
-    width: 100%;
-    font-size: 1.6em;
-    color: #2d2d31;
-    font-weight: 700;
-    position: relative;
-    overflow: hidden;
-    line-height: 1.5em;
-    max-height: 3em;
-    text-align: justify;
-    padding-left: 2em;
-    padding-right: 0;
-    margin-top: .3em; }
-    #popularWrapper > .article h4 .ellipse {
-      color: #2d2d31;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      display: none; }
-    #popularWrapper > .article h4 .ellipse.show {
-      display: block; }
-  #popularWrapper > .article .row {
-    width: 100%;
-    height: auto;
+    height: -webkit-calc((100% / 3) + 3em);
+    height: calc((100% / 3) + 3em);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-align-content: flex-start;
-        -ms-flex-line-pack: start;
-            align-content: flex-start;
-    margin-top: .15em; }
-    #popularWrapper > .article .row p {
-      font-size: 1.2em;
-      color: #90909b; }
-      #popularWrapper > .article .row p:nth-child(2) {
-        margin-right: 1.5em; }
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: ""; }
+    #popularWrapper > .article .img {
+      width: 100%;
+      height: 10em; }
+      #popularWrapper > .article .img img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover; }
+    #popularWrapper > .article h4 {
+      width: 100%;
+      font-size: 1.6em;
+      color: #2d2d31;
+      font-weight: 700;
+      position: relative;
+      overflow: hidden;
+      line-height: 1.5em;
+      max-height: 3em;
+      text-align: justify;
+      padding-left: 2em;
+      padding-right: 0;
+      margin-top: .3em; }
+      #popularWrapper > .article h4 .ellipse {
+        color: #2d2d31;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: none; }
+      #popularWrapper > .article h4 .ellipse.show {
+        display: block; }
+    #popularWrapper > .article .row {
+      width: 100%;
+      height: auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-align-content: flex-start;
+          -ms-flex-line-pack: start;
+              align-content: flex-start;
+      margin-top: .15em; }
+      #popularWrapper > .article .row p {
+        font-size: 1.2em;
+        color: #90909b; }
+        #popularWrapper > .article .row p:nth-child(2) {
+          margin-right: 1.5em; }
 
 .popular, #popular {
   width: 100%;
-  height: -webkit-calc((2 * (100% / 3)) - 2em);
-  height: calc((2 * (100% / 3)) - 2em);
+  height: 100%;
   margin-top: 0em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5567,9 +5584,10 @@ header {
   #latest .tags .tag.special {
     background-color: #ea6161; }
 
-#latest .articles {
+#latest {
   width: 100%;
   height: auto;
+  margin-top: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5587,102 +5605,72 @@ header {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
-  margin-top: 1em; }
-  #latest .articles .article {
-    width: -webkit-calc((100% - (2 * 2em)) / 2);
-    width: calc((100% - (2 * 2em)) / 2);
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: ""; }
+  #latest #latestArticles, #latest #latestVids {
+    width: 50%;
     height: auto;
-    margin: 1em 0;
-    padding: 0.75em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
     -webkit-align-content: "";
         -ms-flex-line-pack: "";
-            align-content: "";
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear; }
-    #latest .articles .article:hover {
-      -webkit-box-shadow: 0 0 2.5em 0.5em rgba(135, 135, 135, 0.5);
-              box-shadow: 0 0 2.5em 0.5em rgba(135, 135, 135, 0.5); }
-      #latest .articles .article:hover .img img {
-        -webkit-transform: scale(1.3);
-            -ms-transform: scale(1.3);
-                transform: scale(1.3); }
-    #latest .articles .article .img {
-      -webkit-flex-shrink: 0;
-          -ms-flex-negative: 0;
-              flex-shrink: 0;
-      width: 15em;
-      height: 10em;
-      position: relative;
-      overflow: hidden;
-      border-radius: 1.5em; }
-      #latest .articles .article .img img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -webkit-transition: all .2s linear;
-        transition: all .2s linear; }
-    #latest .articles .article .info {
+            align-content: ""; }
+    #latest #latestArticles:nth-child(2), #latest #latestVids:nth-child(2) {
+      margin-right: 2em; }
+    #latest #latestArticles .articles, #latest #latestVids .articles {
       width: 100%;
       height: auto;
-      margin-right: 0.75em;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
           -ms-flex-align: start;
               align-items: flex-start;
-      -webkit-flex-wrap: nowrap;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap;
-      -webkit-align-content: "";
-          -ms-flex-line-pack: "";
-              align-content: ""; }
-      #latest .articles .article .info h4 {
-        font-size: 1.6em;
-        color: #2d2d31;
-        font-weight: 700; }
-      #latest .articles .article .info .row {
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-align-content: flex-start;
+          -ms-flex-line-pack: start;
+              align-content: flex-start;
+      margin-top: 1em; }
+      #latest #latestArticles .articles .article, #latest #latestVids .articles .article {
         width: 100%;
         height: auto;
-        margin-top: 0;
+        margin: 1em 0;
+        padding: 0.75em;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -5692,10 +5680,10 @@ header {
         -webkit-flex-direction: row;
             -ms-flex-direction: row;
                 flex-direction: row;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         -webkit-box-align: center;
         -webkit-align-items: center;
             -ms-flex-align: center;
@@ -5705,56 +5693,45 @@ header {
                 flex-wrap: nowrap;
         -webkit-align-content: "";
             -ms-flex-line-pack: "";
-                align-content: ""; }
-        #latest .articles .article .info .row p {
-          font-size: 1.2em;
-          color: #90909b; }
-        #latest .articles .article .info .row .right {
-          width: 100%;
-          height: auto;
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: row;
-              -ms-flex-direction: row;
-                  flex-direction: row;
-          -webkit-box-pack: start;
-          -webkit-justify-content: flex-start;
-              -ms-flex-pack: start;
-                  justify-content: flex-start;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-flex-wrap: nowrap;
-              -ms-flex-wrap: nowrap;
-                  flex-wrap: nowrap;
-          -webkit-align-content: "";
-              -ms-flex-line-pack: "";
-                  align-content: ""; }
-          #latest .articles .article .info .row .right p {
-            margin-right: 1.5em; }
-            #latest .articles .article .info .row .right p:first-child {
-              margin-right: 0; }
-        #latest .articles .article .info .row .left {
+                align-content: "";
+        -webkit-transition: all .3s linear;
+        transition: all .3s linear; }
+        #latest #latestArticles .articles .article:hover, #latest #latestVids .articles .article:hover {
+          -webkit-box-shadow: 0 0 2.5em 0.5em rgba(135, 135, 135, 0.5);
+                  box-shadow: 0 0 2.5em 0.5em rgba(135, 135, 135, 0.5); }
+          #latest #latestArticles .articles .article:hover .img img, #latest #latestVids .articles .article:hover .img img {
+            -webkit-transform: scale(1.3);
+                -ms-transform: scale(1.3);
+                    transform: scale(1.3); }
+        #latest #latestArticles .articles .article .img, #latest #latestVids .articles .article .img {
           -webkit-flex-shrink: 0;
               -ms-flex-negative: 0;
                   flex-shrink: 0;
-          margin-right: 0.75em;
-          width: auto;
+          width: 15em;
+          height: 10em;
+          position: relative;
+          overflow: hidden;
+          border-radius: 1.5em; }
+          #latest #latestArticles .articles .article .img img, #latest #latestVids .articles .article .img img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+            -webkit-transition: all .2s linear;
+            transition: all .2s linear; }
+        #latest #latestArticles .articles .article .info, #latest #latestVids .articles .article .info {
+          width: 100%;
           height: auto;
+          margin-right: 0.75em;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex;
-          -webkit-box-orient: horizontal;
+          -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
-          -webkit-flex-direction: row;
-              -ms-flex-direction: row;
-                  flex-direction: row;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
           -webkit-box-pack: start;
           -webkit-justify-content: flex-start;
               -ms-flex-pack: start;
@@ -5769,22 +5746,27 @@ header {
           -webkit-align-content: "";
               -ms-flex-line-pack: "";
                   align-content: ""; }
-          #latest .articles .article .info .row .left .like, #latest .articles .article .info .row .left .comment {
-            width: auto;
+          #latest #latestArticles .articles .article .info h4, #latest #latestVids .articles .article .info h4 {
+            font-size: 1.6em;
+            color: #2d2d31;
+            font-weight: 700; }
+          #latest #latestArticles .articles .article .info .row, #latest #latestVids .articles .article .info .row {
+            width: 100%;
             height: auto;
+            margin-top: 0;
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: vertical;
+            -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            -webkit-box-pack: start;
-            -webkit-justify-content: flex-start;
-                -ms-flex-pack: start;
-                    justify-content: flex-start;
+            -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             -webkit-box-align: center;
             -webkit-align-items: center;
                 -ms-flex-align: center;
@@ -5794,29 +5776,118 @@ header {
                     flex-wrap: nowrap;
             -webkit-align-content: "";
                 -ms-flex-line-pack: "";
-                    align-content: "";
-            color: #ababb3; }
-            #latest .articles .article .info .row .left .like:not(:first-child), #latest .articles .article .info .row .left .comment:not(:first-child) {
-              margin-right: 1.5em; }
-            #latest .articles .article .info .row .left .like i, #latest .articles .article .info .row .left .comment i {
-              width: 2.2em;
-              height: 2.2em;
-              border-radius: 50%;
-              border: 1px solid #ababb3;
-              position: relative; }
-              #latest .articles .article .info .row .left .like i::before, #latest .articles .article .info .row .left .comment i::before {
-                position: absolute;
-                top: 50%;
-                right: 50%;
-                -webkit-transform: translate(50%, -50%);
-                    -ms-transform: translate(50%, -50%);
-                        transform: translate(50%, -50%);
-                font-size: 1.2em;
-                color: inherit; }
-            #latest .articles .article .info .row .left .like p, #latest .articles .article .info .row .left .comment p {
+                    align-content: ""; }
+            #latest #latestArticles .articles .article .info .row p, #latest #latestVids .articles .article .info .row p {
               font-size: 1.2em;
-              margin-top: .2em;
-              color: inherit; }
+              color: #90909b; }
+            #latest #latestArticles .articles .article .info .row .right, #latest #latestVids .articles .article .info .row .right {
+              width: 100%;
+              height: auto;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -webkit-flex-direction: row;
+                  -ms-flex-direction: row;
+                      flex-direction: row;
+              -webkit-box-pack: start;
+              -webkit-justify-content: flex-start;
+                  -ms-flex-pack: start;
+                      justify-content: flex-start;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              -webkit-flex-wrap: nowrap;
+                  -ms-flex-wrap: nowrap;
+                      flex-wrap: nowrap;
+              -webkit-align-content: "";
+                  -ms-flex-line-pack: "";
+                      align-content: ""; }
+              #latest #latestArticles .articles .article .info .row .right p, #latest #latestVids .articles .article .info .row .right p {
+                margin-right: 1.5em; }
+                #latest #latestArticles .articles .article .info .row .right p:first-child, #latest #latestVids .articles .article .info .row .right p:first-child {
+                  margin-right: 0; }
+            #latest #latestArticles .articles .article .info .row .left, #latest #latestVids .articles .article .info .row .left {
+              -webkit-flex-shrink: 0;
+                  -ms-flex-negative: 0;
+                      flex-shrink: 0;
+              margin-right: 0.75em;
+              width: auto;
+              height: auto;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -webkit-flex-direction: row;
+                  -ms-flex-direction: row;
+                      flex-direction: row;
+              -webkit-box-pack: start;
+              -webkit-justify-content: flex-start;
+                  -ms-flex-pack: start;
+                      justify-content: flex-start;
+              -webkit-box-align: start;
+              -webkit-align-items: flex-start;
+                  -ms-flex-align: start;
+                      align-items: flex-start;
+              -webkit-flex-wrap: nowrap;
+                  -ms-flex-wrap: nowrap;
+                      flex-wrap: nowrap;
+              -webkit-align-content: "";
+                  -ms-flex-line-pack: "";
+                      align-content: ""; }
+              #latest #latestArticles .articles .article .info .row .left .like, #latest #latestArticles .articles .article .info .row .left .comment, #latest #latestVids .articles .article .info .row .left .like, #latest #latestVids .articles .article .info .row .left .comment {
+                width: auto;
+                height: auto;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-box-pack: start;
+                -webkit-justify-content: flex-start;
+                    -ms-flex-pack: start;
+                        justify-content: flex-start;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-flex-wrap: nowrap;
+                    -ms-flex-wrap: nowrap;
+                        flex-wrap: nowrap;
+                -webkit-align-content: "";
+                    -ms-flex-line-pack: "";
+                        align-content: "";
+                color: #ababb3; }
+                #latest #latestArticles .articles .article .info .row .left .like:not(:first-child), #latest #latestArticles .articles .article .info .row .left .comment:not(:first-child), #latest #latestVids .articles .article .info .row .left .like:not(:first-child), #latest #latestVids .articles .article .info .row .left .comment:not(:first-child) {
+                  margin-right: 1.5em; }
+                #latest #latestArticles .articles .article .info .row .left .like i, #latest #latestArticles .articles .article .info .row .left .comment i, #latest #latestVids .articles .article .info .row .left .like i, #latest #latestVids .articles .article .info .row .left .comment i {
+                  width: 2.2em;
+                  height: 2.2em;
+                  border-radius: 50%;
+                  border: 1px solid #ababb3;
+                  position: relative; }
+                  #latest #latestArticles .articles .article .info .row .left .like i::before, #latest #latestArticles .articles .article .info .row .left .comment i::before, #latest #latestVids .articles .article .info .row .left .like i::before, #latest #latestVids .articles .article .info .row .left .comment i::before {
+                    position: absolute;
+                    top: 50%;
+                    right: 50%;
+                    -webkit-transform: translate(50%, -50%);
+                        -ms-transform: translate(50%, -50%);
+                            transform: translate(50%, -50%);
+                    font-size: 1.2em;
+                    color: inherit; }
+                #latest #latestArticles .articles .article .info .row .left .like p, #latest #latestArticles .articles .article .info .row .left .comment p, #latest #latestVids .articles .article .info .row .left .like p, #latest #latestVids .articles .article .info .row .left .comment p {
+                  font-size: 1.2em;
+                  margin-top: .2em;
+                  color: inherit; }
 
 #grid {
   padding: 2em;
@@ -5864,12 +5935,12 @@ header {
       -webkit-align-items: flex-start;
           -ms-flex-align: start;
               align-items: flex-start;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-      -webkit-align-content: flex-start;
-          -ms-flex-line-pack: start;
-              align-content: flex-start; }
+      -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+      -webkit-align-content: "";
+          -ms-flex-line-pack: "";
+              align-content: ""; }
       #grid > .row:nth-child(1) .col {
         height: 100%;
         display: -webkit-box;
@@ -5897,12 +5968,18 @@ header {
                 align-content: ""; }
         #grid > .row:nth-child(1) .col:not(:first-child) {
           margin-right: 2em; }
-        #grid > .row:nth-child(1) .col:nth-child(1), #grid > .row:nth-child(1) .col:nth-child(3) {
-          width: -webkit-calc((100% / 3.9) - 2em);
-          width: calc((100% / 3.9) - 2em); }
+        #grid > .row:nth-child(1) .col:nth-child(1) {
+          width: 100%; }
         #grid > .row:nth-child(1) .col:nth-child(2) {
-          width: -webkit-calc((100% / 2) - 2em);
-          width: calc((100% / 2) - 2em); }
+          -webkit-flex-shrink: 0;
+              -ms-flex-negative: 0;
+                  flex-shrink: 0;
+          width: 35em; }
+        #grid > .row:nth-child(1) .col:nth-child(3) {
+          -webkit-flex-shrink: 0;
+              -ms-flex-negative: 0;
+                  flex-shrink: 0;
+          width: 25em; }
       #grid > .row:nth-child(1) #ads .ad {
         width: 100%; }
         #grid > .row:nth-child(1) #ads .ad:nth-child(1) {
@@ -8009,10 +8086,10 @@ form#newsLetters {
       opacity: 1;
       visibility: visible; }
 
-form#contact, form#report, form#requestAd {
-  width: 60em;
+form#contact {
+  width: 100%;
   height: auto;
-  padding: 1.5em 0;
+  margin-top: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8036,15 +8113,7 @@ form#contact, form#report, form#requestAd {
   -webkit-align-content: "";
       -ms-flex-line-pack: "";
           align-content: ""; }
-  form#contact img, form#report img, form#requestAd img {
-    width: 14em;
-    height: 16em;
-    margin-top: -1.5em; }
-  form#contact h4, form#report h4, form#requestAd h4 {
-    font-size: 2em;
-    font-weight: 700;
-    color: #26a69a; }
-  form#contact .inputs, form#report .inputs, form#requestAd .inputs {
+  form#contact .inputs {
     width: 100%;
     height: auto;
     display: -webkit-box;
@@ -8070,13 +8139,13 @@ form#contact, form#report, form#requestAd {
     -webkit-align-content: flex-start;
         -ms-flex-line-pack: start;
             align-content: flex-start; }
-  form#contact .inputWrapper.text, form#report .inputWrapper.text, form#requestAd .inputWrapper.text {
+  form#contact .inputWrapper.text {
     width: -webkit-calc((100% - (2 * 3em)) / 2);
     width: calc((100% - (2 * 3em)) / 2);
     height: 4em;
     position: relative;
     margin: 1.5em; }
-    form#contact .inputWrapper.text input, form#report .inputWrapper.text input, form#requestAd .inputWrapper.text input {
+    form#contact .inputWrapper.text input {
       width: 100%;
       height: 100%;
       line-height: 4em;
@@ -8085,25 +8154,25 @@ form#contact, form#report, form#requestAd {
       color: #2d2d31;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text input::-webkit-input-placeholder, form#report .inputWrapper.text input::-webkit-input-placeholder, form#requestAd .inputWrapper.text input::-webkit-input-placeholder {
+      form#contact .inputWrapper.text input::-webkit-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::-moz-placeholder, form#report .inputWrapper.text input::-moz-placeholder, form#requestAd .inputWrapper.text input::-moz-placeholder {
+      form#contact .inputWrapper.text input::-moz-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input:-ms-input-placeholder, form#report .inputWrapper.text input:-ms-input-placeholder, form#requestAd .inputWrapper.text input:-ms-input-placeholder {
+      form#contact .inputWrapper.text input:-ms-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::-ms-input-placeholder, form#report .inputWrapper.text input::-ms-input-placeholder, form#requestAd .inputWrapper.text input::-ms-input-placeholder {
+      form#contact .inputWrapper.text input::-ms-input-placeholder {
         color: #90909b;
         font-size: 1.6em; }
-      form#contact .inputWrapper.text input::placeholder, form#report .inputWrapper.text input::placeholder, form#requestAd .inputWrapper.text input::placeholder {
+      form#contact .inputWrapper.text input::placeholder {
         color: #90909b;
         font-size: 1.6em; }
-    form#contact .inputWrapper.text input.style1, form#report .inputWrapper.text input.style1, form#requestAd .inputWrapper.text input.style1 {
+    form#contact .inputWrapper.text input.style1 {
       border: none;
       border-bottom: 1.2px solid #d3d3d7; }
-      form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
+      form#contact .inputWrapper.text input.style1:focus ~ label {
         color: #26a69a;
         font-size: 8px;
         bottom: -webkit-calc(100% + .5em);
@@ -8112,14 +8181,14 @@ form#contact, form#report, form#requestAd {
             -ms-transform: translateY(50%);
                 transform: translateY(50%);
         right: 0; }
-      form#contact .inputWrapper.text input.style1:focus ~ .line, form#report .inputWrapper.text input.style1:focus ~ .line, form#requestAd .inputWrapper.text input.style1:focus ~ .line {
+      form#contact .inputWrapper.text input.style1:focus ~ .line {
         width: 100%; }
-    form#contact .inputWrapper.text input.style2, form#report .inputWrapper.text input.style2, form#requestAd .inputWrapper.text input.style2 {
+    form#contact .inputWrapper.text input.style2 {
       border: 1.2px solid #d3d3d7;
       border-radius: 3em; }
-      form#contact .inputWrapper.text input.style2:focus, form#report .inputWrapper.text input.style2:focus, form#requestAd .inputWrapper.text input.style2:focus {
+      form#contact .inputWrapper.text input.style2:focus {
         border: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
+        form#contact .inputWrapper.text input.style2:focus ~ label {
           color: #26a69a;
           font-size: 8px;
           bottom: -webkit-calc(100% + 1.5em);
@@ -8128,19 +8197,19 @@ form#contact, form#report, form#requestAd {
               -ms-transform: translateY(50%);
                   transform: translateY(50%);
           right: 0.75em; }
-        form#contact .inputWrapper.text input.style2:focus ~ .line, form#report .inputWrapper.text input.style2:focus ~ .line, form#requestAd .inputWrapper.text input.style2:focus ~ .line {
+        form#contact .inputWrapper.text input.style2:focus ~ .line {
           width: 0%; }
-    form#contact .inputWrapper.text input.style1.error, form#report .inputWrapper.text input.style1.error, form#requestAd .inputWrapper.text input.style1.error {
+    form#contact .inputWrapper.text input.style1.error {
       border-bottom: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.text input.style1.error ~ label, form#report .inputWrapper.text input.style1.error ~ label, form#requestAd .inputWrapper.text input.style1.error ~ label {
+      form#contact .inputWrapper.text input.style1.error ~ label {
         color: #ea6161; }
-      form#contact .inputWrapper.text input.style1.error ~ .line, form#report .inputWrapper.text input.style1.error ~ .line, form#requestAd .inputWrapper.text input.style1.error ~ .line {
+      form#contact .inputWrapper.text input.style1.error ~ .line {
         background-color: #ea6161; }
-    form#contact .inputWrapper.text input.style2.error, form#report .inputWrapper.text input.style2.error, form#requestAd .inputWrapper.text input.style2.error {
+    form#contact .inputWrapper.text input.style2.error {
       border: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.text input.style2.error ~ label, form#report .inputWrapper.text input.style2.error ~ label, form#requestAd .inputWrapper.text input.style2.error ~ label {
+      form#contact .inputWrapper.text input.style2.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.text label, form#report .inputWrapper.text label, form#requestAd .inputWrapper.text label {
+    form#contact .inputWrapper.text label {
       width: auto;
       height: auto;
       position: absolute;
@@ -8175,14 +8244,14 @@ form#contact, form#report, form#requestAd {
       color: #c6c6cb;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text label .icon, form#report .inputWrapper.text label .icon, form#requestAd .inputWrapper.text label .icon {
+      form#contact .inputWrapper.text label .icon {
         font-size: 1.6em; }
-      form#contact .inputWrapper.text label p, form#report .inputWrapper.text label p, form#requestAd .inputWrapper.text label p {
+      form#contact .inputWrapper.text label p {
         font-size: 1.5em;
         -webkit-transform: translateX(-0.3em);
             -ms-transform: translateX(-0.3em);
                 transform: translateX(-0.3em); }
-    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + .5em);
       bottom: calc(100% + .5em);
@@ -8190,7 +8259,7 @@ form#contact, form#report, form#requestAd {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 1.5em);
       bottom: calc(100% + 1.5em);
@@ -8198,7 +8267,7 @@ form#contact, form#report, form#requestAd {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0.75em; }
-    form#contact .inputWrapper.text .line, form#report .inputWrapper.text .line, form#requestAd .inputWrapper.text .line {
+    form#contact .inputWrapper.text .line {
       width: 0%;
       height: 1.2px;
       background-color: #26a69a;
@@ -8208,7 +8277,7 @@ form#contact, form#report, form#requestAd {
       top: calc(100% - 1.5px);
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-    form#contact .inputWrapper.text .msg, form#report .inputWrapper.text .msg, form#requestAd .inputWrapper.text .msg {
+    form#contact .inputWrapper.text .msg {
       width: auto;
       height: auto;
       border-radius: 3em;
@@ -8222,21 +8291,21 @@ form#contact, form#report, form#requestAd {
       visibility: hidden;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-      form#contact .inputWrapper.text .msg p, form#report .inputWrapper.text .msg p, form#requestAd .inputWrapper.text .msg p {
+      form#contact .inputWrapper.text .msg p {
         color: #fbfbfb;
         font-size: 1.4em; }
-      form#contact .inputWrapper.text .msg i, form#report .inputWrapper.text .msg i, form#requestAd .inputWrapper.text .msg i {
+      form#contact .inputWrapper.text .msg i {
         font-size: 2.4em;
         color: #ea6161;
         position: absolute;
         right: 1.5em;
         top: -webkit-calc(0% - .6em);
         top: calc(0% - .6em); }
-    form#contact .inputWrapper.text .msg.show, form#report .inputWrapper.text .msg.show, form#requestAd .inputWrapper.text .msg.show {
+    form#contact .inputWrapper.text .msg.show {
       opacity: 1;
       visibility: visible;
       z-index: 2; }
-  form#contact .inputWrapper.textarea, form#report .inputWrapper.textarea, form#requestAd .inputWrapper.textarea {
+  form#contact .inputWrapper.textarea {
     width: 100%;
     height: auto;
     position: relative;
@@ -8245,7 +8314,7 @@ form#contact, form#report, form#requestAd {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    form#contact .inputWrapper.textarea textarea, form#report .inputWrapper.textarea textarea, form#requestAd .inputWrapper.textarea textarea {
+    form#contact .inputWrapper.textarea textarea {
       width: 100%;
       font-size: 1.6em;
       color: #2d2d31;
@@ -8254,33 +8323,33 @@ form#contact, form#report, form#requestAd {
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
       resize: none; }
-      form#contact .inputWrapper.textarea textarea::-webkit-input-placeholder, form#report .inputWrapper.textarea textarea::-webkit-input-placeholder, form#requestAd .inputWrapper.textarea textarea::-webkit-input-placeholder {
+      form#contact .inputWrapper.textarea textarea::-webkit-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::-moz-placeholder, form#report .inputWrapper.textarea textarea::-moz-placeholder, form#requestAd .inputWrapper.textarea textarea::-moz-placeholder {
+      form#contact .inputWrapper.textarea textarea::-moz-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea:-ms-input-placeholder, form#report .inputWrapper.textarea textarea:-ms-input-placeholder, form#requestAd .inputWrapper.textarea textarea:-ms-input-placeholder {
+      form#contact .inputWrapper.textarea textarea:-ms-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::-ms-input-placeholder, form#report .inputWrapper.textarea textarea::-ms-input-placeholder, form#requestAd .inputWrapper.textarea textarea::-ms-input-placeholder {
+      form#contact .inputWrapper.textarea textarea::-ms-input-placeholder {
         font-size: 1.6em;
         color: #90909b; }
-      form#contact .inputWrapper.textarea textarea::placeholder, form#report .inputWrapper.textarea textarea::placeholder, form#requestAd .inputWrapper.textarea textarea::placeholder {
+      form#contact .inputWrapper.textarea textarea::placeholder {
         font-size: 1.6em;
         color: #90909b; }
-    form#contact .inputWrapper.textarea textarea.style1, form#report .inputWrapper.textarea textarea.style1, form#requestAd .inputWrapper.textarea textarea.style1 {
+    form#contact .inputWrapper.textarea textarea.style1 {
       height: 8em;
       border: 1.2px solid #d3d3d7;
       border-radius: 1.5em; }
-      form#contact .inputWrapper.textarea textarea.style1 ~ label, form#report .inputWrapper.textarea textarea.style1 ~ label, form#requestAd .inputWrapper.textarea textarea.style1 ~ label {
+      form#contact .inputWrapper.textarea textarea.style1 ~ label {
         bottom: 100%;
         -webkit-transform: translateY(150%);
             -ms-transform: translateY(150%);
                 transform: translateY(150%); }
-      form#contact .inputWrapper.textarea textarea.style1:focus, form#report .inputWrapper.textarea textarea.style1:focus, form#requestAd .inputWrapper.textarea textarea.style1:focus {
+      form#contact .inputWrapper.textarea textarea.style1:focus {
         border: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
+        form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
           font-size: 8px;
           right: 0.75em;
           color: #26a69a;
@@ -8289,20 +8358,20 @@ form#contact, form#report, form#requestAd {
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
                   transform: translateY(0); }
-    form#contact .inputWrapper.textarea textarea.style2, form#report .inputWrapper.textarea textarea.style2, form#requestAd .inputWrapper.textarea textarea.style2 {
+    form#contact .inputWrapper.textarea textarea.style2 {
       height: 4em;
       max-height: 12em;
       overflow: auto;
       border: none;
       border-bottom: 1.2px solid #d3d3d7; }
-      form#contact .inputWrapper.textarea textarea.style2 ~ label, form#report .inputWrapper.textarea textarea.style2 ~ label, form#requestAd .inputWrapper.textarea textarea.style2 ~ label {
+      form#contact .inputWrapper.textarea textarea.style2 ~ label {
         bottom: 50%;
         -webkit-transform: translateY(50%);
             -ms-transform: translateY(50%);
                 transform: translateY(50%); }
-      form#contact .inputWrapper.textarea textarea.style2:focus, form#report .inputWrapper.textarea textarea.style2:focus, form#requestAd .inputWrapper.textarea textarea.style2:focus {
+      form#contact .inputWrapper.textarea textarea.style2:focus {
         border-bottom: 1.2px solid #26a69a; }
-        form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
+        form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
           font-size: 8px;
           right: 0;
           color: #26a69a;
@@ -8311,17 +8380,17 @@ form#contact, form#report, form#requestAd {
           -webkit-transform: translateY(0);
               -ms-transform: translateY(0);
                   transform: translateY(0); }
-        form#contact .inputWrapper.textarea textarea.style2:focus ~ .line, form#report .inputWrapper.textarea textarea.style2:focus ~ .line, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ .line {
+        form#contact .inputWrapper.textarea textarea.style2:focus ~ .line {
           width: 100%; }
-    form#contact .inputWrapper.textarea textarea.style1.error, form#report .inputWrapper.textarea textarea.style1.error, form#requestAd .inputWrapper.textarea textarea.style1.error {
+    form#contact .inputWrapper.textarea textarea.style1.error {
       border: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.textarea textarea.style1.error ~ label, form#report .inputWrapper.textarea textarea.style1.error ~ label, form#requestAd .inputWrapper.textarea textarea.style1.error ~ label {
+      form#contact .inputWrapper.textarea textarea.style1.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.textarea textarea.style2.error, form#report .inputWrapper.textarea textarea.style2.error, form#requestAd .inputWrapper.textarea textarea.style2.error {
+    form#contact .inputWrapper.textarea textarea.style2.error {
       border-bottom: 1.2px solid #ea6161; }
-      form#contact .inputWrapper.textarea textarea.style2.error ~ label, form#report .inputWrapper.textarea textarea.style2.error ~ label, form#requestAd .inputWrapper.textarea textarea.style2.error ~ label {
+      form#contact .inputWrapper.textarea textarea.style2.error ~ label {
         color: #ea6161; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 2em);
       bottom: calc(100% + 2em);
@@ -8329,7 +8398,7 @@ form#contact, form#report, form#requestAd {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 8px;
       bottom: -webkit-calc(100% + 1em);
       bottom: calc(100% + 1em);
@@ -8337,7 +8406,7 @@ form#contact, form#report, form#requestAd {
           -ms-transform: translateY(50%);
               transform: translateY(50%);
       right: 0; }
-    form#contact .inputWrapper.textarea label, form#report .inputWrapper.textarea label, form#requestAd .inputWrapper.textarea label {
+    form#contact .inputWrapper.textarea label {
       width: auto;
       height: auto;
       position: absolute;
@@ -8369,14 +8438,14 @@ form#contact, form#report, form#requestAd {
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
       color: #d3d3d7; }
-      form#contact .inputWrapper.textarea label i, form#report .inputWrapper.textarea label i, form#requestAd .inputWrapper.textarea label i {
+      form#contact .inputWrapper.textarea label i {
         font-size: 1.6em; }
-      form#contact .inputWrapper.textarea label p, form#report .inputWrapper.textarea label p, form#requestAd .inputWrapper.textarea label p {
+      form#contact .inputWrapper.textarea label p {
         font-size: 1.5em;
         -webkit-transform: translateX(-0.3em);
             -ms-transform: translateX(-0.3em);
                 transform: translateX(-0.3em); }
-    form#contact .inputWrapper.textarea .line, form#report .inputWrapper.textarea .line, form#requestAd .inputWrapper.textarea .line {
+    form#contact .inputWrapper.textarea .line {
       width: 0%;
       height: 1.2px;
       background-color: #26a69a;
@@ -8386,7 +8455,397 @@ form#contact, form#report, form#requestAd {
       top: calc(100% - .6px);
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-  form#contact button[type="submit"], form#report button[type="submit"], form#requestAd button[type="submit"] {
+  form#contact button[type="submit"] {
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    color: #fbfbfb;
+    background-color: #26a69a;
+    border: 1.2px solid transparent; }
+    form#contact button[type="submit"]:hover {
+      color: #26a69a;
+      background-color: #fbfbfb;
+      border: 1.2px solid #26a69a; }
+
+form#report, form#requestAd {
+  width: 60em;
+  height: auto;
+  padding: 1.5em 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: ""; }
+  form#report img, form#requestAd img {
+    width: 14em;
+    height: 16em;
+    margin-top: -1.5em; }
+  form#report h4, form#requestAd h4 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #26a69a; }
+  form#report .inputs, form#requestAd .inputs {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start; }
+  form#report .inputWrapper.text, form#requestAd .inputWrapper.text {
+    width: -webkit-calc((100% - (2 * 3em)) / 2);
+    width: calc((100% - (2 * 3em)) / 2);
+    height: 4em;
+    position: relative;
+    margin: 1.5em; }
+    form#report .inputWrapper.text input, form#requestAd .inputWrapper.text input {
+      width: 100%;
+      height: 100%;
+      line-height: 4em;
+      padding: 0 0.75em;
+      font-size: 1.6em;
+      color: #2d2d31;
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear; }
+      form#report .inputWrapper.text input::-webkit-input-placeholder, form#requestAd .inputWrapper.text input::-webkit-input-placeholder {
+        color: #90909b;
+        font-size: 1.6em; }
+      form#report .inputWrapper.text input::-moz-placeholder, form#requestAd .inputWrapper.text input::-moz-placeholder {
+        color: #90909b;
+        font-size: 1.6em; }
+      form#report .inputWrapper.text input:-ms-input-placeholder, form#requestAd .inputWrapper.text input:-ms-input-placeholder {
+        color: #90909b;
+        font-size: 1.6em; }
+      form#report .inputWrapper.text input::-ms-input-placeholder, form#requestAd .inputWrapper.text input::-ms-input-placeholder {
+        color: #90909b;
+        font-size: 1.6em; }
+      form#report .inputWrapper.text input::placeholder, form#requestAd .inputWrapper.text input::placeholder {
+        color: #90909b;
+        font-size: 1.6em; }
+    form#report .inputWrapper.text input.style1, form#requestAd .inputWrapper.text input.style1 {
+      border: none;
+      border-bottom: 1.2px solid #d3d3d7; }
+      form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
+        color: #26a69a;
+        font-size: 8px;
+        bottom: -webkit-calc(100% + .5em);
+        bottom: calc(100% + .5em);
+        -webkit-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+                transform: translateY(50%);
+        right: 0; }
+      form#report .inputWrapper.text input.style1:focus ~ .line, form#requestAd .inputWrapper.text input.style1:focus ~ .line {
+        width: 100%; }
+    form#report .inputWrapper.text input.style2, form#requestAd .inputWrapper.text input.style2 {
+      border: 1.2px solid #d3d3d7;
+      border-radius: 3em; }
+      form#report .inputWrapper.text input.style2:focus, form#requestAd .inputWrapper.text input.style2:focus {
+        border: 1.2px solid #26a69a; }
+        form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
+          color: #26a69a;
+          font-size: 8px;
+          bottom: -webkit-calc(100% + 1.5em);
+          bottom: calc(100% + 1.5em);
+          -webkit-transform: translateY(50%);
+              -ms-transform: translateY(50%);
+                  transform: translateY(50%);
+          right: 0.75em; }
+        form#report .inputWrapper.text input.style2:focus ~ .line, form#requestAd .inputWrapper.text input.style2:focus ~ .line {
+          width: 0%; }
+    form#report .inputWrapper.text input.style1.error, form#requestAd .inputWrapper.text input.style1.error {
+      border-bottom: 1.2px solid #ea6161; }
+      form#report .inputWrapper.text input.style1.error ~ label, form#requestAd .inputWrapper.text input.style1.error ~ label {
+        color: #ea6161; }
+      form#report .inputWrapper.text input.style1.error ~ .line, form#requestAd .inputWrapper.text input.style1.error ~ .line {
+        background-color: #ea6161; }
+    form#report .inputWrapper.text input.style2.error, form#requestAd .inputWrapper.text input.style2.error {
+      border: 1.2px solid #ea6161; }
+      form#report .inputWrapper.text input.style2.error ~ label, form#requestAd .inputWrapper.text input.style2.error ~ label {
+        color: #ea6161; }
+    form#report .inputWrapper.text label, form#requestAd .inputWrapper.text label {
+      width: auto;
+      height: auto;
+      position: absolute;
+      right: 0.75em;
+      bottom: 50%;
+      -webkit-transform: translateY(50%);
+          -ms-transform: translateY(50%);
+              transform: translateY(50%);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+      -webkit-align-content: "";
+          -ms-flex-line-pack: "";
+              align-content: "";
+      color: #c6c6cb;
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear; }
+      form#report .inputWrapper.text label .icon, form#requestAd .inputWrapper.text label .icon {
+        font-size: 1.6em; }
+      form#report .inputWrapper.text label p, form#requestAd .inputWrapper.text label p {
+        font-size: 1.5em;
+        -webkit-transform: translateX(-0.3em);
+            -ms-transform: translateX(-0.3em);
+                transform: translateX(-0.3em); }
+    form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
+      font-size: 8px;
+      bottom: -webkit-calc(100% + .5em);
+      bottom: calc(100% + .5em);
+      -webkit-transform: translateY(50%);
+          -ms-transform: translateY(50%);
+              transform: translateY(50%);
+      right: 0; }
+    form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
+      font-size: 8px;
+      bottom: -webkit-calc(100% + 1.5em);
+      bottom: calc(100% + 1.5em);
+      -webkit-transform: translateY(50%);
+          -ms-transform: translateY(50%);
+              transform: translateY(50%);
+      right: 0.75em; }
+    form#report .inputWrapper.text .line, form#requestAd .inputWrapper.text .line {
+      width: 0%;
+      height: 1.2px;
+      background-color: #26a69a;
+      position: absolute;
+      right: 0;
+      top: -webkit-calc(100% - 1.5px);
+      top: calc(100% - 1.5px);
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear; }
+    form#report .inputWrapper.text .msg, form#requestAd .inputWrapper.text .msg {
+      width: auto;
+      height: auto;
+      border-radius: 3em;
+      padding: 0.75em 1.5em;
+      position: relative;
+      background-color: #ea6161;
+      position: absolute;
+      right: 0;
+      top: 115%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear; }
+      form#report .inputWrapper.text .msg p, form#requestAd .inputWrapper.text .msg p {
+        color: #fbfbfb;
+        font-size: 1.4em; }
+      form#report .inputWrapper.text .msg i, form#requestAd .inputWrapper.text .msg i {
+        font-size: 2.4em;
+        color: #ea6161;
+        position: absolute;
+        right: 1.5em;
+        top: -webkit-calc(0% - .6em);
+        top: calc(0% - .6em); }
+    form#report .inputWrapper.text .msg.show, form#requestAd .inputWrapper.text .msg.show {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2; }
+  form#report .inputWrapper.textarea, form#requestAd .inputWrapper.textarea {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 1.5em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    form#report .inputWrapper.textarea textarea, form#requestAd .inputWrapper.textarea textarea {
+      width: 100%;
+      font-size: 1.6em;
+      color: #2d2d31;
+      padding: 0.75em;
+      line-height: 1.5em;
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear;
+      resize: none; }
+      form#report .inputWrapper.textarea textarea::-webkit-input-placeholder, form#requestAd .inputWrapper.textarea textarea::-webkit-input-placeholder {
+        font-size: 1.6em;
+        color: #90909b; }
+      form#report .inputWrapper.textarea textarea::-moz-placeholder, form#requestAd .inputWrapper.textarea textarea::-moz-placeholder {
+        font-size: 1.6em;
+        color: #90909b; }
+      form#report .inputWrapper.textarea textarea:-ms-input-placeholder, form#requestAd .inputWrapper.textarea textarea:-ms-input-placeholder {
+        font-size: 1.6em;
+        color: #90909b; }
+      form#report .inputWrapper.textarea textarea::-ms-input-placeholder, form#requestAd .inputWrapper.textarea textarea::-ms-input-placeholder {
+        font-size: 1.6em;
+        color: #90909b; }
+      form#report .inputWrapper.textarea textarea::placeholder, form#requestAd .inputWrapper.textarea textarea::placeholder {
+        font-size: 1.6em;
+        color: #90909b; }
+    form#report .inputWrapper.textarea textarea.style1, form#requestAd .inputWrapper.textarea textarea.style1 {
+      height: 8em;
+      border: 1.2px solid #d3d3d7;
+      border-radius: 1.5em; }
+      form#report .inputWrapper.textarea textarea.style1 ~ label, form#requestAd .inputWrapper.textarea textarea.style1 ~ label {
+        bottom: 100%;
+        -webkit-transform: translateY(150%);
+            -ms-transform: translateY(150%);
+                transform: translateY(150%); }
+      form#report .inputWrapper.textarea textarea.style1:focus, form#requestAd .inputWrapper.textarea textarea.style1:focus {
+        border: 1.2px solid #26a69a; }
+        form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
+          font-size: 8px;
+          right: 0.75em;
+          color: #26a69a;
+          bottom: -webkit-calc(100% + .5em);
+          bottom: calc(100% + .5em);
+          -webkit-transform: translateY(0);
+              -ms-transform: translateY(0);
+                  transform: translateY(0); }
+    form#report .inputWrapper.textarea textarea.style2, form#requestAd .inputWrapper.textarea textarea.style2 {
+      height: 4em;
+      max-height: 12em;
+      overflow: auto;
+      border: none;
+      border-bottom: 1.2px solid #d3d3d7; }
+      form#report .inputWrapper.textarea textarea.style2 ~ label, form#requestAd .inputWrapper.textarea textarea.style2 ~ label {
+        bottom: 50%;
+        -webkit-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+                transform: translateY(50%); }
+      form#report .inputWrapper.textarea textarea.style2:focus, form#requestAd .inputWrapper.textarea textarea.style2:focus {
+        border-bottom: 1.2px solid #26a69a; }
+        form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
+          font-size: 8px;
+          right: 0;
+          color: #26a69a;
+          bottom: -webkit-calc(100% + 0em);
+          bottom: calc(100% + 0em);
+          -webkit-transform: translateY(0);
+              -ms-transform: translateY(0);
+                  transform: translateY(0); }
+        form#report .inputWrapper.textarea textarea.style2:focus ~ .line, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ .line {
+          width: 100%; }
+    form#report .inputWrapper.textarea textarea.style1.error, form#requestAd .inputWrapper.textarea textarea.style1.error {
+      border: 1.2px solid #ea6161; }
+      form#report .inputWrapper.textarea textarea.style1.error ~ label, form#requestAd .inputWrapper.textarea textarea.style1.error ~ label {
+        color: #ea6161; }
+    form#report .inputWrapper.textarea textarea.style2.error, form#requestAd .inputWrapper.textarea textarea.style2.error {
+      border-bottom: 1.2px solid #ea6161; }
+      form#report .inputWrapper.textarea textarea.style2.error ~ label, form#requestAd .inputWrapper.textarea textarea.style2.error ~ label {
+        color: #ea6161; }
+    form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
+      font-size: 8px;
+      bottom: -webkit-calc(100% + 2em);
+      bottom: calc(100% + 2em);
+      -webkit-transform: translateY(50%);
+          -ms-transform: translateY(50%);
+              transform: translateY(50%);
+      right: 0; }
+    form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
+      font-size: 8px;
+      bottom: -webkit-calc(100% + 1em);
+      bottom: calc(100% + 1em);
+      -webkit-transform: translateY(50%);
+          -ms-transform: translateY(50%);
+              transform: translateY(50%);
+      right: 0; }
+    form#report .inputWrapper.textarea label, form#requestAd .inputWrapper.textarea label {
+      width: auto;
+      height: auto;
+      position: absolute;
+      right: 0.75em;
+      position: absolute;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+      -webkit-align-content: "";
+          -ms-flex-line-pack: "";
+              align-content: "";
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear;
+      color: #d3d3d7; }
+      form#report .inputWrapper.textarea label i, form#requestAd .inputWrapper.textarea label i {
+        font-size: 1.6em; }
+      form#report .inputWrapper.textarea label p, form#requestAd .inputWrapper.textarea label p {
+        font-size: 1.5em;
+        -webkit-transform: translateX(-0.3em);
+            -ms-transform: translateX(-0.3em);
+                transform: translateX(-0.3em); }
+    form#report .inputWrapper.textarea .line, form#requestAd .inputWrapper.textarea .line {
+      width: 0%;
+      height: 1.2px;
+      background-color: #26a69a;
+      position: absolute;
+      right: 0;
+      top: -webkit-calc(100% - .6px);
+      top: calc(100% - .6px);
+      -webkit-transition: all .2s linear;
+      transition: all .2s linear; }
+  form#report button[type="submit"], form#requestAd button[type="submit"] {
     width: auto;
     height: auto;
     padding: 0.5em 2.5em;
@@ -8400,7 +8859,7 @@ form#contact, form#report, form#requestAd {
     color: #fbfbfb;
     background-color: #26a69a;
     border: 1.2px solid transparent; }
-    form#contact button[type="submit"]:hover, form#report button[type="submit"]:hover, form#requestAd button[type="submit"]:hover {
+    form#report button[type="submit"]:hover, form#requestAd button[type="submit"]:hover {
       color: #26a69a;
       background-color: #fbfbfb;
       border: 1.2px solid #26a69a; }
@@ -9931,23 +10390,41 @@ form.reply {
       font-size: 6px; }
     form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 6px; }
-  form#contact, form#report, form#requestAd {
+  form#contact {
     font-size: 8px; }
-    form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
+    form#contact .inputWrapper.text input.style1:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
+    form#contact .inputWrapper.text input.style2:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 6px; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+      font-size: 6px; }
+  form#report, form#requestAd {
+    font-size: 8px; }
+    form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
+      font-size: 6px; }
+    form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
+      font-size: 6px; }
+    form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
+      font-size: 6px; }
+    form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
+      font-size: 6px; }
+    form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
+      font-size: 6px; }
+    form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
+      font-size: 6px; }
+    form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
+      font-size: 6px; }
+    form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 6px; }
   form#login {
     font-size: 8px; }
@@ -10043,23 +10520,41 @@ form.reply {
       font-size: 4px; }
     form#sample .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 4px; }
-  form#contact, form#report, form#requestAd {
+  form#contact {
     font-size: 6px; }
-    form#contact .inputWrapper.text input.style1:focus ~ label, form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
+    form#contact .inputWrapper.text input.style1:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style2:focus ~ label, form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
+    form#contact .inputWrapper.text input.style2:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style1 ~ label.top, form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
+    form#contact .inputWrapper.text input.style1 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.text input.style2 ~ label.top, form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
+    form#contact .inputWrapper.text input.style2 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style1:focus ~ label, form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style1:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style2:focus ~ label, form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
+    form#contact .inputWrapper.textarea textarea.style2:focus ~ label {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style1 ~ label.top, form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style1 ~ label.top {
       font-size: 4px; }
-    form#contact .inputWrapper.textarea textarea.style2 ~ label.top, form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
+    form#contact .inputWrapper.textarea textarea.style2 ~ label.top {
+      font-size: 4px; }
+  form#report, form#requestAd {
+    font-size: 6px; }
+    form#report .inputWrapper.text input.style1:focus ~ label, form#requestAd .inputWrapper.text input.style1:focus ~ label {
+      font-size: 4px; }
+    form#report .inputWrapper.text input.style2:focus ~ label, form#requestAd .inputWrapper.text input.style2:focus ~ label {
+      font-size: 4px; }
+    form#report .inputWrapper.text input.style1 ~ label.top, form#requestAd .inputWrapper.text input.style1 ~ label.top {
+      font-size: 4px; }
+    form#report .inputWrapper.text input.style2 ~ label.top, form#requestAd .inputWrapper.text input.style2 ~ label.top {
+      font-size: 4px; }
+    form#report .inputWrapper.textarea textarea.style1:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style1:focus ~ label {
+      font-size: 4px; }
+    form#report .inputWrapper.textarea textarea.style2:focus ~ label, form#requestAd .inputWrapper.textarea textarea.style2:focus ~ label {
+      font-size: 4px; }
+    form#report .inputWrapper.textarea textarea.style1 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style1 ~ label.top {
+      font-size: 4px; }
+    form#report .inputWrapper.textarea textarea.style2 ~ label.top, form#requestAd .inputWrapper.textarea textarea.style2 ~ label.top {
       font-size: 4px; }
   form#login {
     font-size: 6px; }

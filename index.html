@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 <link href="index.css" rel="stylesheet"></head>
+
 <body class="bg">
     <header>
         <div id="top">
             <div class="right">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <p>خانه</p>
+                </a>
                 <a href="login.html">
                     <i class="fas fa-user"></i>
                     <p>ورود/ثبت نام</p>
@@ -762,7 +768,7 @@
                 </li>
                 <li class="logo center-y">
                     <a href="index.html">
-                        <p>عنوان سایت</p>
+                        <p>ایران استتیک</p>
                         <img src="assets/imgs/logo.png" alt="logoImg">
                     </a>
                 </li>
@@ -771,14 +777,6 @@
     </header>
     <div id="grid" class="containerStyle">
         <div class="row">
-            <div id="ads" class="col">
-                <a href="#!" class="ad">
-                    <img src="assets/imgs/side1.jpg" alt="adImg">
-                </a>
-                <a href="#!" class="ad">
-                    <img src="assets/imgs/side2.jpg" alt="adImg">
-                </a>
-            </div>
             <div id="sliderMoveWrapper" class="col">
                 <div class="sliderMove">
                     <button class="btn prev">
@@ -818,19 +816,6 @@
                 </div>
             </div>
             <div id="popularWrapper" class="col">
-                <a href="article.html" class="article">
-                    <div class="img zoom">
-                        <img src="assets/imgs/article1.jpg" alt="articleImg">
-                    </div>
-                    <h4>
-                        <span class="ellipse" data-align="right">...</span>
-                        عنوان مقاله
-                    </h4>
-                    <div class="row">
-                        <p class="writer">نام نویسنده</p>
-                        <p class="date">1398/10/10</p>
-                    </div>
-                </a>
                 <div class="popular">
                     <div class="title">
                         <h4>پربازدیدترین ها</h4>
@@ -840,218 +825,298 @@
                         <a href="article.html" class="article">
                             <p>عنوان مقاله</p>
                         </a>
-                        <a href="article.html" class="article">
-                            <p>عنوان مقاله</p>
+                        <a href="video.html" class="article">
+                            <p>عنوان ویدیو</p>
                         </a>
                         <a href="article.html" class="article">
                             <p>عنوان مقاله</p>
                         </a>
-                        <a href="article.html" class="article">
-                            <p>عنوان مقاله</p>
+                        <a href="video.html" class="article">
+                            <p>عنوان ویدیو</p>
                         </a>
                         <a href="article.html" class="article">
                             <p>عنوان مقاله</p>
                         </a>
-                        <a href="article.html" class="article">
-                            <p>عنوان مقاله</p>
+                        <a href="video.html" class="article">
+                            <p>عنوان ویدیو</p>
                         </a>
                         <a href="article.html" class="article">
                             <p>عنوان مقاله</p>
                         </a>
-                        <a href="article.html" class="article">
-                            <p>عنوان مقاله</p>
+                        <a href="video.html" class="article">
+                            <p>عنوان ویدیو</p>
                         </a>
                         <a href="article.html" class="article">
                             <p>عنوان مقاله</p>
                         </a>
-                        <a href="article.html" class="article">
-                            <p>عنوان مقاله</p>
+                        <a href="video.html" class="article">
+                            <p>عنوان ویدیو</p>
                         </a>
                     </div>
                 </div>
+            </div>
+            <div id="ads" class="col">
+                <a href="#!" class="ad">
+                    <img src="assets/imgs/side1.jpg" alt="adImg">
+                </a>
+                <a href="#!" class="ad">
+                    <img src="assets/imgs/side2.jpg" alt="adImg">
+                </a>
             </div>
         </div>
-        <div id="latest" class="row">
-            <div class="title">
-                <div class="skew">
-                    <h4>آخرین مطالب</h4>
+        <div id="latest">
+            <div id="latestArticles" >
+                <div class="title">
+                    <div class="skew">
+                        <h4>جدیدترین مقالات</h4>
+                    </div>
+                </div>
+                <div class="articles">
+                    <a href="article.html" class="article containerStyle">
+                        <div class="img">
+                            <img src="assets/imgs/article1.jpg" alt="articleImg">
+                            <div class="tags">
+                                <span class="tag news">اخبار</span>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>عنوان مقاله</h4>
+                            <div class="row">
+                                <div class="right">
+                                    <p>نام نویسنده</p>
+                                    <p>1398/10/10</p>
+                                </div>
+                                <div class="left">
+                                    <div class="like">
+                                        <i class="fas fa-heart"></i>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fas fa-comment"></i>
+                                        <p>10نظر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="article.html" class="article containerStyle">
+                        <div class="img">
+                            <img src="assets/imgs/article1.jpg" alt="articleImg">
+                            <div class="tags">
+                                <span class="tag new">جدید</span>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>عنوان مقاله</h4>
+                            <div class="row">
+                                <div class="right">
+                                    <p>نام نویسنده</p>
+                                    <p>1398/10/10</p>
+                                </div>
+                                <div class="left">
+                                    <div class="like">
+                                        <i class="fas fa-heart"></i>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fas fa-comment"></i>
+                                        <p>10نظر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="article.html" class="article containerStyle">
+                        <div class="img">
+                            <img src="assets/imgs/article1.jpg" alt="articleImg">
+                            <div class="tags">
+                                <span class="tag special">اختصاصی</span>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>عنوان مقاله</h4>
+                            <div class="row">
+                                <div class="right">
+                                    <p>نام نویسنده</p>
+                                    <p>1398/10/10</p>
+                                </div>
+                                <div class="left">
+                                    <div class="like">
+                                        <i class="fas fa-heart"></i>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fas fa-comment"></i>
+                                        <p>10نظر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="article.html" class="article containerStyle">
+                        <div class="img">
+                            <img src="assets/imgs/article1.jpg" alt="articleImg">
+                            <div class="tags">
+                                <span class="tag news">اخبار</span>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>عنوان مقاله</h4>
+                            <div class="row">
+                                <div class="right">
+                                    <p>نام نویسنده</p>
+                                    <p>1398/10/10</p>
+                                </div>
+                                <div class="left">
+                                    <div class="like">
+                                        <i class="fas fa-heart"></i>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fas fa-comment"></i>
+                                        <p>10نظر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pagination shadowBlurL">
+                    <a href="#!" class="active">1</a>
+                    <a href="#!">2</a>
+                    <a href="#!">3</a>
+                    <span>...</span>
+                    <a href="#!">صفحه آخر</a>
                 </div>
             </div>
-            <div class="articles">
-                <a href="article.html" class="article containerStyle">
-                    <div class="img">
-                        <img src="assets/imgs/article1.jpg" alt="articleImg">
-                        <div class="tags">
-                            <span class="tag news">اخبار</span>
-                        </div>
+            <div id="latestVids">
+                <div class="title">
+                    <div class="skew">
+                        <h4>جدیدترین ویدیوها</h4>
                     </div>
-                    <div class="info">
-                        <h4>عنوان مقاله</h4>
-                        <div class="row">
-                            <div class="right">
-                                <p>نام نویسنده</p>
-                                <p>1398/10/10</p>
+                </div>
+                <div class="articles">
+                    <a href="video.html" class="article containerStyle">
+                        <div class="img">
+                            <img src="assets/imgs/article1.jpg" alt="articleImg">
+                            <div class="tags">
+                                <span class="tag news">اخبار</span>
                             </div>
-                            <div class="left">
-                                <div class="like">
-                                    <i class="fas fa-heart"></i>
-                                    <p>100</p>        
+                        </div>
+                        <div class="info">
+                            <h4>عنوان ویدیو</h4>
+                            <div class="row">
+                                <div class="right">
+                                    <p>نام نویسنده</p>
+                                    <p>1398/10/10</p>
                                 </div>
-                                <div class="comment">
-                                    <i class="fas fa-comment"></i>
-                                    <p>10نظر</p>
-                                </div>              
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="article.html" class="article containerStyle">
-                    <div class="img">
-                        <img src="assets/imgs/article1.jpg" alt="articleImg">
-                        <div class="tags">
-                            <span class="tag new">جدید</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h4>عنوان مقاله</h4>
-                        <div class="row">
-                            <div class="right">
-                                <p>نام نویسنده</p>
-                                <p>1398/10/10</p>
-                            </div>
-                            <div class="left">
-                                <div class="like">
-                                    <i class="fas fa-heart"></i>
-                                    <p>100</p>        
-                                </div>
-                                <div class="comment">
-                                    <i class="fas fa-comment"></i>
-                                    <p>10نظر</p>
+                                <div class="left">
+                                    <div class="like">
+                                        <i class="fas fa-heart"></i>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fas fa-comment"></i>
+                                        <p>10نظر</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                <a href="article.html" class="article containerStyle">
-                    <div class="img">
-                        <img src="assets/imgs/article1.jpg" alt="articleImg">
-                        <div class="tags">              
-                            <span class="tag special">اختصاصی</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h4>عنوان مقاله</h4>
-                        <div class="row">
-                            <div class="right">
-                                <p>نام نویسنده</p>
-                                <p>1398/10/10</p>
+                    </a>
+                    <a href="video.html" class="article containerStyle">
+                        <div class="img">
+                            <img src="assets/imgs/article1.jpg" alt="articleImg">
+                            <div class="tags">
+                                <span class="tag news">اخبار</span>
                             </div>
-                            <div class="left">
-                                <div class="like">
-                                    <i class="fas fa-heart"></i>
-                                    <p>100</p>        
+                        </div>
+                        <div class="info">
+                            <h4>عنوان ویدیو</h4>
+                            <div class="row">
+                                <div class="right">
+                                    <p>نام نویسنده</p>
+                                    <p>1398/10/10</p>
                                 </div>
-                                <div class="comment">
-                                    <i class="fas fa-comment"></i>
-                                    <p>10نظر</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="article.html" class="article containerStyle">
-                    <div class="img">
-                        <img src="assets/imgs/article1.jpg" alt="articleImg">
-                        <div class="tags">
-                            <span class="tag news">اخبار</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h4>عنوان مقاله</h4>
-                        <div class="row">
-                            <div class="right">
-                                <p>نام نویسنده</p>
-                                <p>1398/10/10</p>
-                            </div>
-                            <div class="left">
-                                <div class="like">
-                                    <i class="fas fa-heart"></i>
-                                    <p>100</p>        
-                                </div>
-                                <div class="comment">
-                                    <i class="fas fa-comment"></i>
-                                    <p>10نظر</p>
-                                </div>              
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="article.html" class="article containerStyle">
-                    <div class="img">
-                        <img src="assets/imgs/article1.jpg" alt="articleImg">
-                        <div class="tags">
-                            <span class="tag new">جدید</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h4>عنوان مقاله</h4>
-                        <div class="row">
-                            <div class="right">
-                                <p>نام نویسنده</p>
-                                <p>1398/10/10</p>
-                            </div>
-                            <div class="left">
-                                <div class="like">
-                                    <i class="fas fa-heart"></i>
-                                    <p>100</p>        
-                                </div>
-                                <div class="comment">
-                                    <i class="fas fa-comment"></i>
-                                    <p>10نظر</p>
+                                <div class="left">
+                                    <div class="like">
+                                        <i class="fas fa-heart"></i>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fas fa-comment"></i>
+                                        <p>10نظر</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                <a href="article.html" class="article containerStyle">
-                    <div class="img">
-                        <img src="assets/imgs/article1.jpg" alt="articleImg">
-                        <div class="tags">              
-                            <span class="tag special">اختصاصی</span>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h4>عنوان مقاله</h4>
-                        <div class="row">
-                            <div class="right">
-                                <p>نام نویسنده</p>
-                                <p>1398/10/10</p>
-                            </div>
-                            <div class="left">
-                                <div class="like">
-                                    <i class="fas fa-heart"></i>
-                                    <p>100</p>        
-                                </div>
-                                <div class="comment">
-                                    <i class="fas fa-comment"></i>
-                                    <p>10نظر</p>
-                                </div>
+                    </a>
+                    <a href="video.html" class="article containerStyle">
+                        <div class="img">
+                            <img src="assets/imgs/article1.jpg" alt="articleImg">
+                            <div class="tags">
+                                <span class="tag news">اخبار</span>
                             </div>
                         </div>
-                    </div>
-                </a>                 
-            </div>
-            <div class="pagination shadowBlurL">
-                <a href="#!" class="active">1</a>
-                <a href="#!">2</a>
-                <a href="#!">3</a>
-                <span>...</span>
-                <a href="#!">صفحه آخر</a>
+                        <div class="info">
+                            <h4>عنوان ویدیو</h4>
+                            <div class="row">
+                                <div class="right">
+                                    <p>نام نویسنده</p>
+                                    <p>1398/10/10</p>
+                                </div>
+                                <div class="left">
+                                    <div class="like">
+                                        <i class="fas fa-heart"></i>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fas fa-comment"></i>
+                                        <p>10نظر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="video.html" class="article containerStyle">
+                        <div class="img">
+                            <img src="assets/imgs/article1.jpg" alt="articleImg">
+                            <div class="tags">
+                                <span class="tag news">اخبار</span>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>عنوان ویدیو</h4>
+                            <div class="row">
+                                <div class="right">
+                                    <p>نام نویسنده</p>
+                                    <p>1398/10/10</p>
+                                </div>
+                                <div class="left">
+                                    <div class="like">
+                                        <i class="fas fa-heart"></i>
+                                        <p>100</p>
+                                    </div>
+                                    <div class="comment">
+                                        <i class="fas fa-comment"></i>
+                                        <p>10نظر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>              
+                </div>
+                <div class="pagination shadowBlurL">
+                    <a href="#!" class="active">1</a>
+                    <a href="#!">2</a>
+                    <a href="#!">3</a>
+                    <span>...</span>
+                    <a href="#!">صفحه آخر</a>
+                </div>
             </div>
         </div>
     </div>
     <div id="video" class="containerStyle">
-        <h4>آخرین ویدیوها</h4>
+        <h4> ویدیوها</h4>
         <div class="cols">
             <div class="col">
                 <a href="video.html" class="video">
@@ -1129,22 +1194,23 @@
         <h4>خبرنامه</h4>
         <p>برای عضویت در خبرنامه ایمیل خود را وارد نمایید</p>
         <div class="inputWrapper withSubmit">
-			<input type="email" id="email" name="email" class="validate" placeholder="ایمیل خود را وارد نمابید" required>
-			<button type="submit">ثبت</button>
-			<div class="msg">
-				<i class="fas fa-caret-up"></i>
-				<p>ایمیل صحیح وارد نکرده اید</p>
-			</div>
-		</div>
+            <input type="email" id="email" name="email" class="validate" placeholder="ایمیل خود را وارد نمابید"
+                required>
+            <button type="submit">ثبت</button>
+            <div class="msg">
+                <i class="fas fa-caret-up"></i>
+                <p>ایمیل صحیح وارد نکرده اید</p>
+            </div>
+        </div>
     </form>
     <footer>
         <div class="logo">
             <img src="assets/imgs/logo.png" alt="logoImg">
-            <h6>نام سایت</h6>
+            <h6>ایران استتیک</h6>
         </div>
         <div class="info">
             <div class="col contact">
-                <h6>درباره نام سایت</h6>
+                <h6>درباره ایران استتیک</h6>
                 <div class="address">
                     <i class="fas fa-map-marker-alt"></i>
                     <p>سید رضی ۵۷ - پلاک ۲۸۸</p>
@@ -1187,15 +1253,16 @@
                 </a>
                 <a href="#!">
                     <img src="assets/imgs/apps2.png" alt="appImg">
-                </a>        
+                </a>
             </div>
         </div>
         <div class="copyright">
             <a href="http://www.ittoos.com/">
-                طراحی و پیاده سازی شده توسط 
+                طراحی و پیاده سازی شده توسط
                 ittoos
-            </a>          
+            </a>
         </div>
     </footer>
 <script type="text/javascript" src="index.js"></script></body>
+
 </html>

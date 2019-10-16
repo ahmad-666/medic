@@ -4814,7 +4814,7 @@ header nav {
       width: auto;
       height: 100%;
       margin-right: 0;
-      padding: 0.75em 3em;
+      padding: 0.75em 2em;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -5097,6 +5097,22 @@ header {
           -webkit-transform: translateX(-0.5em);
               -ms-transform: translateX(-0.5em);
                   transform: translateX(-0.5em); }
+
+@media screen and (max-width: 1000px) {
+  header {
+    font-size: 8px; } }
+
+@media screen and (max-width: 800px) {
+  header #top .right a, header #top .right .phone, header #top .left a, header #top .left .phone {
+    margin-right: 1.5em; } }
+
+@media screen and (max-width: 700px) {
+  header {
+    font-size: 6px; } }
+
+@media screen and (max-width: 400px) {
+  header {
+    font-size: 4px; } }
 
 #rules {
   width: 95%;
