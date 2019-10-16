@@ -13,14 +13,23 @@
         display: flex;
         &:nth-child(1){
             height: 40em;
-            @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+            @include flex(row,flex-start,flex-start,nowrap,"") ;
             .col{
                 height: 100%;
                 display: flex;
                 @include flex(column,flex-start,flex-start,nowrap,'') ;
                 &:not(:first-child){margin-right: 2em;}
-                &:nth-child(1),&:nth-child(3){width: calc((100% / 3.9) - 2em);}
-                &:nth-child(2){width: calc((100% / 2) - 2em);}
+                &:nth-child(1){
+                    width: 100%;
+                }
+                &:nth-child(2){
+                    flex-shrink: 0;;
+                    width: 35em;
+                }
+                &:nth-child(3){
+                    flex-shrink: 0;;
+                    width: 25em;
+                }
             }
             #ads{
                 .ad{

@@ -127,7 +127,7 @@
 //     }
 // }
 @mixin resizeTablet($wrapper){
-    @media screen and (max-width:900px){
+    @media screen and (max-width:1000px){
         #{$wrapper}{
             font-size: 8px ;
             @content ;
@@ -135,14 +135,14 @@
     }  
 }
 @mixin resizeMobile($wrapper){
-    @media screen and (max-width:600px){
+    @media screen and (max-width:700px){
         #{$wrapper}{
             font-size: 6px ;
             @content ;
         }
     }
 }
-@mixin mediaQ-w($maxWidth) {
+@mixin mediaQ($maxWidth) {
     @media screen and (max-width: $maxWidth){@content ;}
 }
 @mixin mediaQ-h($maxHeight) {

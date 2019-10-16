@@ -2,6 +2,7 @@
 @import '../../colors.scss' ;
 @import '../../mixins.scss' ;
 #popularWrapper{
+    height: 100%;
     > .article{
         width: 100%;
         height: calc((100% / 3) + 3em);
@@ -40,7 +41,7 @@
 }
 .popular,#popular{
     width: 100%;
-    height: calc((2 * (100% / 3)) - 2em);
+    height: 100%;
     margin-top: 0em;
     display: flex;
     @include flex(column,flex-start,flex-start,nowrap,"") ;

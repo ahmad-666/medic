@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body class="bg">
     <header>
         <div id="top">
@@ -765,45 +767,85 @@
             </ul>
         </nav>
     </header>
-    <form novalidate id="contact" name="contact" class="validate containerStyle" method="GET" action="#!" enctype="text/plain">
+    <div id="contactWrapper" class="containerStyle">
         <img src="../assets/icons/contact.png" alt="contactImg">
         <h4>ارتباط با ما</h4>
-        <div class="inputs">
-            <div class="inputWrapper text">
-                <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
-                <label for="name">
-                    <i class="fas fa-user icon"></i>
-                    <p>نام و نام خانوادگی</p>
-                </label>
-                <span class="line"></span>
-                <div class="msg">
-                    <p>نام و نام خانوادگی خود را وارد نمایید</p>
-                    <i class="fas fa-caret-up"></i>
-                </div>
+        <div class="row infos">
+            <h6>تماس با ایران استتیک</h6>
+            <div class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>سید رضی ۵۷ - پلاک ۲۸۸</p>
             </div>
-            <div class="inputWrapper text">
-                <input type="text" id="emailPhone" name="emailPhone" class="style1 labelHandler validate" required>
-                <label for="emailPhone">
-                    <i class="fas fa-envelope icon"></i>
-                    <p>ایمیل یا شماره موبایل</p>
-                </label>
-                <span class="line"></span>
-                <div class="msg">
-                    <p>لطفا مقداری وارد نمایید</p>
-                    <i class="fas fa-caret-up"></i>
-                </div>
+            <div class="info">
+                <i class="fas fa-phone"></i>
+                <p>051-38670000</p>
             </div>
-            <div class="inputWrapper textarea">
-                <textarea name="comment1" id="comment1" class="style1 labelHandler validate" required></textarea>
-                <label for="comment1">
-                    <i class="fas fa-comments"></i>
-                    <p>نظر خود را وارد نمایید</p>
-                </label>
-                <span class="line"></span>
+            <div class="info">
+                <i class="fas fa-mobile"></i>
+                <p>09158990000</p>
+            </div>
+            <div class="info">
+                <i class="fas fa-envelope"></i>
+                <p>something@gmail.com</p>
             </div>
         </div>
-        <button type="submit" class="pulse">ارسال</button>
-    </form>
+        <div class="row socials">
+            <h6>ایران استتیک را دنبال کنید</h6>
+            <div class="social">
+                <a href="#!">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#!">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row contactForm">
+            <h6>ارتباط با مدیر</h6>
+            <form novalidate id="contact" name="contact" class="validate" method="GET" action="#!" enctype="text/plain">
+                <div class="inputs">
+                    <div class="inputWrapper text">
+                        <input type="text" id="name" name="name" class="style1 labelHandler validate" required>
+                        <label for="name">
+                            <i class="fas fa-user icon"></i>
+                            <p>نام و نام خانوادگی</p>
+                        </label>
+                        <span class="line"></span>
+                        <div class="msg">
+                            <p>نام و نام خانوادگی خود را وارد نمایید</p>
+                            <i class="fas fa-caret-up"></i>
+                        </div>
+                    </div>
+                    <div class="inputWrapper text">
+                        <input type="text" id="emailPhone" name="emailPhone" class="style1 labelHandler validate"
+                            required>
+                        <label for="emailPhone">
+                            <i class="fas fa-envelope icon"></i>
+                            <p>ایمیل یا شماره موبایل</p>
+                        </label>
+                        <span class="line"></span>
+                        <div class="msg">
+                            <p>لطفا مقداری وارد نمایید</p>
+                            <i class="fas fa-caret-up"></i>
+                        </div>
+                    </div>
+                    <div class="inputWrapper textarea">
+                        <textarea name="comment1" id="comment1" class="style1 labelHandler validate"
+                            required></textarea>
+                        <label for="comment1">
+                            <i class="fas fa-comments"></i>
+                            <p>نظر خود را وارد نمایید</p>
+                        </label>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn small pulse">ارسال</button>
+            </form>
+        </div>
+    </div>
     <footer>
         <div class="logo">
             <img src="../assets/icons/logo.png" alt="logoImg">
@@ -854,15 +896,16 @@
                 </a>
                 <a href="#!">
                     <img src="../assets/icons/apps2.png" alt="appImg">
-                </a>        
+                </a>
             </div>
         </div>
         <div class="copyright">
             <a href="http://www.ittoos.com/">
-                طراحی و پیاده سازی شده توسط 
+                طراحی و پیاده سازی شده توسط
                 ittoos
-            </a>          
+            </a>
         </div>
     </footer>
 </body>
+
 </html>

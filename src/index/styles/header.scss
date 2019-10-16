@@ -34,3 +34,21 @@ header{
         }
     }
 }
+@include resizeTablet('header');
+@include mediaQ(800px){
+    header{
+        #top{
+            .right,.left{
+                a,.phone{
+                    margin-right: $dist2 ;
+                }
+            }
+        }
+    }
+}
+@include resizeMobile('header') ;
+@include mediaQ(400px){
+    header{
+        font-size: 4px ;
+    }
+}
