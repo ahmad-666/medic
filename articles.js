@@ -86,14 +86,81 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@fortawesome/fontawesome-free/css/all.css":
+/*!****************************************************************!*\
+  !*** ./node_modules/@fortawesome/fontawesome-free/css/all.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./node_modules/@fortawesome/fontawesome-free/css/all.css?");
+
+/***/ }),
+
 /***/ "./src/articles/articles.js":
 /*!**********************************!*\
   !*** ./src/articles/articles.js ***!
   \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/articles/articles.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/@fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../framework.scss */ \"./src/framework.scss\");\n/* harmony import */ var _framework_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_framework_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../init.scss */ \"./src/init.scss\");\n/* harmony import */ var _init_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_init_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../index/styles/header.scss */ \"./src/index/styles/header.scss\");\n/* harmony import */ var _index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_styles_header_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _articles_styles_articles_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../articles/styles/articles.scss */ \"./src/articles/styles/articles.scss\");\n/* harmony import */ var _articles_styles_articles_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_articles_styles_articles_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../index/styles/footer.scss */ \"./src/index/styles/footer.scss\");\n/* harmony import */ var _index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_styles_footer_scss__WEBPACK_IMPORTED_MODULE_5__);\n//load styles\n\n\n\n\n\n //load scripts\n//load videos\n\n//# sourceURL=webpack:///./src/articles/articles.js?");
+
+/***/ }),
+
+/***/ "./src/articles/styles/articles.scss":
+/*!*******************************************!*\
+  !*** ./src/articles/styles/articles.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/articles/styles/articles.scss?");
+
+/***/ }),
+
+/***/ "./src/framework.scss":
+/*!****************************!*\
+  !*** ./src/framework.scss ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/framework.scss?");
+
+/***/ }),
+
+/***/ "./src/index/styles/footer.scss":
+/*!**************************************!*\
+  !*** ./src/index/styles/footer.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/index/styles/footer.scss?");
+
+/***/ }),
+
+/***/ "./src/index/styles/header.scss":
+/*!**************************************!*\
+  !*** ./src/index/styles/header.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/index/styles/header.scss?");
+
+/***/ }),
+
+/***/ "./src/init.scss":
+/*!***********************!*\
+  !*** ./src/init.scss ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/init.scss?");
 
 /***/ })
 
