@@ -6357,6 +6357,14 @@ form#newsLetters {
       opacity: 1;
       visibility: visible; }
 
+@media screen and (max-width: 1000px) {
+  form#newsLetters {
+    font-size: 8px; } }
+
+@media screen and (max-width: 700px) {
+  form#newsLetters {
+    font-size: 6px; } }
+
 form#contact {
   width: 100%;
   height: auto;
@@ -6738,6 +6746,23 @@ form#contact {
       color: #26a69a;
       background-color: #fbfbfb;
       border: 1.2px solid #26a69a; }
+
+@media screen and (max-width: 1000px) {
+  form#contact {
+    font-size: 8px; } }
+
+@media screen and (max-width: 700px) {
+  form#contact {
+    font-size: 6px; } }
+
+@media screen and (max-width: 400px) {
+  form#contact .inputWrapper.text {
+    width: 90%;
+    margin: 1.5em; }
+  form#contact .inputWrapper.textarea {
+    width: 100%; }
+    form#contact .inputWrapper.textarea textarea.style1 {
+      height: 13em; } }
 
 form#report, form#requestAd {
   width: 60em;
@@ -7135,6 +7160,38 @@ form#report, form#requestAd {
       background-color: #fbfbfb;
       border: 1.2px solid #26a69a; }
 
+@media screen and (max-width: 1000px) {
+  form#report {
+    font-size: 8px; } }
+
+@media screen and (max-width: 700px) {
+  form#report {
+    font-size: 6px; } }
+
+@media screen and (max-width: 1000px) {
+  form#requestAd {
+    font-size: 8px; } }
+
+@media screen and (max-width: 700px) {
+  form#requestAd {
+    font-size: 6px; } }
+
+@media screen and (max-width: 400px) {
+  form#report, form#requestAd {
+    width: 90%; }
+    form#report img, form#requestAd img {
+      width: 14em;
+      height: 16em; }
+    form#report .inputWrapper.text, form#requestAd .inputWrapper.text {
+      width: 90%;
+      height: 4em;
+      position: relative;
+      margin: 1.5em; }
+    form#report .inputWrapper.textarea, form#requestAd .inputWrapper.textarea {
+      width: 100%; }
+      form#report .inputWrapper.textarea textarea.style1, form#requestAd .inputWrapper.textarea textarea.style1 {
+        height: 13em; } }
+
 form#requestAd img {
   width: 14em;
   height: 14em; }
@@ -7483,6 +7540,14 @@ form#login {
     color: #90909b;
     margin-top: 1.5em; }
 
+@media screen and (max-width: 1000px) {
+  form#login {
+    font-size: 8px; } }
+
+@media screen and (max-width: 700px) {
+  form#login {
+    font-size: 6px; } }
+
 form#forgetPassword {
   width: 40em;
   height: auto;
@@ -7716,6 +7781,14 @@ form#forgetPassword {
     font-size: 1.4em;
     color: #90909b;
     margin-top: 1.5em; }
+
+@media screen and (max-width: 1000px) {
+  form#forgetPassword {
+    font-size: 8px; } }
+
+@media screen and (max-width: 700px) {
+  form#forgetPassword {
+    font-size: 6px; } }
 
 form#signup {
   width: 40em;
@@ -8052,6 +8125,14 @@ form#signup {
     font-size: 1.6em;
     color: #90909b;
     margin-top: 1.5em; }
+
+@media screen and (max-width: 1000px) {
+  form#signup {
+    font-size: 8px; } }
+
+@media screen and (max-width: 700px) {
+  form#signup {
+    font-size: 6px; } }
 
 form#userComment {
   width: auto;
@@ -8435,6 +8516,59 @@ form#userComment {
       background-color: #fbfbfb;
       border: 1.2px solid #26a69a; }
 
+@media screen and (max-width: 360px) {
+  form#userComment {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-content: "";
+        -ms-flex-line-pack: "";
+            align-content: ""; }
+    form#userComment .row {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-align-content: flex-start;
+          -ms-flex-line-pack: start;
+              align-content: flex-start;
+      width: 100%; }
+      form#userComment .row .inputWrapper.text {
+        width: 90%;
+        height: 4em;
+        position: relative; }
+        form#userComment .row .inputWrapper.text:not(:first-child) {
+          margin-right: 0;
+          margin-top: 3em; }
+    form#userComment .inputWrapper.textarea {
+      width: 90%; } }
+
 form.reply {
   width: auto;
   height: auto;
@@ -8626,6 +8760,12 @@ form.reply {
       background-color: #fbfbfb;
       border: 1.2px solid #26a69a; }
 
+@media screen and (max-width: 400px) {
+  form.reply {
+    width: 100%; }
+    form.reply .inputWrapper.textarea {
+      width: 90%; } }
+
 @media screen and (max-width: 900px) {
   form#sample {
     font-size: 8px; }
@@ -8729,13 +8869,13 @@ form.reply {
       font-size: 6px; }
   form#userComment {
     font-size: 8px; }
-    form#userComment .inputWrapper.text input.style1:focus ~ label {
+    form#userComment .row .inputWrapper.text input.style1:focus ~ label {
       font-size: 6px; }
-    form#userComment .inputWrapper.text input.style2:focus ~ label {
+    form#userComment .row .inputWrapper.text input.style2:focus ~ label {
       font-size: 6px; }
-    form#userComment .inputWrapper.text input.style1 ~ label.top {
+    form#userComment .row .inputWrapper.text input.style1 ~ label.top {
       font-size: 6px; }
-    form#userComment .inputWrapper.text input.style2 ~ label.top {
+    form#userComment .row .inputWrapper.text input.style2 ~ label.top {
       font-size: 6px; }
     form#userComment .inputWrapper.textarea textarea.style1:focus ~ label {
       font-size: 6px; }
@@ -8859,13 +8999,13 @@ form.reply {
       font-size: 4px; }
   form#userComment {
     font-size: 6px; }
-    form#userComment .inputWrapper.text input.style1:focus ~ label {
+    form#userComment .row .inputWrapper.text input.style1:focus ~ label {
       font-size: 4px; }
-    form#userComment .inputWrapper.text input.style2:focus ~ label {
+    form#userComment .row .inputWrapper.text input.style2:focus ~ label {
       font-size: 4px; }
-    form#userComment .inputWrapper.text input.style1 ~ label.top {
+    form#userComment .row .inputWrapper.text input.style1 ~ label.top {
       font-size: 4px; }
-    form#userComment .inputWrapper.text input.style2 ~ label.top {
+    form#userComment .row .inputWrapper.text input.style2 ~ label.top {
       font-size: 4px; }
     form#userComment .inputWrapper.textarea textarea.style1:focus ~ label {
       font-size: 4px; }
