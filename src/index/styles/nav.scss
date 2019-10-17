@@ -176,7 +176,7 @@ header{
                         position: absolute ;
                         top: 105%;
                         right: 0;
-                        width: 25em ;
+                        width: 18em ;
                         height: auto;
                         @include flex(column,flex-start,flex-start,nowrap,"") ;
                         li{display: flex;}
@@ -218,7 +218,7 @@ header{
                                 }
                             }                   
                             .menu{
-                                width: calc(100vw - 30em) ;
+                                width: calc(100vw - 20em) ;
                                 max-height: 80vh;
                                 overflow: auto;
                                 position: absolute;
@@ -226,7 +226,7 @@ header{
                                 right: 102% ;
                                 // padding: $dist2 $dist3;
                                 .col{
-                                    margin: $dist2 $dist3 ;
+                                    margin: $dist1 $dist2 ;
                                     // &:first-child{margin-right: 0;}
                                 }
                             }
