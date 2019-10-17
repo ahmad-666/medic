@@ -5021,7 +5021,7 @@ header nav {
         position: absolute;
         top: 105%;
         right: 0;
-        width: 25em;
+        width: 18em;
         height: auto;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -5094,15 +5094,15 @@ header nav {
             visibility: visible;
             z-index: 5; }
           header nav ul li#mobileNav ul li:not(.logo) .menu {
-            width: -webkit-calc(100vw - 30em);
-            width: calc(100vw - 30em);
+            width: -webkit-calc(100vw - 20em);
+            width: calc(100vw - 20em);
             max-height: 80vh;
             overflow: auto;
             position: absolute;
             top: 0;
             right: 102%; }
             header nav ul li#mobileNav ul li:not(.logo) .menu .col {
-              margin: 1.5em 3em; } }
+              margin: 0.75em 1.5em; } }
 
 header {
   width: 100%;
@@ -5665,17 +5665,11 @@ header {
           height: 4em;
           border-radius: 50%;
           position: relative;
-          cursor: pointer;
-          -webkit-transition: all .3s linear;
-          transition: all .3s linear;
           color: #ea6161;
           background-color: white;
-          border: 1.2px solid transparent;
-          border: 1px solid #ea6161; }
-          #article .content .text #userLike i:hover {
-            color: white;
-            background-color: #ea6161;
-            border: 1.2px solid white; }
+          border: 1px solid #ea6161;
+          -webkit-transition: all .2s linear;
+          transition: all .2s linear; }
           #article .content .text #userLike i::before {
             font-size: 1.9em;
             position: absolute;

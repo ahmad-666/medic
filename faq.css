@@ -5021,7 +5021,7 @@ header nav {
         position: absolute;
         top: 105%;
         right: 0;
-        width: 25em;
+        width: 18em;
         height: auto;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -5094,15 +5094,15 @@ header nav {
             visibility: visible;
             z-index: 5; }
           header nav ul li#mobileNav ul li:not(.logo) .menu {
-            width: -webkit-calc(100vw - 30em);
-            width: calc(100vw - 30em);
+            width: -webkit-calc(100vw - 20em);
+            width: calc(100vw - 20em);
             max-height: 80vh;
             overflow: auto;
             position: absolute;
             top: 0;
             right: 102%; }
             header nav ul li#mobileNav ul li:not(.logo) .menu .col {
-              margin: 1.5em 3em; } }
+              margin: 0.75em 1.5em; } }
 
 header {
   width: 100%;
