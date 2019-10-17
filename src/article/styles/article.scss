@@ -12,8 +12,24 @@
         width: 50%;
         height: 45em;
     }
+    .infos{
+        height: auto;
+    }
     .content{
         width: 100%;
         height: auto;
+    }
+}
+@include resizeTablet('#article') ;
+@include resizeMobile('#article') ;
+@include mediaQ(550px){
+    #article{
+        .img,.video,.infos{
+            width: 100%;
+            height: 45em;
+        }
+        .infos{
+            height: auto;
+        }
     }
 }

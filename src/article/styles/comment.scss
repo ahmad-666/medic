@@ -127,4 +127,22 @@
         @include swapColor(white,$primaryColor) ;
     }
 }
-@include resizeTablet('#comments'+' .comment') ;
+@include resizeTablet('#comments');
+@include resizeTablet('#adminApprove');
+@include resizeMobile('#comments');
+@include resizeMobile('#adminApprove');
+@include mediaQ(750px){
+    #comments{
+        .comment,.commentReply{       
+            .commentReply{
+                width: calc(100% - 5em);
+                margin-right: 5em;
+            }
+        }   
+    }
+}
+@include mediaQ(400px){
+    #adminApprove{
+        width: 90vw;
+    }
+}

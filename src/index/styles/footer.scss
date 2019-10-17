@@ -140,3 +140,22 @@ footer{
         }
     }
 }
+@include resizeTablet('footer') ;
+@include resizeMobile('footer') ;
+@include mediaQ(340px){
+    footer{    
+        .info{
+            @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+            .col.contact{
+            }
+            .col.moreInfo{
+                margin-right: $dist4;
+            }
+            .col.apps{
+               width: 100%;
+               margin-right: 0;
+               margin-top: $dist2;
+            }
+        }
+    } 
+}

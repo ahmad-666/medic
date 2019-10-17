@@ -6,13 +6,13 @@
     @include flex(column,flex-start,flex-start,nowrap,"") ;
     .content{
         border-top: 1px solid lighten($textGrey,20%) ;
-        margin-top: $dist3 + 1em;
+        margin-top: $dist1 ;
         // padding-top: $dist2;
         .text{
             width: 100%;
             height: auto;
             // margin-top: $dist1;
-            padding: $dist3 $dist2;
+            padding: $dist2 $dist1;
             border-bottom: 1px solid lighten($textGrey,20%);
             display: flex;
             @include flex(column,flex-start,flex-start,nowrap,"") ;
@@ -148,6 +148,24 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+@include mediaQ(600px){
+    #article{    
+        .content{
+            #ref{
+                width: 90%;
+            }
+        }
+    }
+}
+@include mediaQ(430px){
+    #article{    
+        .content{
+            #ref{
+                width: 96%;
             }
         }
     }

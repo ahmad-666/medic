@@ -73,3 +73,26 @@
         }
     }
 }
+@include resizeTablet('.sliderMove') ;
+@include mediaQ(1000px){
+    .sliderMove{
+        .btn{
+            font-size: 9px;
+        }
+    }
+}
+@include mediaQ(900px){
+    .sliderMove{
+        .btn{
+            font-size: 11px;
+        }
+    }
+}
+@include resizeMobile('.sliderMove') ;
+@include mediaQ(600px){
+    .sliderMove{
+        .btn{
+            font-size: 9px;
+        }
+    }
+}

@@ -23,11 +23,11 @@
                     width: 100%;
                 }
                 &:nth-child(2){
-                    flex-shrink: 0;;
-                    width: 35em;
+                    flex-shrink: 1;
+                    width: 80em;
                 }
                 &:nth-child(3){
-                    flex-shrink: 0;;
+                    flex-shrink: 0;
                     width: 25em;
                 }
             }
@@ -50,6 +50,72 @@
             height: auto;
             padding-top: 2em;
             @include flex(column,flex-start,flex-start,nowrap,"") ;
+        }
+    }
+}
+@include resizeTablet('#grid') ;
+@include mediaQ(900px){
+    #grid{
+        > .row{
+            &:nth-child(1){
+                height: calc(80em + 2em);
+                @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+                .col{
+                    &:nth-child(1){
+                        width: 100%;
+                        height: 40em;
+                    }
+                    &:nth-child(2){
+                        flex-shrink: 1;
+                        width: calc(70% - 2em);
+                        height: 40em;
+                        margin-right: 0;
+                        margin-top: 2em;
+                    }
+                    &:nth-child(3){
+                        flex-shrink: 1;
+                        width: 30%;
+                        height: 40em;
+                        margin-top: 2em;
+                        margin-right: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+@include resizeMobile('#grid') ;
+@include mediaQ(400px){
+    #grid{
+        > .row{
+            &:nth-child(1){
+                height: calc(40em + 2em + 40em + 2em + 25em);
+                .col{
+                    &:nth-child(2){
+                        width: 100%;
+                    }
+                    &:nth-child(3){
+                        width: 100%;
+                        height: 25em;
+                        margin-right: 0em;
+                    }
+                }
+                #ads{
+                    @include flex(row,flex-start,center,nowrap,"") ;
+                    .ad{
+                        &:nth-child(1){
+                            width: 50%;
+                            height: 100%;
+                        }
+                        &:nth-child(2){
+                            width: 50%;
+                            height: 100%;
+                            margin-top: 0em;
+                            margin-right: 2em;
+                        }
+                    }
+                }
+            }
         }
     }
 }

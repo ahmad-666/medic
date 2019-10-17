@@ -121,5 +121,33 @@
             }       
         }
     }
-    
+}
+@include mediaQ(750px){
+    #latest{ 
+        @include flex(row,space-between,flex-start,wrap,flex-start) ;
+        #latestArticles,#latestVids{
+            width: 100%;
+            height: auto;
+            &:nth-child(2){
+                margin-right: 0em;
+                margin-top: 2em;
+            }
+            .articles{
+                .article{
+                    margin: 1em 0 ;
+                    padding: $dist1 ;                  
+                    .img{
+                        flex-shrink: 0 ;
+                        width: 15em ;
+                        height: 10em;                   
+                    }
+                    .info{
+                        width: 100% ;
+                        margin-right: $dist1 ;
+                        @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    }       
+                }
+            }
+        }
+    }
 }

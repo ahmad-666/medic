@@ -47,6 +47,15 @@ header{
     }
 }
 @include resizeMobile('header') ;
+@include mediaQ(500px){
+    header{
+        #top{
+            .right,.left{
+                padding: $dist1 ;
+            }
+        }
+    }
+}
 @include mediaQ(400px){
     header{
         font-size: 4px ;

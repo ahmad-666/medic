@@ -138,3 +138,48 @@ main{
         }  
     }
 }
+@include resizeTablet('main');
+@include resizeMobile('main');
+@include mediaQ(800px){
+    main{
+        @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+        #latest{
+            .articles{
+                @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+                .article{
+                    width: calc((100% - (2 * 2em)) / 2);
+                    &:nth-last-child(1){border-bottom: none;} 
+                    &:nth-last-child(2){border-bottom: none;} 
+                    &:nth-child(even){margin-right: 4em;}
+                }
+            }  
+        }
+        #popular{
+            flex-shrink: 0;
+            width: 40em;
+            height: auto;
+            margin: $dist3 auto 0 auto;
+        }
+    }
+}
+@include mediaQ(600px){
+    main{
+        #latest{
+            .articles{
+                .article{
+                    width: 100%;
+                    &:nth-last-child(1){border-bottom: none;} 
+                    &:nth-last-child(2){border-bottom: 1px solid lighten($textGrey,20%);} 
+                    &:nth-child(even){margin-right: 0em;}
+                }
+            }  
+        }
+    }
+}
+@include mediaQ(450px){
+    main{
+        #popular{
+            width: 100%;
+        }
+    }
+}

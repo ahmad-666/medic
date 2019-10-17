@@ -71,3 +71,10 @@
         }
     }
 }
+@include resizeTablet('#contactWrapper') ;
+@include resizeMobile('#contactWrapper') ;
+@include mediaQ(500px){
+    #contactWrapper{
+        width: 90%;
+    }
+}

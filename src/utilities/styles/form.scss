@@ -1340,6 +1340,8 @@ form#newsLetters {
         }
     }
 }
+@include resizeTablet('form#newsLetters') ;
+@include resizeMobile('form#newsLetters') ;
 form#contact{
     width:100% ;
     height: auto;
@@ -1626,6 +1628,22 @@ form#contact{
     button[type="submit"] {
         margin: 0 auto;
         @include swapColor($textWhite,$primaryColor) ;
+    }
+}
+@include resizeTablet('form#contact');
+@include resizeMobile('form#contact');
+@include mediaQ(400px){
+    form#contact{
+        .inputWrapper.text {
+            width: 90%;
+            margin: $dist2;
+        }
+        .inputWrapper.textarea {
+            width: 100%;
+            textarea.style1 {
+                height: 13em;
+            }         
+        }     
     }
 }
 form#report,form#requestAd {
@@ -1932,6 +1950,31 @@ form#report,form#requestAd {
         @include swapColor($textWhite,$primaryColor) ;
     }
 }
+@include resizeTablet('form#report');
+@include resizeMobile('form#report');
+@include resizeTablet('form#requestAd');
+@include resizeMobile('form#requestAd');
+@include mediaQ(400px){
+    form#report,form#requestAd{
+        width: 90% ;
+        img{
+            width: 14em ;
+            height: 16em;
+        }
+        .inputWrapper.text {
+            width: 90%;
+            height: 4em;
+            position: relative;
+            margin: $dist2;
+        }
+        .inputWrapper.textarea {
+            width: 100%;
+            textarea.style1 {
+                height: 13em;
+            }
+        }
+    }   
+}
 form#requestAd{
     img{
         width: 14em ;
@@ -2219,6 +2262,8 @@ form#login{
         margin-top: $dist2 ;
     }
 }
+@include resizeTablet('form#login') ;
+@include resizeMobile('form#login') ;
 form#forgetPassword{
     width: 40em;
     height: auto;
@@ -2408,6 +2453,8 @@ form#forgetPassword{
         margin-top: $dist2 ;
     }
 }
+@include resizeTablet('form#forgetPassword') ;
+@include resizeMobile('form#forgetPassword') ;
 form#signup {
     width: 40em;
     height: auto;
@@ -2681,6 +2728,8 @@ form#signup {
         margin-top: $dist2 ;
     }
 }
+@include resizeTablet('form#signup') ;
+@include resizeMobile('form#signup') ;
 form#userComment{
     width: auto;
     display: flex;
@@ -2983,6 +3032,28 @@ form#userComment{
         @include swapColor($textWhite,$primaryColor) ; 
     }
 }
+@include mediaQ(360px){
+    form#userComment{
+        width: 100%;
+        @include flex(column,flex-start,center,nowrap,"") ;
+        .row{
+            @include flex(row,center,center,wrap,flex-start) ;
+            width: 100%;
+            .inputWrapper.text {
+                width: 90%;
+                height: 4em;
+                position: relative;
+                &:not(:first-child){
+                    margin-right: 0;
+                    margin-top: $dist3;
+                }
+            }
+        }
+        .inputWrapper.textarea {
+            width: 90%;
+        }
+    }
+}
 form.reply{
     width: auto;
     height: auto;
@@ -3117,6 +3188,14 @@ form.reply{
         border-radius: $dist3;
         font-size: $fontM;
         @include swapColor($textWhite,$primaryColor) ; 
+    }
+}
+@include mediaQ(400px){
+    form.reply{
+        width: 100%;
+        .inputWrapper.textarea {
+            width: 90%;
+        }    
     }
 }
 @include mediaQ(900px){
@@ -3344,25 +3423,28 @@ form.reply{
     }
     form#userComment {
         font-size: 8px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 6px;}                  
+        .row{
+            .inputWrapper.text {
+                input.style1 {
+                    &:focus {
+                        ~label {font-size: 6px;}                  
+                    }
                 }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 6px;}
+                input.style2 {
+                    &:focus {
+                        ~label {font-size: 6px;}
+                    }
+                }  
+                input.style1 {
+                    ~label.top {font-size: 6px;}
                 }
-            }  
-            input.style1 {
-                ~label.top {font-size: 6px;}
-            }
-    
-            input.style2 {
-                ~label.top {font-size: 6px;}
+        
+                input.style2 {
+                    ~label.top {font-size: 6px;}
+                }
             }
         }
+        
         .inputWrapper.textarea {   
             textarea.style1 {
                 &:focus {    
@@ -3629,25 +3711,28 @@ form.reply{
     }
     form#userComment {
         font-size: 6px ;
-        .inputWrapper.text {
-            input.style1 {
-                &:focus {
-                    ~label {font-size: 4px;}                  
+        .row{
+            .inputWrapper.text {
+                input.style1 {
+                    &:focus {
+                        ~label {font-size: 4px;}                  
+                    }
                 }
-            }
-            input.style2 {
-                &:focus {
-                    ~label {font-size: 4px;}
+                input.style2 {
+                    &:focus {
+                        ~label {font-size: 4px;}
+                    }
+                }  
+                input.style1 {
+                    ~label.top {font-size: 4px;}
                 }
-            }  
-            input.style1 {
-                ~label.top {font-size: 4px;}
-            }
-    
-            input.style2 {
-                ~label.top {font-size: 4px;}
+        
+                input.style2 {
+                    ~label.top {font-size: 4px;}
+                }
             }
         }
+        
         .inputWrapper.textarea {   
             textarea.style1 {
                 &:focus {    
@@ -3689,3 +3774,4 @@ form.reply{
         }
     }
 }
+
