@@ -8,7 +8,8 @@ import '../index/styles/grid.scss' ;
 import '../index/styles/video.scss' ;
 import '../index/styles/newsletters.scss' ;
 import '../index/styles/footer.scss' ;
-//load scripts
+//load scripts\
+import '../index/scripts/nav.js' ;
 import '../index/scripts/grid.js' ;
 import '../index/scripts/newsletters.js' ;
 //load videos 

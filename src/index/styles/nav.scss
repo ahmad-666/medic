@@ -6,7 +6,7 @@ header{
         width: 100% ;
         height: auto;
         box-shadow: 0 .3em 1em -.2em $shadowColor ;
-        ul{
+        > ul{
             position: relative ;
             width: 100% ;
             height: auto;
@@ -136,11 +136,14 @@ header{
 @include mediaQ(600px){
     header{
         nav{
-            ul{
+            padding: 0;
+            > ul{
+                padding: 0;
                 position: relative;
                 .logo{display: none;}
                 li:not(.logo){
                      display: none ;
+                     cursor: auto;
                      &:hover{
                         .menu{
                             opacity: 0;
@@ -150,6 +153,7 @@ header{
                     }       
                 }
                 li#mobileNav{
+                    padding: 0;
                     display: block;
                     height: 100%;
                     width: auto;
@@ -159,12 +163,15 @@ header{
                             color: white;
                         }
                         background-color: $primaryColor;
-                        ul{
-                            opacity: 1;
-                            visibility: visible;
-                        }
+                        // ul{
+                        //     opacity: 1;
+                        //     visibility: visible;
+                        // }
+                       
                     }
                     i{
+                        height: 100%;
+                        padding: .3em $dist1 ;
                         font-size: $fontXL;
                         color: $textDark;
                     }
@@ -178,6 +185,7 @@ header{
                         right: 0;
                         width: 18em ;
                         height: auto;
+                        background-color: white;
                         @include flex(column,flex-start,flex-start,nowrap,"") ;
                         li{display: flex;}
                         .logo{
@@ -195,13 +203,15 @@ header{
                                 p{
                                     font-size: $fontL;
                                     font-weight: 700;
+                                    color: $textDark;
                                 }
                             }
                         }
                         li:not(.logo){
                             width: 100% ;
                             height: auto;
-                            padding: $dist2 $dist1 ;    
+                            padding: $dist2 $dist1 ; 
+                            cursor: pointer;   
                             p{
                                 font-size: $fontL;
                             }                        
@@ -210,14 +220,15 @@ header{
                                 margin-right: .5em ;
                                 color: inherit ;
                             }
-                            &:hover{
-                                .menu{
-                                    opacity: 1;
-                                    visibility: visible ;
-                                    z-index: 5;
-                                }
-                            }                   
+                            // &:hover{
+                            //     .menu{
+                            //         opacity: 1;
+                            //         visibility: visible ;
+                            //         z-index: 5;
+                            //     }
+                            // }                   
                             .menu{
+                                cursor: auto;
                                 width: calc(100vw - 20em) ;
                                 max-height: 80vh;
                                 overflow: auto;
@@ -230,7 +241,16 @@ header{
                                     // &:first-child{margin-right: 0;}
                                 }
                             }
+                            .menu.show{
+                                opacity: 1;
+                                visibility: visible ;
+                                z-index: 5;
+                            }
                         }
+                    }
+                    ul.show{
+                        visibility: visible;
+                        opacity: 1;
                     }
                 }
             }
