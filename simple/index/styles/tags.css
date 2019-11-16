@@ -1,0 +1,61 @@
+#latest .tags {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+#latest .tags .tag {
+  width: auto;
+  height: auto;
+  padding: 0.5em 1em;
+  font-weight: 1.2em;
+  color: #fbfbfb;
+  margin-top: .5em;
+}
+
+#latest .tags .tag:first-child {
+  margin-top: 0;
+}
+
+#latest .tags .tag.news {
+  background-color: #004782;
+}
+
+#latest .tags .tag.new {
+  background-color: #26a69a;
+}
+
+#latest .tags .tag.special {
+  background-color: #ea6161;
+}
+/*# sourceMappingURL=tags.css.map */

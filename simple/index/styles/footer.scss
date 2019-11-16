@@ -1,0 +1,161 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+footer{
+    width: 100% ;
+    height: auto;
+    margin: $dist4 auto 0 auto ;
+    padding: $dist2 ;
+    background-image: linear-gradient(to right top, #50a4b5, #42abb5, #37b1b1, #35b7aa, #3dbca0, #3dbca0, #3dbca0, #3dbca0, #35b7aa, #37b1b1, #42abb5, #50a4b5); 
+    display: flex ;
+    @include flex(column,flex-start,center,nowrap,"") ;
+    .logo{
+        width: auto ;
+        height: auto;
+        display: flex ;
+        @include flex(column,flex-start,center,nowrap,"") ;
+        img{
+            width: 10em ;
+            height: 8em;
+        }
+        h6{
+            font-size: $fontL ;
+            font-weight: 700 ;
+            color: $textWhite ;
+        }
+    }
+    .info{
+        width: 100% ;
+        height: auto;
+        margin-top: $dist3 ;
+        display: flex ;
+        @include flex(row,space-around,flex-start,wrap,flex-start) ;
+        .col{
+            width: auto ;
+            height: auto;
+            margin-right: $dist2 ;
+            &:first-child{margin-right: 0 ;}
+            display: flex ;
+            @include flex(column,flex-start,flex-start,nowrap,"") ;
+            h6{
+                font-size: $fontM + .2em ;
+                color: $textWhite ;
+                font-weight: 700 ;
+            }
+        }
+        .col.contact{
+            .logo{
+                width: auto ;
+                height: auto;
+                display: flex ;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                img{
+                    width: 6em ;
+                    height: 5em;
+                }
+                h6{margin-right: .5em ;}
+            }
+            .address{
+                width: auto ;
+                height: auto;
+                margin-top: $dist2 ;
+                display: flex ;
+                @include flex(row,flex-start,center,nowrap,"") ;
+                color: lighten($textGrey,35%) ;
+                i,p{
+                    font-size: $fontM ;
+                    color: inherit ;
+                    &:nth-child(2){margin-right: .5em ;}
+                }
+            }
+            .socials{
+                width: 100% ;
+                height: auto;
+                display: flex ;
+                @include flex(row,flex-start,center,wrap,flex-start) ;
+                a{
+                    width: auto ;
+                    height: auto;
+                    margin: $dist2  ;
+                    &:first-child{margin-right: 0 ;}
+                    i{
+                        width: 4em ;
+                        height: 4em;
+                        border-radius: 50% ;
+                        position: relative ;
+                        border: 1.2px solid transparent ;
+                        background-color: lighten($orangeColor1,5%) ;
+                        color: white ;
+                        transition: all .2s linear ;
+                        &::before{
+                            @include center-xy ;
+                            font-size: $fontL ;
+                        }
+                        &:hover{
+                            border: 1px solid lighten($orangeColor1,5%) ;
+                            color: lighten($orangeColor1,5%) ;
+                            background-color: white ;
+                        }
+                    }
+                }
+            }
+        }
+        .col.moreInfo{
+            a{
+                width: auto ;
+                height: auto;
+                margin-top: $dist2 - .6em ;
+                font-size: $fontM ;
+                color: lighten($textGrey,35%) ;
+                transition: all .2s linear ;
+                &:hover{
+                    color: white ;
+                }
+            }
+        }
+        .col.apps{
+            a{
+                width: auto ;
+                height: auto;
+                margin-top: $dist2 ;
+                img{
+                    width: 15em ;
+                    height: 5em;
+                }
+            }
+        }
+    }
+    .copyright{
+        width: 100% ;
+        margin-top: 0 ;
+        padding-top: $dist2 ;
+        border-top: 1.2px solid white ;
+        color: white ;
+        a{
+            display: inline-block ;
+            width: 100% ;
+            text-align: center ;
+            font-size: $fontM  ;
+            color: inherit ;
+        }
+    }
+}
+@include resizeTablet('footer') ;
+@include resizeMobile('footer') ;
+@include mediaQ(340px){
+    footer{    
+        .info{
+            @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+            .col.contact{
+            }
+            .col.moreInfo{
+                margin-right: $dist4;
+            }
+            .col.apps{
+               width: 100%;
+               margin-right: 0;
+               margin-top: $dist2;
+            }
+        }
+    } 
+}

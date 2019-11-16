@@ -1,0 +1,34 @@
+#latest .title, #articles .title {
+  width: 100%;
+  height: auto;
+  background-color: #343743;
+  overflow: hidden;
+}
+
+#latest .title .skew, #articles .title .skew {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: #26a69a;
+  -webkit-transform: translateX(2em) skewX(-30deg);
+     -moz-transform: translateX(2em) skewX(-30deg);
+      -ms-transform: translateX(2em) skewX(-30deg);
+          transform: translateX(2em) skewX(-30deg);
+  padding: 0.75em 1.5em 0.75em 12em;
+}
+
+#latest .title .skew h4, #articles .title .skew h4 {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #fbfbfb;
+  -webkit-transform: skewX(30deg) translateX(-1.5em);
+     -moz-transform: skewX(30deg) translateX(-1.5em);
+      -ms-transform: skewX(30deg) translateX(-1.5em);
+          transform: skewX(30deg) translateX(-1.5em);
+}
+
+#articles .title {
+  border-top-right-radius: 1.5em;
+  border-top-left-radius: 1.5em;
+}
+/*# sourceMappingURL=skewTitle.css.map */

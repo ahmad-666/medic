@@ -1,0 +1,26 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#latest{
+    .tags{
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        @include flex(column,flex-start,flex-start,nowrap,"") 
+        .tag{
+            width: auto ;
+            height: auto;
+            padding: .5em $dist2 - .5em ;
+            font-weight: $fontS ;
+            color: $textWhite ;
+            margin-top: .5em;
+            &:first-child{margin-top: 0;}
+        }
+        .tag.news{background-color: darken($blueColor1,20%) ;}
+        .tag.new{background-color: $primaryColor ;}
+        .tag.special{background-color: lighten($redColor2,5%) ;}
+    }
+}

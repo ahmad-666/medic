@@ -1,0 +1,408 @@
+footer {
+  width: 100%;
+  height: auto;
+  margin: 6em auto 0 auto;
+  padding: 1.5em;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#50a4b5), color-stop(#42abb5), color-stop(#37b1b1), color-stop(#35b7aa), color-stop(#3dbca0), color-stop(#3dbca0), color-stop(#3dbca0), color-stop(#3dbca0), color-stop(#35b7aa), color-stop(#37b1b1), color-stop(#42abb5), to(#50a4b5));
+  background-image: -webkit-linear-gradient(left bottom, #50a4b5, #42abb5, #37b1b1, #35b7aa, #3dbca0, #3dbca0, #3dbca0, #3dbca0, #35b7aa, #37b1b1, #42abb5, #50a4b5);
+  background-image: -moz-linear-gradient(left bottom, #50a4b5, #42abb5, #37b1b1, #35b7aa, #3dbca0, #3dbca0, #3dbca0, #3dbca0, #35b7aa, #37b1b1, #42abb5, #50a4b5);
+  background-image: linear-gradient(to right top, #50a4b5, #42abb5, #37b1b1, #35b7aa, #3dbca0, #3dbca0, #3dbca0, #3dbca0, #35b7aa, #37b1b1, #42abb5, #50a4b5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+footer .logo {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+footer .logo img {
+  width: 10em;
+  height: 8em;
+}
+
+footer .logo h6 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #fbfbfb;
+}
+
+footer .info {
+  width: 100%;
+  height: auto;
+  margin-top: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+footer .info .col {
+  width: auto;
+  height: auto;
+  margin-right: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+footer .info .col:first-child {
+  margin-right: 0;
+}
+
+footer .info .col h6 {
+  font-size: 1.8em;
+  color: #fbfbfb;
+  font-weight: 700;
+}
+
+footer .info .col.contact .logo {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+}
+
+footer .info .col.contact .logo img {
+  width: 6em;
+  height: 5em;
+}
+
+footer .info .col.contact .logo h6 {
+  margin-right: .5em;
+}
+
+footer .info .col.contact .address {
+  width: auto;
+  height: auto;
+  margin-top: 1.5em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  color: #eeeef0;
+}
+
+footer .info .col.contact .address i, footer .info .col.contact .address p {
+  font-size: 1.6em;
+  color: inherit;
+}
+
+footer .info .col.contact .address i:nth-child(2), footer .info .col.contact .address p:nth-child(2) {
+  margin-right: .5em;
+}
+
+footer .info .col.contact .socials {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+
+footer .info .col.contact .socials a {
+  width: auto;
+  height: auto;
+  margin: 1.5em;
+}
+
+footer .info .col.contact .socials a:first-child {
+  margin-right: 0;
+}
+
+footer .info .col.contact .socials a i {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  position: relative;
+  border: 1.2px solid transparent;
+  background-color: #ff9475;
+  color: white;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+footer .info .col.contact .socials a i::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+     -moz-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  font-size: 2em;
+}
+
+footer .info .col.contact .socials a i:hover {
+  border: 1px solid #ff9475;
+  color: #ff9475;
+  background-color: white;
+}
+
+footer .info .col.moreInfo a {
+  width: auto;
+  height: auto;
+  margin-top: 0.9em;
+  font-size: 1.6em;
+  color: #eeeef0;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+footer .info .col.moreInfo a:hover {
+  color: white;
+}
+
+footer .info .col.apps a {
+  width: auto;
+  height: auto;
+  margin-top: 1.5em;
+}
+
+footer .info .col.apps a img {
+  width: 15em;
+  height: 5em;
+}
+
+footer .copyright {
+  width: 100%;
+  margin-top: 0;
+  padding-top: 1.5em;
+  border-top: 1.2px solid white;
+  color: white;
+}
+
+footer .copyright a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  color: inherit;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  footer .info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start;
+  }
+  footer .info .col.moreInfo {
+    margin-right: 6em;
+  }
+  footer .info .col.apps {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 1.5em;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,278 @@
+@import '../../variables.scss' ;
+@import '../../colors.scss' ;
+@import '../../mixins.scss' ;
+#video{
+    box-shadow: none ;
+    background-color: darken($darkBlue,15%) ;
+    padding: $dist2 ;
+    padding-bottom: $dist4 + $dist1 ;
+    display: flex ;
+    @include flex(column,flex-start,column,nowrap,"") ;
+    position: relative ;
+    h4{
+        font-size: $fontL ;
+        color: $textWhite ;
+        font-weight: 700 ;
+    } 
+    .cols{
+        width: 100% ;
+        height: auto;
+        display: flex ;
+        @include flex(row,flex-start,flex-start,nowrap,"") ;
+        .col{
+            height: 40em;
+            &:nth-child(1){
+                width: 100% ;
+                .video{
+                    display: inline-block ;
+                    width: 100% ;
+                    height: 100%;
+                    position: relative ;
+                    margin-top: $dist2 ;
+                    &:hover{
+                        .play{
+                            i{
+                                transform: scale(1.1) ;
+                                background-color: lighten($redColor2,5%) ;
+                                box-shadow: 0 0 1em .1em lighten($redColor2,5%);
+                                &::before{color: $textWhite ;}
+                            }
+                        }
+                    }
+                    &::before{
+                        content: '' ;
+                        @include fullSize-abs ;
+                        background-color: $blackFilter2 ;
+                    }
+                    img{
+                        width: 100% ;
+                        height: 100%;
+                        object-fit: cover ;
+                    }
+                    .play{
+                        width: auto ;
+                        height: auto;
+                        display: flex ;
+                        @include flex(column,flex-start,center,nowrap,"") ;
+                        i{
+                            width: 7em ;
+                            height: 7em;
+                            border-radius: 50% ;
+                            background-color: $textDark ;
+                            position: relative ;
+                            box-shadow: 0 0 1em .1em $textDark;
+                            transition: all .3s linear ;
+                            &::before{
+                                @include center-xy ;
+                                font-size: $fontXL ;
+                                color: lighten($redColor2,5%) ;
+                                transition: all .3s linear ;
+                            }                         
+                        }
+                        p{
+                            font-size: $fontL - .2em ;
+                            color: white ;
+                            margin-top: .5em ;
+                        }
+                    }
+                    .info{
+                        width: 90% ;
+                        height: auto;
+                        bottom: 0 ;
+                        display: flex ;
+                        @include flex(column,flex-start,flex-start,nowrap,"") ;
+                        h4{
+                            width: 100% ;
+                            font-size: $fontM ;
+                            color: $textWhite ;
+                            font-weight: 700 ;
+                            padding-bottom: $dist1 ;
+                            border-bottom: 1.2px solid lighten($textGrey,10%) ;
+                        }
+                        .row{
+                            width: 100% ;
+                            height: auto;
+                            margin-top: $dist1 ;
+                            display: flex ;
+                            @include flex(row,space-between,flex-start,nowrap,"") ;
+                            color: lighten($textGrey,20%) ;
+                            p{
+                                font-size: $fontS ;
+                                color: inherit ;
+                            }
+                            .right{
+                                width: 100% ;
+                                height: auto;
+                                display: flex ;
+                                @include flex(row,flex-start,center,nowrap,"") ;
+                                p{
+                                    margin-right: $dist2 ;
+                                    &:first-child{margin-right: 0;}
+                                }
+                            }
+                            .left{
+                                flex-shrink: 0 ;
+                                width: auto ;
+                                height: auto;
+                                margin-right: $dist1 ;
+                                display: flex ;
+                                @include flex(column,flex-start,center,nowrap,"") ;
+                                i{
+                                    width: 2.5em ;
+                                    height: 2.5em;
+                                    border-radius: 50% ;
+                                    border: 1px solid lighten($textGrey,10%) ;
+                                    position: relative ;
+                                    &::before{
+                                        @include center-xy ;
+                                        font-size: $fontM - .2em ;
+                                        color: inherit ;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(2){
+                flex-shrink: 0 ;
+                width: 50em ;
+                display: flex ;
+                @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+                .video{
+                    width: calc((100% - (2 * 3em)) / 2) ;
+                    height: calc((100% - (2 * 1.5em)) / 2);
+                    margin: $dist2 ;
+                    display: flex ;
+                    @include flex(column,flex-start,center,nowrap,"") ;
+                    &:hover{
+                        .img{
+                            &::before{background-color: rgba(50,50,50,0);}
+                            img{
+                                transform: scale(1.2) ;
+                            }
+                            i{
+                                background-color: lighten($redColor2,5%) ;
+                                &::before{
+                                    color: $textWhite ;
+                                }
+                            }
+                        }
+                        h4{color: lighten($redColor2,5%);}
+                    }
+                    .img{
+                        width: 100% ;
+                        height: 70%;
+                        position: relative ;
+                        overflow: hidden;
+                        border-radius: $dist2 ;
+                        &::before{
+                            content: '' ;
+                            @include fullSize-abs ;
+                            background-color: rgba(50,100,50,.3) ;
+                            transition: all 2.2s linear ;
+                        }
+                        img{
+                            width: 100% ;
+                            height: 100%;
+                            object-fit: cover ;
+                            transition: all .2s linear ;
+                        }
+                        i{
+                            width: 4em ;
+                            height: 4em;
+                            border-radius: 50% ;
+                            background-color: $textDark ;
+                            transition: all .2s linear ;
+                            &::before{
+                                @include center-xy ;
+                                font-size: $fontM ;
+                                color: lighten($redColor2,5%) ;
+                                transition: all .2s linear ;
+                            }
+                        }
+                    }
+                    h4{
+                        width: 100% ;
+                        font-size: $fontM - .1em ;
+                        color: $textWhite ;
+                        transition: all .2s linear ;
+                        @include multiEllipse(2,$dist2 + .2em,$textWhite) ;
+                    }
+                }
+            }
+        }
+    }
+    .showMore{
+        position: absolute ;
+        left: $dist2;
+        bottom: $dist2 ;
+        width: auto ;
+        height: auto;
+        display: flex ;
+        @include flex(row,flex-start,center,nowrap,"") ;
+        color: lighten($textGrey,20%) ;
+        transition: all .2s linear ;
+        &:hover{color: white ;}
+        p{font-size: $fontM ;}
+        i{
+            font-size: $fontM ;
+            margin-right: .5em ;
+        }
+    }
+}
+@include resizeTablet('#video') ;
+@include mediaQ(800px){
+    #video{
+        padding-bottom: $dist3 + 1em;
+        .cols{
+            @include flex(row,flex-start,flex-start,wrap,flex-start) ;
+            .col{
+                height: 40em;
+                &:nth-child(1){
+                    width: 100% ;
+                }
+                &:nth-child(2){
+                    width: 100% ;
+                    height: auto;
+                    margin-top: 2em;
+                    padding: 0;
+                    .video{
+                        width: calc((100% - 4 * (3em)) / 4) ;
+                        height: 19em;
+                        .img{
+                            height: 14em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include resizeMobile('#video') ;
+@include mediaQ(550px){
+    #video{
+        .cols{
+            .col{
+                &:nth-child(2){
+                    .video{
+                        width: calc((100% - 3 * (3em)) / 3) ;
+                    }
+                }
+            }
+        }
+    }
+}
+@include mediaQ(420px){
+    #video{
+        .cols{
+            .col{
+                &:nth-child(2){
+                    .video{
+                        width: calc((100% - 2 * (3em)) / 2) ;
+                    }
+                }
+            }
+        }
+    }
+}

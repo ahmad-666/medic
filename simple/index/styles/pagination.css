@@ -1,0 +1,73 @@
+#latest .pagination, #articles .pagination {
+  width: auto;
+  height: auto;
+  border-radius: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-align-content: "";
+      -ms-flex-line-pack: "";
+          align-content: "";
+  margin: 2em auto .5em auto;
+}
+
+#latest .pagination a, #latest .pagination span, #articles .pagination a, #articles .pagination span {
+  width: auto;
+  height: auto;
+  font-size: 1.6em;
+  color: #2d2d31;
+  padding: 0.5em 1em;
+  background-color: white;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+  border-left: 1px solid #c6c6cb;
+}
+
+#latest .pagination a:first-child, #latest .pagination span:first-child, #articles .pagination a:first-child, #articles .pagination span:first-child {
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+}
+
+#latest .pagination a:last-child, #latest .pagination span:last-child, #articles .pagination a:last-child, #articles .pagination span:last-child {
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  border-left: none;
+}
+
+#latest .pagination a:hover, #articles .pagination a:hover {
+  color: #fbfbfb;
+  background-color: #26a69a;
+}
+
+#latest .pagination a.active, #articles .pagination a.active {
+  color: #fbfbfb;
+  background-color: #26a69a;
+}
+
+#articles .pagination {
+  margin-bottom: 1.5em;
+}
+/*# sourceMappingURL=pagination.css.map */
