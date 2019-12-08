@@ -33,7 +33,7 @@
   margin: 2em auto .5em auto;
 }
 
-#latest .pagination a, #latest .pagination span, #articles .pagination a, #articles .pagination span {
+#latest .pagination li, #articles .pagination li {
   width: auto;
   height: auto;
   font-size: 1.6em;
@@ -46,25 +46,43 @@
   border-left: 1px solid #c6c6cb;
 }
 
-#latest .pagination a:first-child, #latest .pagination span:first-child, #articles .pagination a:first-child, #articles .pagination span:first-child {
+#latest .pagination li:first-child, #articles .pagination li:first-child {
   border-top-right-radius: 1.5em;
   border-bottom-right-radius: 1.5em;
 }
 
-#latest .pagination a:last-child, #latest .pagination span:last-child, #articles .pagination a:last-child, #articles .pagination span:last-child {
+#latest .pagination li:last-child, #articles .pagination li:last-child {
   border-top-left-radius: 1.5em;
   border-bottom-left-radius: 1.5em;
   border-left: none;
 }
 
-#latest .pagination a:hover, #articles .pagination a:hover {
-  color: #fbfbfb;
+#latest .pagination li:hover, #articles .pagination li:hover {
   background-color: #26a69a;
 }
 
-#latest .pagination a.active, #articles .pagination a.active {
+#latest .pagination li:hover a, #articles .pagination li:hover a {
   color: #fbfbfb;
+}
+
+#latest .pagination li a, #articles .pagination li a {
+  color: #26a69a;
+}
+
+#latest .pagination li.active, #articles .pagination li.active {
   background-color: #26a69a;
+}
+
+#latest .pagination li.active a, #articles .pagination li.active a {
+  color: #fbfbfb;
+}
+
+#latest .pagination li.disabled, #articles .pagination li.disabled {
+  background-color: #c6c6cb;
+}
+
+#latest .pagination li.disabled a, #articles .pagination li.disabled a {
+  color: #2d2d31;
 }
 
 #articles .pagination {

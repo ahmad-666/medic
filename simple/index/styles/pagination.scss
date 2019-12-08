@@ -9,7 +9,7 @@
         display: flex ;
         @include flex(row,flex-start,flex-start,nowrap,"") ;
         margin: 2em auto .5em auto ;
-        a,span{
+        li{
             width: auto ;
             height: auto;
             font-size: $fontM ;
@@ -28,15 +28,29 @@
                 border-left: none ;
             }
         }
-        a{
+        li{
             &:hover{
-                color: $textWhite ;
+                a{
+                    color: $textWhite ;
+                }
                 background-color: $primaryColor ;
             }
+            a{
+                color: $primaryColor;
+            }
         }
-        a.active{
-            color: $textWhite ;
+        li.active{
+            
             background-color: $primaryColor ;
+            a{
+                color: $textWhite ;
+            }
+        }
+        li.disabled{ 
+            background-color: lighten($textGrey,20%) ;
+            a{
+                color: $textDark ;
+            }
         }
     }
 }

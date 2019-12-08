@@ -77,54 +77,66 @@ header{
                     background-color: $textWhite ;
                     display: flex ;
                     @include flex(row,flex-start,flex-start,wrap,flex-start);
-                    .col{
-                        width: auto ;
-                        height: auto;
-                        margin: $dist2 $dist3 ;
-                        // &:first-child{margin-right: 0;}
-                        display: flex ;
-                        @include flex(column,flex-start,flex-start,nowrap,"") ;
-                        &:hover{h4{border-bottom: 1.5px solid $primaryColor ;}}
-                        a.title{
-                            width: 100%;
-                            height: auto;
+                    a{
+                        margin: $dist2;
+                        
+                        color: $textDark;
+                        transition: all .2s linear;
+                        &:hover{
+                            color: $primaryColor;
                         }
-                        h4{
-                            width: 100% ;
-                            height: auto;
-                            padding: $dist1 0 ;
-                            border-bottom: 1px solid lighten($textGrey,25%) ;
-                            transition: all .2s linear ;
-                            color: $textDark ;
-                            font-size: $fontM ;
-                            font-weight: 700 ;
-                        }
-                        a:not(.title){
-                            width: 100% ;
-                            height: auto;
-                            display: flex ;
-                            @include flex(row,flex-start,center,nowrap,"") ;
-                            padding: $dist2 $dist1 ;
-                            background-color: transparent ;
-                            transition: all .2s linear ;
-                            border-bottom: 1px solid lighten($textGrey,25%) ;
-                            &:last-child{border-bottom: none ;}
-                            color: $textDark ;
-                            &:hover{background-color: darken(white,8%) ;}
-                            p{
-                                width: 100% ;
-                                height: auto;
-                                font-size: $fontM ;
-                                color: inherit ;
-                            }
-                            i{
-                                flex-shrink: 0;
-                                margin-right: .5em ;
-                                font-size: $fontM ;
-                                color: inherit ;
-                            }
+                        p{
+                            font-size: $fontM;
                         }
                     }
+                    // .col{
+                    //     width: auto ;
+                    //     height: auto;
+                    //     margin: $dist2 $dist3 ;
+                    //     // &:first-child{margin-right: 0;}
+                    //     display: flex ;
+                    //     @include flex(column,flex-start,flex-start,nowrap,"") ;
+                    //     &:hover{h4{border-bottom: 1.5px solid $primaryColor ;}}
+                    //     a.title{
+                    //         width: 100%;
+                    //         height: auto;
+                    //     }
+                    //     h4{
+                    //         width: 100% ;
+                    //         height: auto;
+                    //         padding: $dist1 0 ;
+                    //         border-bottom: 1px solid lighten($textGrey,25%) ;
+                    //         transition: all .2s linear ;
+                    //         color: $textDark ;
+                    //         font-size: $fontM ;
+                    //         font-weight: 700 ;
+                    //     }
+                    //     a:not(.title){
+                    //         width: 100% ;
+                    //         height: auto;
+                    //         display: flex ;
+                    //         @include flex(row,flex-start,center,nowrap,"") ;
+                    //         padding: $dist2 $dist1 ;
+                    //         background-color: transparent ;
+                    //         transition: all .2s linear ;
+                    //         border-bottom: 1px solid lighten($textGrey,25%) ;
+                    //         &:last-child{border-bottom: none ;}
+                    //         color: $textDark ;
+                    //         &:hover{background-color: darken(white,8%) ;}
+                    //         p{
+                    //             width: 100% ;
+                    //             height: auto;
+                    //             font-size: $fontM ;
+                    //             color: inherit ;
+                    //         }
+                    //         i{
+                    //             flex-shrink: 0;
+                    //             margin-right: .5em ;
+                    //             font-size: $fontM ;
+                    //             color: inherit ;
+                    //         }
+                    //     }
+                    // }
                 }
             }
             li#mobileNav{
@@ -236,10 +248,23 @@ header{
                                 top: 0;
                                 right: 102% ;
                                 // padding: $dist2 $dist3;
-                                .col{
-                                    margin: $dist1 $dist2 ;
-                                    // &:first-child{margin-right: 0;}
+                                display: flex;
+                                @include flex(row,flex-start,center,wrap,flex-start) ;
+                                a{
+                                    margin: $dist2;
+                                    color: $textDark;
+                                    transition: all .2s linear;
+                                    &:hover{
+                                        color: $primaryColor;
+                                    }
+                                    p{
+                                        font-size: $fontM;
+                                    }
                                 }
+                                // .col{
+                                //     margin: $dist1 $dist2 ;
+                                //     // &:first-child{margin-right: 0;}
+                                // }
                             }
                             .menu.show{
                                 opacity: 1;
